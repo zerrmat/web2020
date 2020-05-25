@@ -1,0 +1,12 @@
+[
+  {
+    "code": "WA",
+    "currency": "PLN",
+    "name": "WARSAW STOCK EXCHANGE/EQUITIES/MAIN MARKET"
+  },
+  {
+    "code": "PA",
+    "currency": "EUR",
+    "name": "NYSE EURONEXT - EURONEXT PARIS"
+  }
+]
