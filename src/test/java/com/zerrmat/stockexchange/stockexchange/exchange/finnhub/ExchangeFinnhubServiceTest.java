@@ -5,7 +5,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.zerrmat.stockexchange.exchange.finnhub.dao.ExchangeFinnhubRepository;
 import com.zerrmat.stockexchange.exchange.finnhub.dto.ExchangeFinnhubResponse;
-import com.zerrmat.stockexchange.exchange.finnhub.model.ExchangeFinnhubModel;
+import com.zerrmat.stockexchange.exchange.model.ExchangeModel;
 import com.zerrmat.stockexchange.exchange.finnhub.service.ExchangeFinnhubConverter;
 import com.zerrmat.stockexchange.exchange.finnhub.service.ExchangeFinnhubService;
 import com.zerrmat.stockexchange.rest.ExchangeFinnhubRequest;
@@ -44,17 +44,17 @@ public class ExchangeFinnhubServiceTest {
     @Test
     public void shouldSaveFinnhubResponse() throws JsonProcessingException {
         // given
-        ExchangeFinnhubModel model1 = ExchangeFinnhubModel.builder()
+        ExchangeModel model1 = ExchangeModel.builder()
             .code("WA")
             .currency("PLN")
             .name("WARSAW STOCK EXCHANGE/EQUITIES/MAIN MARKET")
             .build();
-        ExchangeFinnhubModel model2 = ExchangeFinnhubModel.builder()
+        ExchangeModel model2 = ExchangeModel.builder()
             .code("US")
             .currency("USD")
             .name("US exchanges")
             .build();
-        List<ExchangeFinnhubModel> modelList = Arrays.asList(model1, model2);
+        List<ExchangeModel> modelList = Arrays.asList(model1, model2);
 
         List<ExchangeFinnhubResponse> responses = new ObjectMapper().readValue(
             generateRequestBody("ExchangeFinnhubRequest.json"),

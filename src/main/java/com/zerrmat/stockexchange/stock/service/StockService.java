@@ -15,7 +15,6 @@ public class StockService {
     }
 
     public StockModel getStock(Long id) {
-        StockModel one = stockRepository.findById(id).get();
-        return one;
+        return stockRepository.findById(id).get();
     }
 }

@@ -1,7 +1,7 @@
 package com.zerrmat.stockexchange.stockexchange.exchange.finnhub;
 
 import com.zerrmat.stockexchange.exchange.finnhub.dto.ExchangeFinnhubResponse;
-import com.zerrmat.stockexchange.exchange.finnhub.model.ExchangeFinnhubModel;
+import com.zerrmat.stockexchange.exchange.model.ExchangeModel;
 import com.zerrmat.stockexchange.exchange.finnhub.service.ExchangeFinnhubConverter;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -25,7 +25,7 @@ public class ExchangeFinnhubConverterTest {
             .build();
 
         // when
-        ExchangeFinnhubModel model = converter.toEntity(response);
+        ExchangeModel model = converter.toEntity(response);
 
         // then
         Assertions.assertThat(model.getCode()).isEqualTo(response.getCode());
