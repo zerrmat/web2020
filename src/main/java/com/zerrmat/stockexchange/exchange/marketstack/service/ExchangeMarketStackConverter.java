@@ -12,8 +12,9 @@ public class ExchangeMarketStackConverter implements ResponseConverter<ExchangeM
     @Override
     public ExchangeModel toEntity(ExchangeMarketStackResponse response) throws ConversionException {
         return ExchangeModel.builder()
-                //.code(response.getMic())
-                //.name(response.getName())
+                .code(response.getMic())
+                .name(response.getName())
+                .currency(response.getCurrency())
                 .build();
     }
 }

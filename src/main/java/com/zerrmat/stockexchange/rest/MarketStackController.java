@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.zerrmat.stockexchange.exchange.marketstack.dto.ExchangeMarketStackResponse;
+import com.zerrmat.stockexchange.exchange.marketstack.dto.ExchangeMarketStackResponseWrapper;
 import com.zerrmat.stockexchange.exchange.marketstack.service.ExchangeMarketStackService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -38,10 +39,11 @@ public class MarketStackController {
         try {
             //List<ExchangeMarketStackResponse> responses = new ObjectMapper().readValue(response,
               //      new TypeReference<>(){});
-            ExchangeMarketStackResponse responses = new ObjectMapper().readValue(response,
+            ExchangeMarketStackResponseWrapper responseWrapper = new ObjectMapper().readValue(response,
                     new TypeReference<>(){});
+            List<ExchangeMarketStackResponse> responses = responseWrapper.extractResponse();
             ExchangeMarketStackRequest request = new ExchangeMarketStackRequest();
-            //request.setElements(responses);
+            request.setElements(responses);
             exchangeMarketStackService.save(request);
         } catch (JsonProcessingException e) {
             e.printStackTrace();

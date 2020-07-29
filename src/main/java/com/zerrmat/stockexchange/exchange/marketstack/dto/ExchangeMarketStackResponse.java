@@ -8,9 +8,7 @@ import lombok.*;
 @AllArgsConstructor
 @Builder
 public class ExchangeMarketStackResponse {
-    private Pagination pagination;
-    private Data[] data;
-    //private String name;
-    //private String mic;
-    //private String currency;
+    private String name;
+    private String mic;
+    private String currency;
 }
