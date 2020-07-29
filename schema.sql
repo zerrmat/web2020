@@ -17,7 +17,7 @@ CREATE TABLE stock (
 CREATE SEQUENCE exchange_id_seq START 1;
 CREATE TABLE exchange (
     id bigint NOT NULL DEFAULT nextval('exchange_id_seq'),
-    code text,
+    code text UNIQUE,
     currency text,
     name text,
     PRIMARY KEY(id)
