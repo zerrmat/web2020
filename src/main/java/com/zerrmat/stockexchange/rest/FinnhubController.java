@@ -27,8 +27,8 @@ public class FinnhubController {
         this.exchangeFinnhubService = exchangeFinnhubService;
     }
 
-    @GetMapping("/test")
-    public void getExchanges() {
+    @GetMapping("/test/finnhub")
+    public void getFinnhubExchanges() {
        WebClient webClient = WebClient.create();
 
        WebClient.RequestHeadersSpec<?> requestHeadersSpec = webClient
@@ -43,7 +43,8 @@ public class FinnhubController {
        try {
            List<ExchangeFinnhubResponse> responses = new ObjectMapper().readValue(response,
                    new TypeReference<>(){});
-           ExchangeFinnhubRequest request = new ExchangeFinnhubRequest();request.setElements(responses);
+           ExchangeFinnhubRequest request = new ExchangeFinnhubRequest();
+           request.setElements(responses);
            exchangeFinnhubService.save(request);
        } catch (JsonProcessingException e) {
            System.err.println("Oops!");
