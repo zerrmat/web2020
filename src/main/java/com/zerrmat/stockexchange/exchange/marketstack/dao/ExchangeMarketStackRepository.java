@@ -2,6 +2,17 @@ package com.zerrmat.stockexchange.exchange.marketstack.dao;
 
 import com.zerrmat.stockexchange.exchange.model.ExchangeModel;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
+import org.springframework.data.jpa.repository.Query;
+
+import javax.transaction.Transactional;
 
 public interface ExchangeMarketStackRepository extends JpaRepository<ExchangeModel, Long> {
+    void deleteByCode(String code);
+
+    @Transactional
+    @Modifying
+    @Query(value = "INSERT INTO exchange (code, currency, name)" +
+                    "VALUES (?1, ?2, ?3) ON CONFLICT DO NOTHING;", nativeQuery = true)
+    void insertOnConflictDoNothing(String code, String currency, String name);
 }

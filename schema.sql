@@ -1,3 +1,5 @@
+DROP TABLE cachecontrol;
+DROP SEQUENCE cachecontrol_id_seq;
 DROP TABLE exchangetostock;
 DROP SEQUENCE exchangetostock_id_seq;
 DROP TABLE exchange;
@@ -27,7 +29,16 @@ CREATE SEQUENCE exchangetostock_id_seq START 1;
 CREATE TABLE exchangetostock (
     id bigint NOT NULL DEFAULT nextval('exchangetostock_id_seq'),
     exchange_id bigint REFERENCES exchange(id),
-    stock_id bigint REFERENCES stock(id)
+    stock_id bigint REFERENCES stock(id),
+    PRIMARY KEY(id)
+);
+
+CREATE SEQUENCE cachecontrol_id_seq START 1;
+CREATE TABLE cachecontrol (
+    id bigint NOT NULL DEFAULT nextval('cachecontrol_id_seq'),
+    endpoint_name text UNIQUE,
+    last_access timestamp,
+    PRIMARY KEY(id)
 );
 
 
@@ -38,3 +49,7 @@ INSERT INTO exchange(code, currency, name) VALUES ('BK', 'THB', 'STOCK EXCHANGE 
 INSERT INTO exchange(code, currency, name) VALUES ('KS', 'KRW', 'KOREA EXCHANGE (STOCK MARKET)');
 
 INSERT INTO exchangetostock(exchange_id, stock_id) VALUES (1, 1);
+
+INSERT INTO cachecontrol(endpoint_name, last_access) VALUES ('exchanges', '2020-07-31 16:15:14');
+
+update cachecontrol set last_access = '2020-07-29 16:48:00' where endpoint_name = 'exchanges';

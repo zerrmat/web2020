@@ -2,7 +2,6 @@ package com.zerrmat.stockexchange.exchange.marketstack.dto;
 
 import lombok.*;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -19,7 +18,7 @@ public class ExchangeMarketStackResponseWrapper {
         return data.stream().map(
                 d -> ExchangeMarketStackResponse.builder()
                         .name(d.getName())
-                        .mic(d.getMic())
+                        .code(d.getMic())
                         .currency(d.getCurrency().getCode())
                         .build()).collect(Collectors.toList()
         );

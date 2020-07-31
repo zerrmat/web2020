@@ -9,6 +9,6 @@ import lombok.*;
 @Builder
 public class ExchangeMarketStackResponse {
     private String name;
-    private String mic;
+    private String code;
     private String currency;
 }
