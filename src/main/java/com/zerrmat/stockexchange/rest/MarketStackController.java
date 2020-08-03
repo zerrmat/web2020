@@ -70,7 +70,7 @@ public class MarketStackController {
 
                 try {
                     ExchangeMarketStackResponseWrapper responseWrapper = new ObjectMapper()
-                            .readValue(response, new TypeReference<>(){});
+                            .readValue(response, new TypeReference<ExchangeMarketStackResponseWrapper>(){});
                     List<ExchangeDto> exchangeDtos = responseWrapper.extract();
 
                     List<ExchangeDto> exchangesInDB = exchangeService.getAll();
