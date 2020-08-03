@@ -1,4 +1,4 @@
-package com.zerrmat.stockexchange.exchange.marketstack.dto;
+package com.zerrmat.stockexchange.exchange.marketstack.dto.fragments;
 
 import lombok.*;
 
@@ -7,7 +7,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Data {
+public class MarketStackData {
     private String name;
     private String acronym;
     private String mic;
@@ -15,6 +15,6 @@ public class Data {
     private String country_code;
     private String city;
     private String website;
-    private Timezone timezone;
-    private Currency currency;
+    private MarketStackTimezone timezone;
+    private MarketStackCurrency currency;
 }

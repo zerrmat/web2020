@@ -1,4 +1,4 @@
-package com.zerrmat.stockexchange.exchange.marketstack.dto;
+package com.zerrmat.stockexchange.exchange.marketstack.dto.fragments;
 
 import lombok.*;
 
@@ -7,7 +7,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Currency {
+public class MarketStackCurrency {
     private String code;
     private String symbol;
     private String name;

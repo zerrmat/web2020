@@ -1,4 +1,4 @@
-package com.zerrmat.stockexchange.exchange.marketstack.dto;
+package com.zerrmat.stockexchange.exchange.marketstack.dto.fragments;
 
 import lombok.*;
 
@@ -7,7 +7,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Timezone {
+public class MarketStackTimezone {
     private String timezone;
     private String abbr;
     private String abbr_dst;

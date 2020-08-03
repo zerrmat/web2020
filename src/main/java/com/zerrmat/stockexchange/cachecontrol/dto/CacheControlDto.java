@@ -12,4 +12,8 @@ import java.time.LocalDateTime;
 public class CacheControlDto {
     private String endpointName;
     private LocalDateTime lastAccess;
+
+    public boolean isCacheOutdated() {
+        return lastAccess.isBefore(LocalDateTime.now().minusDays(1));
+    }
 }

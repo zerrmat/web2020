@@ -23,23 +23,18 @@ public class CacheControlService {
         this.converter = converter;
     }
 
-    public CacheControlDto getOne(String endpointName) {
+    public CacheControlDto getCacheDataFor(String endpointName) {
         CacheControlModel cacheControlModel = repository.getFirstByEndpointName(endpointName);
         return converter.toDto(cacheControlModel);
     }
 
-    public boolean updateOne(CacheControlDto dto) {
-        try {
-            CacheControlModel cacheControlModel = repository.getFirstByEndpointName(dto.getEndpointName());
-            cacheControlModel.setEndpointName(dto.getEndpointName());
-            cacheControlModel.setLastAccess(dto.getLastAccess());
-            repository.save(cacheControlModel);
-            repository.flush();
-        } catch (ConversionException e) {
-            return false;
-        }
+    public void updateOne(CacheControlDto dto) {
+        CacheControlModel cacheControlModel = repository.getFirstByEndpointName(dto.getEndpointName());
+        cacheControlModel.setEndpointName(dto.getEndpointName());
+        cacheControlModel.setLastAccess(dto.getLastAccess());
 
-        return true;
+        repository.save(cacheControlModel);
+        repository.flush();
     }
 
 }

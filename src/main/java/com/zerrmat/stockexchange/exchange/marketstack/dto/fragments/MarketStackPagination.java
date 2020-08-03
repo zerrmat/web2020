@@ -1,4 +1,4 @@
-package com.zerrmat.stockexchange.exchange.marketstack.dto;
+package com.zerrmat.stockexchange.exchange.marketstack.dto.fragments;
 
 import lombok.*;
 
@@ -7,7 +7,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Pagination {
+public class MarketStackPagination {
     private int limit;
     private int offset;
     private int count;

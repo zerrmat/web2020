@@ -1,15 +1,9 @@
 package com.zerrmat.stockexchange.stockexchange.exchange.marketstack;
 
 import com.zerrmat.stockexchange.exchange.dto.ExchangeDto;
-import com.zerrmat.stockexchange.exchange.marketstack.dao.ExchangeMarketStackRepository;
-import com.zerrmat.stockexchange.exchange.marketstack.dao.ExchangeMarketStackRepositoryFilter;
-import com.zerrmat.stockexchange.exchange.marketstack.service.ExchangeMarketStackService;
-import com.zerrmat.stockexchange.exchange.service.ExchangeConverter;
+import com.zerrmat.stockexchange.exchange.dao.ExchangeRepositoryFilter;
 import org.assertj.core.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
 
 import java.util.Arrays;
 import java.util.List;
@@ -26,7 +20,7 @@ public class ExchangeMarketStackServiceTest {
         List<ExchangeDto> actualSet = Arrays.asList(dtoA, dtoB, dtoC, dtoD);
 
         // when
-        List<ExchangeDto> resultSet = ExchangeMarketStackRepositoryFilter.getObsoleteExchanges(newSet, actualSet);
+        List<ExchangeDto> resultSet = ExchangeRepositoryFilter.getObsoleteExchanges(newSet, actualSet);
 
         // then
         Assertions.assertThat(resultSet.size()).isEqualTo(2);
@@ -45,7 +39,7 @@ public class ExchangeMarketStackServiceTest {
         List<ExchangeDto> actualSet = Arrays.asList(dtoA, dtoB);
 
         // when
-        List<ExchangeDto> resultSet = ExchangeMarketStackRepositoryFilter.getNewExchanges(newSet, actualSet);
+        List<ExchangeDto> resultSet = ExchangeRepositoryFilter.getNewExchanges(newSet, actualSet);
 
         // then
         Assertions.assertThat(resultSet.size()).isEqualTo(2);
