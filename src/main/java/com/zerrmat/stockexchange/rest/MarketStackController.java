@@ -24,7 +24,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping("/")
+@RequestMapping("/external")
 public class MarketStackController {
     private ExchangeMarketStackService exchangeMarketStackService;
     private ExchangeService exchangeService;
@@ -39,11 +39,9 @@ public class MarketStackController {
         this.cacheControlService = cacheControlService;
     }
 
-    @GetMapping("/test")
-    public List<ExchangeMarketStackResponse> getExchanges() {
+    @GetMapping("/exchanges")
+    public void updateExchanges() {
         CacheControlDto cacheControlDto = cacheControlService.getOne("exchanges");
-
-        List<ExchangeMarketStackResponse> responses = new ArrayList<>();
 
         if (cacheControlDto != null) {
             if (cacheControlDto.getLastAccess().isBefore(LocalDateTime.now().minusDays(1))) {
@@ -63,7 +61,7 @@ public class MarketStackController {
                 try {
                     ExchangeMarketStackResponseWrapper responseWrapper = new ObjectMapper().readValue(response,
                             new TypeReference<>(){});
-                    responses = responseWrapper.extractResponse();
+                    List<ExchangeMarketStackResponse> responses = responseWrapper.extractResponse();
 
                     List<ExchangeDto> exchangesInDB = exchangeService.getAll();
                     exchangeMarketStackService.updateExchanges(responses, exchangesInDB);
@@ -80,11 +78,7 @@ public class MarketStackController {
                 } catch (JsonProcessingException e) {
                     e.printStackTrace();
                 }
-            } else {
-                // get exchanges from cache
-                responses = exchangeMarketStackService.getAll();
             }
         }
-        return responses;
     }
 }

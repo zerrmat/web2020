@@ -15,11 +15,14 @@ import java.util.List;
 public class StockExchangeRestController {
     private StockService stockService;
     private ExchangeService exchangeService;
+    private MarketStackController marketStackController;
 
     @Autowired
-    public StockExchangeRestController(StockService stockService, ExchangeService exchangeService) {
+    public StockExchangeRestController(StockService stockService, ExchangeService exchangeService,
+                                       MarketStackController marketStackController) {
         this.stockService = stockService;
         this.exchangeService = exchangeService;
+        this.marketStackController = marketStackController;
     }
 
     @GetMapping("/stock/{id}")
@@ -30,6 +33,7 @@ public class StockExchangeRestController {
     @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("/exchange")
     public List<ExchangeDto> getAllExchanges() {
+        marketStackController.updateExchanges();
         return exchangeService.getAll();
     }
 
