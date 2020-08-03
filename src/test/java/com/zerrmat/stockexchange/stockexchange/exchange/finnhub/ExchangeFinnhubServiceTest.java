@@ -1,31 +1,7 @@
 package com.zerrmat.stockexchange.stockexchange.exchange.finnhub;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.zerrmat.stockexchange.exchange.finnhub.dao.ExchangeFinnhubRepository;
-import com.zerrmat.stockexchange.exchange.finnhub.dto.ExchangeFinnhubResponse;
-import com.zerrmat.stockexchange.exchange.model.ExchangeModel;
-import com.zerrmat.stockexchange.exchange.finnhub.service.ExchangeFinnhubConverter;
-import com.zerrmat.stockexchange.exchange.finnhub.service.ExchangeFinnhubService;
-import com.zerrmat.stockexchange.rest.ExchangeFinnhubRequest;
-import org.assertj.core.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
-import org.mockito.Mockito;
-import org.mockito.MockitoAnnotations;
-import org.springframework.core.io.ClassPathResource;
-import org.springframework.util.StreamUtils;
-
-import java.io.IOException;
-import java.nio.charset.Charset;
-import java.util.Arrays;
-import java.util.List;
-
-import static org.mockito.ArgumentMatchers.any;
-
 public class ExchangeFinnhubServiceTest {
+    /*
     @Mock
     private ExchangeFinnhubRepository exchangeFinnhubRepository;
     @Mock
@@ -84,5 +60,5 @@ public class ExchangeFinnhubServiceTest {
         }
         return requestBody;
     }
-
+*/
 }

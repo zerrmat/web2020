@@ -1,5 +1,6 @@
 package com.zerrmat.stockexchange.exchange.marketstack.dto;
 
+import com.zerrmat.stockexchange.exchange.dto.ExchangeDto;
 import lombok.*;
 
 import java.util.List;
@@ -14,9 +15,9 @@ public class ExchangeMarketStackResponseWrapper {
     private Pagination pagination;
     private List<Data> data;
 
-    public List<ExchangeMarketStackResponse> extractResponse() {
+    public List<ExchangeDto> extract() {
         return data.stream().map(
-                d -> ExchangeMarketStackResponse.builder()
+                d -> ExchangeDto.builder()
                         .name(d.getName())
                         .code(d.getMic())
                         .currency(d.getCurrency().getCode())

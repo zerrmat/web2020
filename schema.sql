@@ -53,3 +53,4 @@ INSERT INTO exchangetostock(exchange_id, stock_id) VALUES (1, 1);
 INSERT INTO cachecontrol(endpoint_name, last_access) VALUES ('exchanges', '2020-07-31 16:15:14');
 
 update cachecontrol set last_access = '2020-07-29 16:48:00' where endpoint_name = 'exchanges';
+SET CLIENT_ENCODING TO 'UTF-8';

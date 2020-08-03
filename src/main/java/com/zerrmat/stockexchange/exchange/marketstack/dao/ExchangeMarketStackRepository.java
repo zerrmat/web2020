@@ -13,6 +13,6 @@ public interface ExchangeMarketStackRepository extends JpaRepository<ExchangeMod
     @Transactional
     @Modifying
     @Query(value = "INSERT INTO exchange (code, currency, name)" +
-                    "VALUES (?1, ?2, ?3) ON CONFLICT DO NOTHING;", nativeQuery = true)
-    void insertOnConflictDoNothing(String code, String currency, String name);
+                    "VALUES (?1, ?2, ?3);", nativeQuery = true)
+    void insert(String code, String currency, String name);
 }
