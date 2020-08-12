@@ -14,6 +14,7 @@ import javax.persistence.Column;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ExchangeDto {
+    private Long id;
     private String code;
     private String currency;
     private String name;

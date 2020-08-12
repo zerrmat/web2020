@@ -11,18 +11,20 @@ public class ExchangeConverter implements GenericConverter<ExchangeModel, Exchan
     @Override
     public ExchangeDto toDto(ExchangeModel entity) throws ConversionException {
         return ExchangeDto.builder()
-            .code(entity.getCode())
-            .currency(entity.getCurrency())
-            .name(entity.getName())
-            .build();
+                .id(entity.getId())
+                .code(entity.getCode())
+                .currency(entity.getCurrency())
+                .name(entity.getName())
+                .build();
     }
 
     @Override
     public ExchangeModel toEntity(ExchangeDto data) throws ConversionException {
         return ExchangeModel.builder()
-            .code(data.getCode())
-            .currency(data.getCurrency())
-            .name(data.getName())
-            .build();
+                .id(data.getId())
+                .code(data.getCode())
+                .currency(data.getCurrency())
+                .name(data.getName())
+                .build();
     }
 }

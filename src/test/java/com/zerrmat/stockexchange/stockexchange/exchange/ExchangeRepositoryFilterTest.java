@@ -1,14 +1,22 @@
-package com.zerrmat.stockexchange.stockexchange.exchange.marketstack;
+package com.zerrmat.stockexchange.stockexchange.exchange;
 
 import com.zerrmat.stockexchange.exchange.dto.ExchangeDto;
 import com.zerrmat.stockexchange.exchange.dao.ExchangeRepositoryFilter;
 import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.List;
 
-public class ExchangeMarketStackServiceTest {
+public class ExchangeRepositoryFilterTest {
+    private ExchangeRepositoryFilter repositoryFilter;
+
+    @BeforeEach
+    public void setup() {
+        repositoryFilter = new ExchangeRepositoryFilter();
+    }
+
     @Test
     public void shouldDeleteObsoleteValuesFromGivenSet() {
         // given
@@ -20,7 +28,7 @@ public class ExchangeMarketStackServiceTest {
         List<ExchangeDto> actualSet = Arrays.asList(dtoA, dtoB, dtoC, dtoD);
 
         // when
-        List<ExchangeDto> resultSet = ExchangeRepositoryFilter.getObsoleteExchanges(newSet, actualSet);
+        List<ExchangeDto> resultSet = repositoryFilter.getObsoleteExchanges(newSet, actualSet);
 
         // then
         Assertions.assertThat(resultSet.size()).isEqualTo(2);
@@ -39,7 +47,7 @@ public class ExchangeMarketStackServiceTest {
         List<ExchangeDto> actualSet = Arrays.asList(dtoA, dtoB);
 
         // when
-        List<ExchangeDto> resultSet = ExchangeRepositoryFilter.getNewExchanges(newSet, actualSet);
+        List<ExchangeDto> resultSet = repositoryFilter.getNewExchanges(newSet, actualSet);
 
         // then
         Assertions.assertThat(resultSet.size()).isEqualTo(2);

@@ -17,7 +17,7 @@ public interface GenericConverter<E,D> {
             .collect(Collectors.toList());
     }
 
-    default List<E> convetAllToEntity(final Collection<D> data) {
+    default List<E> convertAllToEntity(final Collection<D> data) {
         return data.stream()
             .map(this::toEntity)
             .collect(Collectors.toList());
