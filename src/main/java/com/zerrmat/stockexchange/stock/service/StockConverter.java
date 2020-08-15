@@ -4,11 +4,13 @@ import com.zerrmat.stockexchange.stock.dto.StockDto;
 import com.zerrmat.stockexchange.stock.model.StockModel;
 import com.zerrmat.stockexchange.util.GenericConverter;
 import org.springframework.core.convert.ConversionException;
+import org.springframework.stereotype.Component;
 
 import javax.money.Monetary;
 import javax.money.MonetaryAmount;
 import java.math.BigDecimal;
 
+@Component
 public class StockConverter implements GenericConverter<StockModel, StockDto> {
     @Override
     public StockDto toDto(StockModel entity) throws ConversionException {
@@ -18,6 +20,7 @@ public class StockConverter implements GenericConverter<StockModel, StockDto> {
         return StockDto.builder()
                 .id(entity.getId())
                 .name(entity.getName())
+                .symbol(entity.getSymbol())
                 .value(value)
                 .build();
     }
@@ -30,6 +33,7 @@ public class StockConverter implements GenericConverter<StockModel, StockDto> {
         return StockModel.builder()
                 .id(data.getId())
                 .name(data.getName())
+                .symbol(data.getSymbol())
                 .value(value)
                 .currency(currency)
                 .build();

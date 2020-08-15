@@ -32,6 +32,9 @@ public class StockModel {
     @Column(name = "name")
     private String name;
 
+    @Column(name = "symbol")
+    private String symbol;
+
     @Column(name = "value")
     private BigDecimal value;
 

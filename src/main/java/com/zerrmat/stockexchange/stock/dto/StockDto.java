@@ -12,5 +12,6 @@ import javax.money.MonetaryAmount;
 public class StockDto {
     private Long id;
     private String name;
+    private String symbol;
     private MonetaryAmount value;
 }

@@ -20,21 +20,23 @@ public class StockConverterTest {
     }
 
     @Test
-    public void shouldConvertStockModelToStockDto() {
+    public void shouldConvertModelToDto() {
         // given
         StockModel stockModel = StockModel.builder()
-            .id(1L)
-            .name("CDR")
-            .value(BigDecimal.valueOf(392.60))
-            .currency("PLN")
-            .build();
+                .id(1L)
+                .name("CD Projekt")
+                .symbol("CDR")
+                .value(BigDecimal.valueOf(392.60))
+                .currency("PLN")
+                .build();
 
         // when
         StockDto stockDto = stockConverter.toDto(stockModel);
 
         // then
         Assertions.assertThat(stockDto.getId()).isEqualTo(1L);
-        Assertions.assertThat(stockDto.getName()).isEqualTo("CDR");
+        Assertions.assertThat(stockDto.getName()).isEqualTo("CD Projekt");
+        Assertions.assertThat(stockDto.getSymbol()).isEqualTo("CDR");
         MonetaryAmount value = Monetary.getDefaultAmountFactory().setCurrency("PLN")
             .setNumber(BigDecimal.valueOf(392.60)).create();
         Assertions.assertThat(stockDto.getValue().getNumber().compareTo(value.getNumber())).isEqualTo(0);
@@ -42,22 +44,24 @@ public class StockConverterTest {
     }
 
     @Test
-    public void shouldConvertStockDtoToStockModel() {
+    public void shouldConvertDtoToModel() {
         // given
         MonetaryAmount value = Monetary.getDefaultAmountFactory().setCurrency("PLN")
             .setNumber(BigDecimal.valueOf(392.60)).create();
         StockDto stockDto = StockDto.builder()
-            .id(1L)
-            .name("CDR")
-            .value(value)
-            .build();
+                .id(1L)
+                .name("CD Projekt")
+                .symbol("CDR")
+                .value(value)
+                .build();
 
         // when
         StockModel stockModel = stockConverter.toEntity(stockDto);
 
         // then
-        Assertions.assertThat(stockModel.getId()).isEqualTo(stockDto.getId());
-        Assertions.assertThat(stockModel.getName()).isEqualTo(stockDto.getName());
+        Assertions.assertThat(stockModel.getId()).isEqualTo(1L);
+        Assertions.assertThat(stockModel.getName()).isEqualTo("CD Projekt");
+        Assertions.assertThat(stockModel.getSymbol()).isEqualTo("CDR");
         BigDecimal numberValue = stockDto.getValue().getNumber().numberValue(BigDecimal.class);
         Assertions.assertThat(stockModel.getValue().compareTo(numberValue)).isEqualTo(0);
         String currencyCode = stockDto.getValue().getCurrency().getCurrencyCode();
