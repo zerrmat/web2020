@@ -16,7 +16,7 @@ public class ExchangeConverterTest {
     }
 
     @Test
-    public void shouldConvertEntityToDto() {
+    public void shouldConvertModelToDto() {
         // given
         ExchangeModel exchangeModel = ExchangeModel.builder()
                 .id(1L)
@@ -36,7 +36,7 @@ public class ExchangeConverterTest {
     }
 
     @Test
-    public void shouldConvertDtoToEntity() {
+    public void shouldConvertDtoToModel() {
         // given
         ExchangeDto exchangeDto = ExchangeDto.builder()
                 .id(1L)
