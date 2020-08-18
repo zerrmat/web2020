@@ -20,9 +20,9 @@ public class ExchangeConverterTest {
         // given
         ExchangeModel exchangeModel = ExchangeModel.builder()
                 .id(1L)
-                .code("ABC")
+                .symbol("ABC")
                 .name("ABC Exchange")
-                .currency("USD")
+                .currency("PLN")
                 .build();
 
         // when
@@ -30,9 +30,9 @@ public class ExchangeConverterTest {
 
         // then
         Assertions.assertThat(result.getId()).isEqualTo(1L);
-        Assertions.assertThat(result.getCode()).isEqualTo("ABC");
+        Assertions.assertThat(result.getSymbol()).isEqualTo("ABC");
         Assertions.assertThat(result.getName()).isEqualTo("ABC Exchange");
-        Assertions.assertThat(result.getCurrency()).isEqualTo("USD");
+        Assertions.assertThat(result.getCurrency()).isEqualTo("PLN");
     }
 
     @Test
@@ -40,9 +40,9 @@ public class ExchangeConverterTest {
         // given
         ExchangeDto exchangeDto = ExchangeDto.builder()
                 .id(1L)
-                .code("ABC")
+                .symbol("ABC")
                 .name("ABC Exchange")
-                .currency("USD")
+                .currency("PLN")
                 .build();
 
         // when
@@ -50,8 +50,8 @@ public class ExchangeConverterTest {
 
         // then
         Assertions.assertThat(result.getId()).isEqualTo(1L);
-        Assertions.assertThat(result.getCode()).isEqualTo("ABC");
+        Assertions.assertThat(result.getSymbol()).isEqualTo("ABC");
         Assertions.assertThat(result.getName()).isEqualTo("ABC Exchange");
-        Assertions.assertThat(result.getCurrency()).isEqualTo("USD");
+        Assertions.assertThat(result.getCurrency()).isEqualTo("PLN");
     }
 }

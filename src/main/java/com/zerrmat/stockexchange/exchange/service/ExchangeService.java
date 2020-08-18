@@ -26,7 +26,7 @@ public class ExchangeService {
     }
 
     public ExchangeDto get(String code) {
-        ExchangeModel model = repository.findByCode(code);
+        ExchangeModel model = repository.findBySymbol(code);
         return converter.toDto(model);
     }
 
@@ -40,7 +40,7 @@ public class ExchangeService {
         List<ExchangeDto> dbExchanges = this.getAll();
         List<ExchangeDto> obsoleteExchanges =
                 repositoryFilter.getObsoleteExchanges(actualExchanges, dbExchanges);
-        obsoleteExchanges.forEach(e -> repository.deleteByCode(e.getCode()));
+        obsoleteExchanges.forEach(e -> repository.deleteBySymbol(e.getSymbol()));
 
         List<ExchangeDto> newExchanges =
                 repositoryFilter.getNewExchanges(actualExchanges, dbExchanges);
@@ -51,7 +51,7 @@ public class ExchangeService {
         try {
             List<ExchangeModel> modelList = converter.convertAllToEntity(requestList);
             for(ExchangeModel em : modelList) {
-                repository.insert(em.getCode(), em.getCurrency(), em.getName());
+                repository.insert(em.getSymbol(), em.getCurrency(), em.getName());
             }
             repository.flush();
         } catch (ConversionException e) {

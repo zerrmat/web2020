@@ -11,6 +11,7 @@ CREATE SEQUENCE stock_id_seq START 1;
 CREATE TABLE stock (
     id bigint NOT NULL DEFAULT nextval('stock_id_seq'),
     name text,
+    symbol text,
     value decimal(32, 2),
     currency text,
     PRIMARY KEY(id)
@@ -19,9 +20,9 @@ CREATE TABLE stock (
 CREATE SEQUENCE exchange_id_seq START 1;
 CREATE TABLE exchange (
     id bigint NOT NULL DEFAULT nextval('exchange_id_seq'),
-    code text UNIQUE,
-    currency text,
+    symbol text UNIQUE,
     name text,
+    currency text,
     PRIMARY KEY(id)
 );
 
@@ -42,15 +43,23 @@ CREATE TABLE cachecontrol (
 );
 
 
-INSERT INTO stock(name, value, currency) VALUES ('CDR', 320.48, 'PLN');
+INSERT INTO stock(name, symbol, value, currency) VALUES ('CD Projekt', 'CDR', 320.48, 'PLN');
+INSERT INTO stock(name, symbol, value, currency) VALUES ('11 bit studios', '11B', 507.00, 'PLN');
+INSERT INTO stock(name, symbol, value, currency) VALUES ('Apple', 'AAPL', 461.90, 'USD');
 
-INSERT INTO exchange(code, currency, name) VALUES ('WA', 'PLN', 'WARSAW STOCK EXCHANGE/EQUITIES/MAIN MARKET');
-INSERT INTO exchange(code, currency, name) VALUES ('BK', 'THB', 'STOCK EXCHANGE OF THAILAND');
-INSERT INTO exchange(code, currency, name) VALUES ('KS', 'KRW', 'KOREA EXCHANGE (STOCK MARKET)');
+INSERT INTO exchangetostock(exchange_id, stock_id) VALUES (1322, 2);
+INSERT INTO exchangetostock(exchange_id, stock_id) VALUES (1322, 3);
+INSERT INTO exchangetostock(exchange_id, stock_id) VALUES (1351, 4);
 
-INSERT INTO exchangetostock(exchange_id, stock_id) VALUES (1, 1);
+INSERT INTO exchange(symbol, currency, name) VALUES ('WA', 'PLN', 'WARSAW STOCK EXCHANGE/EQUITIES/MAIN MARKET');
+INSERT INTO exchange(symbol, currency, name) VALUES ('BK', 'THB', 'STOCK EXCHANGE OF THAILAND');
+INSERT INTO exchange(symbol, currency, name) VALUES ('KS', 'KRW', 'KOREA EXCHANGE (STOCK MARKET)');
 
 INSERT INTO cachecontrol(endpoint_name, last_access) VALUES ('exchanges', '2020-07-31 16:15:14');
 
 update cachecontrol set last_access = '2020-07-29 16:48:00' where endpoint_name = 'exchanges';
 SET CLIENT_ENCODING TO 'UTF-8';
+
+SELECT ets.id, e.name, s.name, s.symbol, s.value, s.currency
+FROM exchangetostock ets, exchange e, stock s
+WHERE ets.exchange_id = e.id AND ets.stock_id = s.id;

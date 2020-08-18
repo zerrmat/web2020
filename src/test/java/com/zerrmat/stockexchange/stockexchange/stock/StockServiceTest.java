@@ -22,14 +22,14 @@ public class StockServiceTest {
     private StockService service;
 
     @Mock
-    private StockRepository repository;
+    private StockRepository stockRepository;
     @Mock
     private StockConverter converter;
 
     @BeforeEach
     public void setup() {
         MockitoAnnotations.initMocks(this);
-        service = new StockService(repository, converter);
+        service = new StockService(stockRepository, converter);
     }
 
     @Test
@@ -69,7 +69,7 @@ public class StockServiceTest {
                 .build();
 
         List<StockModel> modelList = Arrays.asList(sm1, sm2);
-        Mockito.when(repository.findAll()).thenReturn(modelList);
+        Mockito.when(stockRepository.findAll()).thenReturn(modelList);
         Mockito.when(converter.convertAllToDto(modelList)).thenReturn(Arrays.asList(sd1, sd2));
 
         // when
@@ -118,7 +118,7 @@ public class StockServiceTest {
                 .value(cdrMonetary)
                 .build();
 
-        Mockito.when(repository.getBySymbol("CDR")).thenReturn(model);
+        Mockito.when(stockRepository.getBySymbol("CDR")).thenReturn(model);
         Mockito.when(converter.toDto(model)).thenReturn(dto);
 
         // when
@@ -134,4 +134,6 @@ public class StockServiceTest {
         Assertions.assertThat(result.getValue().getNumber().compareTo(resultCDR.getNumber())).isEqualTo(0);
         Assertions.assertThat(result.getValue().getCurrency()).isEqualTo(resultCDR.getCurrency());
     }
+
+
 }

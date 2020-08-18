@@ -1,8 +1,0 @@
-{
-  "name": "stockexchange",
-  "version": "1.0.0",
-  "dependencies": {
-    "react-router-dom": "latest",
-    "requirejs": "latest"
-  }
-}

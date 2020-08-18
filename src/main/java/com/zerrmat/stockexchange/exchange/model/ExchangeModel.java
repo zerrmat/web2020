@@ -28,8 +28,8 @@ public class ExchangeModel {
     @SequenceGenerator(name = "exchange_id_gen", sequenceName = "exchange_id_seq", allocationSize = 1)
     private Long id;
 
-    @Column(name = "code")
-    private String code;
+    @Column(name = "symbol")
+    private String symbol;
 
     @Column(name = "currency")
     private String currency;

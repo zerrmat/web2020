@@ -21,7 +21,7 @@ public class ExchangeMarketStackResponseWrapper {
         return data.stream().map(
                 d -> ExchangeDto.builder()
                         .name(d.getName())
-                        .code(d.getMic())
+                        .symbol(d.getMic())
                         .currency(d.getCurrency().getCode())
                         .build())
                 .collect(Collectors.toList());

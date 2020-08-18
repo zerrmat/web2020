@@ -12,7 +12,7 @@ public class ExchangeConverter implements GenericConverter<ExchangeModel, Exchan
     public ExchangeDto toDto(ExchangeModel entity) throws ConversionException {
         return ExchangeDto.builder()
                 .id(entity.getId())
-                .code(entity.getCode())
+                .symbol(entity.getSymbol())
                 .currency(entity.getCurrency())
                 .name(entity.getName())
                 .build();
@@ -22,7 +22,7 @@ public class ExchangeConverter implements GenericConverter<ExchangeModel, Exchan
     public ExchangeModel toEntity(ExchangeDto data) throws ConversionException {
         return ExchangeModel.builder()
                 .id(data.getId())
-                .code(data.getCode())
+                .symbol(data.getSymbol())
                 .currency(data.getCurrency())
                 .name(data.getName())
                 .build();

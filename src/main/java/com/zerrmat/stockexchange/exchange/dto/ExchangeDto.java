@@ -13,7 +13,7 @@ import lombok.Setter;
 @AllArgsConstructor
 public class ExchangeDto {
     private Long id;
-    private String code;
+    private String symbol;
     private String currency;
     private String name;
 }

@@ -8,8 +8,8 @@ import org.springframework.data.jpa.repository.Query;
 import javax.transaction.Transactional;
 
 public interface ExchangeRepository extends JpaRepository<ExchangeModel, Long> {
-    ExchangeModel findByCode(String code);
-    void deleteByCode(String code);
+    ExchangeModel findBySymbol(String symbol);
+    void deleteBySymbol(String symbol);
 
     @Transactional
     @Modifying

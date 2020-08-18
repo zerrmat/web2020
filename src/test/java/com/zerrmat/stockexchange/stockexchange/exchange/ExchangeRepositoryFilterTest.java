@@ -20,10 +20,10 @@ public class ExchangeRepositoryFilterTest {
     @Test
     public void shouldDeleteObsoleteValuesFromGivenSet() {
         // given
-        ExchangeDto dtoA = ExchangeDto.builder().code("A").name("1").currency("USD").build();
-        ExchangeDto dtoB = ExchangeDto.builder().code("B").name("2").currency("EUR").build();
-        ExchangeDto dtoC = ExchangeDto.builder().code("C").name("3").currency("CHF").build();
-        ExchangeDto dtoD = ExchangeDto.builder().code("D").name("4").currency("GBP").build();
+        ExchangeDto dtoA = ExchangeDto.builder().symbol("A").name("1").currency("USD").build();
+        ExchangeDto dtoB = ExchangeDto.builder().symbol("B").name("2").currency("EUR").build();
+        ExchangeDto dtoC = ExchangeDto.builder().symbol("C").name("3").currency("CHF").build();
+        ExchangeDto dtoD = ExchangeDto.builder().symbol("D").name("4").currency("GBP").build();
         List<ExchangeDto> newSet = Arrays.asList(dtoA, dtoB);
         List<ExchangeDto> actualSet = Arrays.asList(dtoA, dtoB, dtoC, dtoD);
 
@@ -32,17 +32,17 @@ public class ExchangeRepositoryFilterTest {
 
         // then
         Assertions.assertThat(resultSet.size()).isEqualTo(2);
-        Assertions.assertThat(resultSet.get(0).getCode()).isEqualTo(dtoC.getCode());
-        Assertions.assertThat(resultSet.get(1).getCode()).isEqualTo(dtoD.getCode());
+        Assertions.assertThat(resultSet.get(0).getSymbol()).isEqualTo(dtoC.getSymbol());
+        Assertions.assertThat(resultSet.get(1).getSymbol()).isEqualTo(dtoD.getSymbol());
     }
 
     @Test
     public void shouldAddNewValuesToGivenSet() {
         // given
-        ExchangeDto dtoA = ExchangeDto.builder().code("A").name("1").currency("USD").build();
-        ExchangeDto dtoB = ExchangeDto.builder().code("B").name("2").currency("EUR").build();
-        ExchangeDto dtoC = ExchangeDto.builder().code("C").name("3").currency("CHF").build();
-        ExchangeDto dtoD = ExchangeDto.builder().code("D").name("4").currency("GBP").build();
+        ExchangeDto dtoA = ExchangeDto.builder().symbol("A").name("1").currency("USD").build();
+        ExchangeDto dtoB = ExchangeDto.builder().symbol("B").name("2").currency("EUR").build();
+        ExchangeDto dtoC = ExchangeDto.builder().symbol("C").name("3").currency("CHF").build();
+        ExchangeDto dtoD = ExchangeDto.builder().symbol("D").name("4").currency("GBP").build();
         List<ExchangeDto> newSet = Arrays.asList(dtoA, dtoB, dtoC, dtoD);
         List<ExchangeDto> actualSet = Arrays.asList(dtoA, dtoB);
 
@@ -51,7 +51,7 @@ public class ExchangeRepositoryFilterTest {
 
         // then
         Assertions.assertThat(resultSet.size()).isEqualTo(2);
-        Assertions.assertThat(resultSet.get(0).getCode()).isEqualTo(dtoC.getCode());
-        Assertions.assertThat(resultSet.get(1).getCode()).isEqualTo(dtoD.getCode());
+        Assertions.assertThat(resultSet.get(0).getSymbol()).isEqualTo(dtoC.getSymbol());
+        Assertions.assertThat(resultSet.get(1).getSymbol()).isEqualTo(dtoD.getSymbol());
     }
 }

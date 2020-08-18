@@ -40,12 +40,12 @@ public class ExchangeMarketStackResponseWrapperTest {
         Assertions.assertThat(result.size()).isEqualTo(2);
 
         Assertions.assertThat(result.get(0)).isInstanceOf(ExchangeDto.class);
-        Assertions.assertThat(result.get(0).getCode()).isEqualTo("ABC");
+        Assertions.assertThat(result.get(0).getSymbol()).isEqualTo("ABC");
         Assertions.assertThat(result.get(0).getName()).isEqualTo("ABC Exchange");
         Assertions.assertThat(result.get(0).getCurrency()).isEqualTo("USD");
 
         Assertions.assertThat(result.get(1)).isInstanceOf(ExchangeDto.class);
-        Assertions.assertThat(result.get(1).getCode()).isEqualTo("XYZS");
+        Assertions.assertThat(result.get(1).getSymbol()).isEqualTo("XYZS");
         Assertions.assertThat(result.get(1).getName()).isEqualTo("XYZ Stock Market");
         Assertions.assertThat(result.get(1).getCurrency()).isEqualTo("USD");
     }

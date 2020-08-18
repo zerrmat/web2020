@@ -13,7 +13,6 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.springframework.core.convert.ConversionException;
-import org.springframework.core.convert.ConversionFailedException;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -38,13 +37,13 @@ public class ExchangeServiceTest {
     @Test
     public void shouldReturnAllExchanges() {
         // given
-        ExchangeModel em1 = ExchangeModel.builder().id(1L).code("ABC").build();
-        ExchangeModel em2 = ExchangeModel.builder().id(2L).code("DEF").build();
+        ExchangeModel em1 = ExchangeModel.builder().id(1L).symbol("ABC").build();
+        ExchangeModel em2 = ExchangeModel.builder().id(2L).symbol("DEF").build();
         List<ExchangeModel> exchangeModels = Arrays.asList(em1, em2);
         Mockito.when(repository.findAll()).thenReturn(exchangeModels);
 
-        ExchangeDto ed1 = ExchangeDto.builder().id(1L).code("ABC").build();
-        ExchangeDto ed2 = ExchangeDto.builder().id(2L).code("DEF").build();
+        ExchangeDto ed1 = ExchangeDto.builder().id(1L).symbol("ABC").build();
+        ExchangeDto ed2 = ExchangeDto.builder().id(2L).symbol("DEF").build();
         List<ExchangeDto> exchangeDtos = Arrays.asList(ed1, ed2);
         Mockito.when(converter.convertAllToDto(exchangeModels)).thenReturn(exchangeDtos);
 
@@ -58,21 +57,21 @@ public class ExchangeServiceTest {
         Assertions.assertThat(result.get(0)).isNotNull();
         Assertions.assertThat(result.get(0).getClass()).isEqualTo(ExchangeDto.class);
         Assertions.assertThat(result.get(0).getId()).isEqualTo(1L);
-        Assertions.assertThat(result.get(0).getCode()).isEqualTo("ABC");
+        Assertions.assertThat(result.get(0).getSymbol()).isEqualTo("ABC");
 
         Assertions.assertThat(result.get(1)).isNotNull();
         Assertions.assertThat(result.get(1).getClass()).isEqualTo(ExchangeDto.class);
         Assertions.assertThat(result.get(1).getId()).isEqualTo(2L);
-        Assertions.assertThat(result.get(1).getCode()).isEqualTo("DEF");
+        Assertions.assertThat(result.get(1).getSymbol()).isEqualTo("DEF");
     }
 
     @Test
-    public void shouldReturnExchangeByCode() {
+    public void shouldReturnExchangeBySymbol() {
         // given
-        ExchangeModel em = ExchangeModel.builder().id(1L).code("ABC").build();
-        Mockito.when(repository.findByCode("ABC")).thenReturn(em);
+        ExchangeModel em = ExchangeModel.builder().id(1L).symbol("ABC").build();
+        Mockito.when(repository.findBySymbol("ABC")).thenReturn(em);
 
-        ExchangeDto ed = ExchangeDto.builder().id(1L).code("ABC").build();
+        ExchangeDto ed = ExchangeDto.builder().id(1L).symbol("ABC").build();
         Mockito.when(converter.toDto(em)).thenReturn(ed);
 
         // when
@@ -82,23 +81,23 @@ public class ExchangeServiceTest {
         Assertions.assertThat(result).isNotNull();
         Assertions.assertThat(result.getClass()).isEqualTo(ExchangeDto.class);
         Assertions.assertThat(result.getId()).isEqualTo(1L);
-        Assertions.assertThat(result.getCode()).isEqualTo("ABC");
+        Assertions.assertThat(result.getSymbol()).isEqualTo("ABC");
     }
 
     @Test
     public void shouldUpdateExchanges() {
         // given
-        ExchangeModel em1 = ExchangeModel.builder().id(1L).code("ABC").build();
-        ExchangeModel em2 = ExchangeModel.builder().id(2L).code("DEF").build();
+        ExchangeModel em1 = ExchangeModel.builder().id(1L).symbol("ABC").build();
+        ExchangeModel em2 = ExchangeModel.builder().id(2L).symbol("DEF").build();
         List<ExchangeModel> exchangeModels = Arrays.asList(em1, em2);
         Mockito.when(repository.findAll()).thenReturn(exchangeModels);
 
-        ExchangeDto ed1 = ExchangeDto.builder().id(1L).code("ABC").build();
-        ExchangeDto ed2 = ExchangeDto.builder().id(2L).code("DEF").build();
+        ExchangeDto ed1 = ExchangeDto.builder().id(1L).symbol("ABC").build();
+        ExchangeDto ed2 = ExchangeDto.builder().id(2L).symbol("DEF").build();
         List<ExchangeDto> dbExchanges = Arrays.asList(ed1, ed2);
         Mockito.when(converter.convertAllToDto(exchangeModels)).thenReturn(dbExchanges);
 
-        ExchangeDto ed3 = ExchangeDto.builder().id(3L).code("XYZ").build();
+        ExchangeDto ed3 = ExchangeDto.builder().id(3L).symbol("XYZ").build();
         List<ExchangeDto> actualExchanges = Arrays.asList(ed1, ed3);
 
         Mockito.when(repositoryFilter.getObsoleteExchanges(actualExchanges, dbExchanges))
@@ -117,17 +116,17 @@ public class ExchangeServiceTest {
     @Test
     public void shouldNotSaveNewExchangesWhenConversionExceptionIsThrown() {
         // given
-        ExchangeModel em1 = ExchangeModel.builder().id(1L).code("ABC").build();
-        ExchangeModel em2 = ExchangeModel.builder().id(2L).code("DEF").build();
+        ExchangeModel em1 = ExchangeModel.builder().id(1L).symbol("ABC").build();
+        ExchangeModel em2 = ExchangeModel.builder().id(2L).symbol("DEF").build();
         List<ExchangeModel> exchangeModels = Arrays.asList(em1, em2);
         Mockito.when(repository.findAll()).thenReturn(exchangeModels);
 
-        ExchangeDto ed1 = ExchangeDto.builder().id(1L).code("ABC").build();
-        ExchangeDto ed2 = ExchangeDto.builder().id(2L).code("DEF").build();
+        ExchangeDto ed1 = ExchangeDto.builder().id(1L).symbol("ABC").build();
+        ExchangeDto ed2 = ExchangeDto.builder().id(2L).symbol("DEF").build();
         List<ExchangeDto> dbExchanges = Arrays.asList(ed1, ed2);
         Mockito.when(converter.convertAllToDto(exchangeModels)).thenReturn(dbExchanges);
 
-        ExchangeDto ed3 = ExchangeDto.builder().id(3L).code("XYZ").build();
+        ExchangeDto ed3 = ExchangeDto.builder().id(3L).symbol("XYZ").build();
         List<ExchangeDto> actualExchanges = Arrays.asList(ed1, ed3);
 
         Mockito.when(repositoryFilter.getObsoleteExchanges(actualExchanges, dbExchanges))
