@@ -5,7 +5,9 @@ import com.zerrmat.stockexchange.exchange.marketstack.dto.fragments.MarketStackD
 import com.zerrmat.stockexchange.exchange.marketstack.dto.fragments.MarketStackPagination;
 import lombok.*;
 
+import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 @Getter
@@ -18,6 +20,7 @@ public class ExchangeMarketStackResponseWrapper {
     private List<MarketStackData> data;
 
     public List<ExchangeDto> extract() {
+        data.removeIf(d -> d.getCurrency() == null);
         return data.stream().map(
                 d -> ExchangeDto.builder()
                         .name(d.getName())
