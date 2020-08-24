@@ -3,6 +3,8 @@ package com.zerrmat.stockexchange.exchangetostock.model;
 import com.zerrmat.stockexchange.exchange.model.ExchangeModel;
 import com.zerrmat.stockexchange.stock.model.StockModel;
 import lombok.*;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.*;
 

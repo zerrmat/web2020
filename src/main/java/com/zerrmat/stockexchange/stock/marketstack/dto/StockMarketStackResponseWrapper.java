@@ -20,12 +20,12 @@ public class StockMarketStackResponseWrapper {
     private MarketStackPagination pagination;
     private MarketStackStockData data;
 
-    public List<StockDto> extract() {
+    public List<StockDto> extract(String exchangeCurrency) {
         return data.getTickers().stream().map(
                 d -> StockDto.builder()
                         .name(d.getName())
                         .symbol(d.getSymbol())
-                        .value(Monetary.getDefaultAmountFactory().setCurrency(new DummyCurrencyUnit())
+                        .value(Monetary.getDefaultAmountFactory().setCurrency(exchangeCurrency)
                             .setNumber(BigDecimal.valueOf(-1)).create())
                         .build())
                 .collect(Collectors.toList());

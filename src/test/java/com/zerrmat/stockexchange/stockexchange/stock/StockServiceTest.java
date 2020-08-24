@@ -1,5 +1,6 @@
 package com.zerrmat.stockexchange.stockexchange.stock;
 
+import com.zerrmat.stockexchange.exchangetostock.service.ExchangeToStockService;
 import com.zerrmat.stockexchange.stock.dao.StockRepository;
 import com.zerrmat.stockexchange.stock.dao.StockRepositoryFilter;
 import com.zerrmat.stockexchange.stock.dto.StockDto;
@@ -29,11 +30,13 @@ public class StockServiceTest {
     private StockConverter converter;
     @Mock
     private StockRepositoryFilter repositoryFilter;
+    @Mock
+    private ExchangeToStockService etsService;
 
     @BeforeEach
     public void setup() {
         MockitoAnnotations.initMocks(this);
-        service = new StockService(repository, converter, repositoryFilter);
+        service = new StockService(repository, converter, repositoryFilter, etsService);
     }
 
     @Test
@@ -161,7 +164,7 @@ public class StockServiceTest {
                 .thenReturn(Collections.singletonList(sd3));
 
         // when
-        boolean result = service.updateStocks(actualStocks);
+        boolean result = service.updateStocks(actualStocks, "XWAR");
 
         // then
         Assertions.assertThat(result).isNotNull();

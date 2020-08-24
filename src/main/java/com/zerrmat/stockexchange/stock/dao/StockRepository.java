@@ -10,6 +10,7 @@ import java.math.BigDecimal;
 
 public interface StockRepository extends JpaRepository<StockModel, Long> {
     StockModel getBySymbol(String symbol);
+    @Transactional
     void deleteBySymbol(String symbol);
 
     @Transactional

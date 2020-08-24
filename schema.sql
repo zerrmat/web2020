@@ -30,7 +30,7 @@ CREATE SEQUENCE exchangetostock_id_seq START 1;
 CREATE TABLE exchangetostock (
     id bigint NOT NULL DEFAULT nextval('exchangetostock_id_seq'),
     exchange_id bigint REFERENCES exchange(id),
-    stock_id bigint REFERENCES stock(id),
+    stock_id bigint REFERENCES stock(id) ON DELETE CASCADE,
     PRIMARY KEY(id)
 );
 

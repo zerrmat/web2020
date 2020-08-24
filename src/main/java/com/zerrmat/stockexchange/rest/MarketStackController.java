@@ -48,9 +48,9 @@ public class MarketStackController {
     public void updateExchanges() {
         String exchangesEndpointName = "exchanges";
         CacheControlDto cacheControlDto = cacheControlService.getCacheDataFor(exchangesEndpointName);
-        if (cacheControlDto != null && !cacheControlDto.isCacheOutdated()) {
-            return;
-        }
+        //if (cacheControlDto != null && !cacheControlDto.isCacheOutdated()) {
+        //    return;
+        //}
 
         String response = this.makeMarketStackExchangesRequest();
         try {
@@ -74,14 +74,14 @@ public class MarketStackController {
     public void updateStocks(@PathVariable String exchangeId) {
         String stocksEndpointName = "stocks";
         CacheControlDto cacheControlDto = cacheControlService.getCacheDataFor(stocksEndpointName);
-        if (cacheControlDto != null && !cacheControlDto.isCacheOutdated()) {
-            return;
-        }
+        //if (cacheControlDto != null && !cacheControlDto.isCacheOutdated()) {
+        //    return;
+        //}
 
         final String urlEndpointAddress = "http://api.marketstack.com/v1/exchanges/" + exchangeId + "/tickers";
         final String accessKey = "166af8c956780fd148bc9dd925968daf";
 
-        String fullUrl = urlEndpointAddress + "?" + "access_key=" + accessKey + "&limit=10";
+        String fullUrl = urlEndpointAddress + "?" + "access_key=" + accessKey + "&limit=1000";
 
         WebClient webClient = WebClient.create();
         WebClient.RequestHeadersSpec<?> requestHeadersSpec = webClient
@@ -96,8 +96,8 @@ public class MarketStackController {
         try {
             StockMarketStackResponseWrapper responseWrapper = new ObjectMapper()
                     .readValue(response, new TypeReference<StockMarketStackResponseWrapper>(){});
-            List<StockDto> actualStockDtos = responseWrapper.extract();
-            stockService.updateStocks(actualStockDtos);
+            List<StockDto> actualStockDtos = responseWrapper.extract(exchangeService.get(exchangeId).getCurrency());
+            stockService.updateStocks(actualStockDtos, exchangeService.get(responseWrapper.getData().getMic()));
 
             cacheControlService.updateOne(
                     CacheControlDto.builder()

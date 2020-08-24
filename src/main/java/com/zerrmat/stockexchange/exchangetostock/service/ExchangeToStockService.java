@@ -1,13 +1,16 @@
 package com.zerrmat.stockexchange.exchangetostock.service;
 
+import com.zerrmat.stockexchange.exchange.dto.ExchangeDto;
 import com.zerrmat.stockexchange.exchangetostock.dao.ExchangeToStockRepository;
 import com.zerrmat.stockexchange.exchangetostock.dto.ExchangeToStockDto;
 import com.zerrmat.stockexchange.exchangetostock.model.ExchangeToStockModel;
 import com.zerrmat.stockexchange.stock.dto.StockDto;
+import com.zerrmat.stockexchange.stock.model.StockModel;
 import com.zerrmat.stockexchange.stock.service.StockConverter;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 @Service
@@ -34,4 +37,10 @@ public class ExchangeToStockService {
                 .map(d -> stockConverter.toDto(d.getStock()))
                 .collect(Collectors.toList());
     }
+
+    public void deleteByStockId(Long stockId) {
+        repository.deleteById(stockId);
+    }
+
+    public void save(ExchangeDto exchangeDto, List<StockModel> modelList){}
 }

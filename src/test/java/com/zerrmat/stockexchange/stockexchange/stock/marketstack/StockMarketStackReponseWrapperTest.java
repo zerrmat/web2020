@@ -57,7 +57,7 @@ public class StockMarketStackReponseWrapperTest {
                 .build();
 
         // when
-        List<StockDto> result = wrapper.extract();
+        List<StockDto> result = wrapper.extract("PLN");
 
         // then
         Assertions.assertThat(result).isNotNull();
@@ -69,7 +69,7 @@ public class StockMarketStackReponseWrapperTest {
         Assertions.assertThat(result.get(0).getValue()).isNotNull();
         Assertions.assertThat(result.get(0).getValue().getNumber()
                 .numberValue(BigDecimal.class).compareTo(BigDecimal.valueOf(-1))).isEqualTo(0);
-        Assertions.assertThat(result.get(0).getValue().getCurrency().getCurrencyCode()).isEqualTo("");
+        Assertions.assertThat(result.get(0).getValue().getCurrency().getCurrencyCode()).isEqualTo("PLN");
 
         Assertions.assertThat(result.get(1)).isNotNull();
         Assertions.assertThat(result.get(1).getName()).isEqualTo("11 bit studios");
@@ -77,6 +77,6 @@ public class StockMarketStackReponseWrapperTest {
         Assertions.assertThat(result.get(1).getValue()).isNotNull();
         Assertions.assertThat(result.get(1).getValue().getNumber()
                 .numberValue(BigDecimal.class).compareTo(BigDecimal.valueOf(-1))).isEqualTo(0);
-        Assertions.assertThat(result.get(1).getValue().getCurrency().getCurrencyCode()).isEqualTo("");
+        Assertions.assertThat(result.get(1).getValue().getCurrency().getCurrencyCode()).isEqualTo("PLN");
     }
 }

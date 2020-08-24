@@ -1,5 +1,7 @@
 package com.zerrmat.stockexchange.stock.service;
 
+import com.zerrmat.stockexchange.exchange.dto.ExchangeDto;
+import com.zerrmat.stockexchange.exchangetostock.service.ExchangeToStockService;
 import com.zerrmat.stockexchange.stock.dao.StockRepository;
 import com.zerrmat.stockexchange.stock.dao.StockRepositoryFilter;
 import com.zerrmat.stockexchange.stock.dto.StockDto;
@@ -16,13 +18,15 @@ public class StockService {
     private StockRepository repository;
     private StockConverter converter;
     private StockRepositoryFilter repositoryFilter;
+    private ExchangeToStockService etsService;
 
     @Autowired
     public StockService(StockRepository repository, StockConverter converter,
-                        StockRepositoryFilter repositoryFilter) {
+                        StockRepositoryFilter repositoryFilter, ExchangeToStockService etsService) {
         this.repository = repository;
         this.converter = converter;
         this.repositoryFilter = repositoryFilter;
+        this.etsService = etsService;
     }
 
     public StockModel getStock(Long id) {
@@ -39,23 +43,31 @@ public class StockService {
         return converter.convertAllToDto(modelAll);
     }
 
-    @Transactional
-    public boolean updateStocks(List<StockDto> actualStocks) {
-        List<StockDto> dbStocks = this.getAll();
-        List<StockDto> obsoleteStocks = repositoryFilter.getObsoleteStocks(actualStocks, dbStocks);
-        //obsoleteStocks.forEach(s -> repository.deleteBySymbol(s.getSymbol()));
 
+    public boolean updateStocks(List<StockDto> actualStocks, ExchangeDto exchangeDto) {
+        List<StockDto> dbStocks = etsService.getStocksForExchange(exchangeDto.getSymbol());
+        List<StockDto> obsoleteStocks = repositoryFilter.getObsoleteStocks(actualStocks, dbStocks);
+
+        obsoleteStocks.forEach(s -> {
+            etsService.deleteByStockId(s.getId());
+            repository.deleteBySymbol(s.getSymbol());
+        });
         List<StockDto> newStocks = repositoryFilter.getNewStocks(actualStocks, dbStocks);
-        return this.save(newStocks);
+
+        return this.save(newStocks, exchangeDto);
     }
 
-    private boolean save(List<StockDto> requestList) {
+    private boolean save(List<StockDto> requestList, ExchangeDto exchangeDto) {
         try {
             List<StockModel> modelList = converter.convertAllToEntity(requestList);
             for(StockModel sm : modelList) {
                 repository.insert(sm.getName(), sm.getValue(), sm.getCurrency(), sm.getSymbol());
             }
             repository.flush();
+            for(StockModel sm : modelList) {
+                StockModel stock = repository.getBySymbol(sm.getSymbol());
+                //etsService.save();
+            }
         } catch (ConversionException e) {
             return false;
         }
