@@ -3,7 +3,7 @@ package com.zerrmat.stockexchange.stockexchange.exchange.marketstack;
 import com.zerrmat.stockexchange.exchange.dto.ExchangeDto;
 import com.zerrmat.stockexchange.exchange.marketstack.dto.ExchangeMarketStackResponseWrapper;
 import com.zerrmat.stockexchange.exchange.marketstack.dto.fragments.MarketStackCurrency;
-import com.zerrmat.stockexchange.exchange.marketstack.dto.fragments.MarketStackData;
+import com.zerrmat.stockexchange.exchange.marketstack.dto.fragments.MarketStackExchangeData;
 import com.zerrmat.stockexchange.exchange.marketstack.dto.fragments.MarketStackPagination;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -21,11 +21,11 @@ public class ExchangeMarketStackResponseWrapperTest {
                 .limit(100).offset(0).count(2).total(2).build();
         MarketStackCurrency currency = MarketStackCurrency.builder().code("USD").build();
 
-        MarketStackData data1 = MarketStackData.builder()
+        MarketStackExchangeData data1 = MarketStackExchangeData.builder()
                 .name("ABC Exchange").mic("ABC").currency(currency).build();
-        MarketStackData data2 = MarketStackData.builder()
+        MarketStackExchangeData data2 = MarketStackExchangeData.builder()
                 .name("XYZ Stock Market").mic("XYZS").currency(currency).build();
-        List<MarketStackData> data = Arrays.asList(data1, data2);
+        List<MarketStackExchangeData> data = Arrays.asList(data1, data2);
 
         wrapper = ExchangeMarketStackResponseWrapper.builder()
                 .pagination(pagination)

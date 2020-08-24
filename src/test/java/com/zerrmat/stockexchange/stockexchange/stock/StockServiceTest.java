@@ -1,6 +1,7 @@
 package com.zerrmat.stockexchange.stockexchange.stock;
 
 import com.zerrmat.stockexchange.stock.dao.StockRepository;
+import com.zerrmat.stockexchange.stock.dao.StockRepositoryFilter;
 import com.zerrmat.stockexchange.stock.dto.StockDto;
 import com.zerrmat.stockexchange.stock.model.StockModel;
 import com.zerrmat.stockexchange.stock.service.StockConverter;
@@ -16,20 +17,23 @@ import javax.money.Monetary;
 import javax.money.MonetaryAmount;
 import java.math.BigDecimal;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class StockServiceTest {
     private StockService service;
 
     @Mock
-    private StockRepository stockRepository;
+    private StockRepository repository;
     @Mock
     private StockConverter converter;
+    @Mock
+    private StockRepositoryFilter repositoryFilter;
 
     @BeforeEach
     public void setup() {
         MockitoAnnotations.initMocks(this);
-        service = new StockService(stockRepository, converter);
+        service = new StockService(repository, converter, repositoryFilter);
     }
 
     @Test
@@ -69,7 +73,7 @@ public class StockServiceTest {
                 .build();
 
         List<StockModel> modelList = Arrays.asList(sm1, sm2);
-        Mockito.when(stockRepository.findAll()).thenReturn(modelList);
+        Mockito.when(repository.findAll()).thenReturn(modelList);
         Mockito.when(converter.convertAllToDto(modelList)).thenReturn(Arrays.asList(sd1, sd2));
 
         // when
@@ -118,7 +122,7 @@ public class StockServiceTest {
                 .value(cdrMonetary)
                 .build();
 
-        Mockito.when(stockRepository.getBySymbol("CDR")).thenReturn(model);
+        Mockito.when(repository.getBySymbol("CDR")).thenReturn(model);
         Mockito.when(converter.toDto(model)).thenReturn(dto);
 
         // when
@@ -135,5 +139,32 @@ public class StockServiceTest {
         Assertions.assertThat(result.getValue().getCurrency()).isEqualTo(resultCDR.getCurrency());
     }
 
+    @Test
+    public void shouldUpdateStocks() {
+        // given
+        StockModel sm1 = StockModel.builder().id(1L).symbol("ABC").build();
+        StockModel sm2 = StockModel.builder().id(1L).symbol("DEF").build();
+        List<StockModel> stockModels = Arrays.asList(sm1, sm2);
+        Mockito.when(repository.findAll()).thenReturn(stockModels);
 
+        StockDto sd1 = StockDto.builder().id(1L).symbol("ABC").build();
+        StockDto sd2 = StockDto.builder().id(1L).symbol("DEF").build();
+        List<StockDto> dbStocks = Arrays.asList(sd1, sd2);
+        Mockito.when(converter.convertAllToDto(stockModels)).thenReturn(dbStocks);
+
+        StockDto sd3 = StockDto.builder().id(1L).symbol("XYZ").build();
+        List<StockDto> actualStocks = Arrays.asList(sd1, sd3);
+
+        Mockito.when(repositoryFilter.getObsoleteStocks(actualStocks, dbStocks))
+                .thenReturn(Collections.singletonList(sd2));
+        Mockito.when(repositoryFilter.getNewStocks(actualStocks, dbStocks))
+                .thenReturn(Collections.singletonList(sd3));
+
+        // when
+        boolean result = service.updateStocks(actualStocks);
+
+        // then
+        Assertions.assertThat(result).isNotNull();
+        Assertions.assertThat(result).isTrue();
+    }
 }

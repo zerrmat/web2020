@@ -6,6 +6,8 @@ import com.zerrmat.stockexchange.cachecontrol.model.CacheControlModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
+
 @Service
 public class CacheControlService {
     private CacheControlRepository repository;
@@ -19,11 +21,20 @@ public class CacheControlService {
 
     public CacheControlDto getCacheDataFor(String endpointName) {
         CacheControlModel cacheControlModel = repository.getFirstByEndpointName(endpointName);
+        if (cacheControlModel == null) {
+            cacheControlModel = CacheControlModel.builder()
+                    .endpointName(endpointName)
+                    .lastAccess(LocalDateTime.MIN)
+                    .build();
+        }
         return converter.toDto(cacheControlModel);
     }
 
     public boolean updateOne(CacheControlDto dto) {
         CacheControlModel cacheControlModel = repository.getFirstByEndpointName(dto.getEndpointName());
+        if (cacheControlModel == null) {
+            cacheControlModel = new CacheControlModel();
+        }
         cacheControlModel.setEndpointName(dto.getEndpointName());
         cacheControlModel.setLastAccess(dto.getLastAccess());
 

@@ -8,8 +8,12 @@ import com.zerrmat.stockexchange.cachecontrol.service.CacheControlService;
 import com.zerrmat.stockexchange.exchange.dto.ExchangeDto;
 import com.zerrmat.stockexchange.exchange.marketstack.dto.ExchangeMarketStackResponseWrapper;
 import com.zerrmat.stockexchange.exchange.service.ExchangeService;
+import com.zerrmat.stockexchange.stock.dto.StockDto;
+import com.zerrmat.stockexchange.stock.marketstack.dto.StockMarketStackResponseWrapper;
+import com.zerrmat.stockexchange.stock.service.StockService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -28,12 +32,15 @@ import java.util.Objects;
 @RequestMapping("/external")
 public class MarketStackController {
     private ExchangeService exchangeService;
+    private StockService stockService;
     private CacheControlService cacheControlService;
 
     @Autowired
     public MarketStackController(ExchangeService exchangeService,
+                                 StockService stockService,
                                  CacheControlService cacheControlService) {
         this.exchangeService = exchangeService;
+        this.stockService = stockService;
         this.cacheControlService = cacheControlService;
     }
 
@@ -59,6 +66,46 @@ public class MarketStackController {
                             .build()
             );
         } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @GetMapping("/exchanges/{exchangeId}/stocks")
+    public void updateStocks(@PathVariable String exchangeId) {
+        String stocksEndpointName = "stocks";
+        CacheControlDto cacheControlDto = cacheControlService.getCacheDataFor(stocksEndpointName);
+        if (cacheControlDto != null && !cacheControlDto.isCacheOutdated()) {
+            return;
+        }
+
+        final String urlEndpointAddress = "http://api.marketstack.com/v1/exchanges/" + exchangeId + "/tickers";
+        final String accessKey = "166af8c956780fd148bc9dd925968daf";
+
+        String fullUrl = urlEndpointAddress + "?" + "access_key=" + accessKey + "&limit=10";
+
+        WebClient webClient = WebClient.create();
+        WebClient.RequestHeadersSpec<?> requestHeadersSpec = webClient
+                .get()
+                .uri(URI.create(fullUrl));
+
+        String response = Objects.requireNonNull(requestHeadersSpec.exchange())
+                .block()
+                .bodyToMono(String.class)
+                .block();
+
+        try {
+            StockMarketStackResponseWrapper responseWrapper = new ObjectMapper()
+                    .readValue(response, new TypeReference<StockMarketStackResponseWrapper>(){});
+            List<StockDto> actualStockDtos = responseWrapper.extract();
+            stockService.updateStocks(actualStockDtos);
+
+            cacheControlService.updateOne(
+                    CacheControlDto.builder()
+                        .endpointName(stocksEndpointName)
+                        .lastAccess(LocalDateTime.now())
+                        .build()
+            );
+        } catch(JsonProcessingException e) {
             e.printStackTrace();
         }
     }

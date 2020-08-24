@@ -31,7 +31,7 @@ public class ExchangeServiceTest {
     @BeforeEach
     public void setup() {
         MockitoAnnotations.initMocks(this);
-        service = new ExchangeService(repository, converter,repositoryFilter);
+        service = new ExchangeService(repository, converter, repositoryFilter);
     }
 
     @Test

@@ -1,13 +1,11 @@
 package com.zerrmat.stockexchange.exchange.marketstack.dto;
 
 import com.zerrmat.stockexchange.exchange.dto.ExchangeDto;
-import com.zerrmat.stockexchange.exchange.marketstack.dto.fragments.MarketStackData;
+import com.zerrmat.stockexchange.exchange.marketstack.dto.fragments.MarketStackExchangeData;
 import com.zerrmat.stockexchange.exchange.marketstack.dto.fragments.MarketStackPagination;
 import lombok.*;
 
-import java.util.Arrays;
 import java.util.List;
-import java.util.Objects;
 import java.util.stream.Collectors;
 
 @Getter
@@ -17,7 +15,7 @@ import java.util.stream.Collectors;
 @Builder
 public class ExchangeMarketStackResponseWrapper {
     private MarketStackPagination pagination;
-    private List<MarketStackData> data;
+    private List<MarketStackExchangeData> data;
 
     public List<ExchangeDto> extract() {
         data.removeIf(d -> d.getCurrency() == null);

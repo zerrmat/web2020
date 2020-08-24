@@ -47,8 +47,9 @@ public class StockExchangeRestController {
         return Collections.singletonList(exchangeService.get(code));
     }
 
-    @GetMapping("/exchange/{code}/stock")
+    @GetMapping("/exchange/{code}/stocks")
     public List<StockDto> getAllStocks(@PathVariable String code) {
+        marketStackController.updateStocks(code);
         return exchangeToStockService.getStocksForExchange(code);
     }
 }
