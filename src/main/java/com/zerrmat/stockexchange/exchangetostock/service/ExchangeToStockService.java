@@ -7,6 +7,7 @@ import com.zerrmat.stockexchange.exchangetostock.model.ExchangeToStockModel;
 import com.zerrmat.stockexchange.stock.dto.StockDto;
 import com.zerrmat.stockexchange.stock.model.StockModel;
 import com.zerrmat.stockexchange.stock.service.StockConverter;
+import org.springframework.core.convert.ConversionException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -31,8 +32,8 @@ public class ExchangeToStockService {
         return converter.convertAllToDto(models);
     }
 
-    public List<StockDto> getStocksForExchange(String exchangeCode) {
-        List<ExchangeToStockModel> models = repository.findAllByExchange_Symbol(exchangeCode);
+    public List<StockDto> getStocksForExchange(Long exchangeId) {
+        List<ExchangeToStockModel> models = repository.findAllByExchange_Id(exchangeId);
         return models.stream()
                 .map(d -> stockConverter.toDto(d.getStock()))
                 .collect(Collectors.toList());
@@ -42,5 +43,15 @@ public class ExchangeToStockService {
         repository.deleteById(stockId);
     }
 
-    public void save(ExchangeDto exchangeDto, List<StockModel> modelList){}
+    public boolean save(ExchangeDto exchangeDto, List<StockDto> dtoList) {
+        try {
+            for (StockDto sd : dtoList) {
+                repository.insert(exchangeDto.getId(), sd.getId());
+            }
+        } catch(ConversionException e) {
+            return false;
+        }
+
+        return true;
+    }
 }

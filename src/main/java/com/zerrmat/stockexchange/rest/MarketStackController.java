@@ -72,11 +72,11 @@ public class MarketStackController {
 
     @GetMapping("/exchanges/{exchangeId}/stocks")
     public void updateStocks(@PathVariable String exchangeId) {
-        String stocksEndpointName = "stocks";
+        String stocksEndpointName = "stocks." + exchangeId;
         CacheControlDto cacheControlDto = cacheControlService.getCacheDataFor(stocksEndpointName);
-        //if (cacheControlDto != null && !cacheControlDto.isCacheOutdated()) {
-        //    return;
-        //}
+        if (cacheControlDto != null && !cacheControlDto.isCacheOutdated()) {
+            return;
+        }
 
         final String urlEndpointAddress = "http://api.marketstack.com/v1/exchanges/" + exchangeId + "/tickers";
         final String accessKey = "166af8c956780fd148bc9dd925968daf";

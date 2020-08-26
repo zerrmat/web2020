@@ -49,7 +49,9 @@ public class StockExchangeRestController {
 
     @GetMapping("/exchange/{code}/stocks")
     public List<StockDto> getAllStocks(@PathVariable String code) {
+        code = code.toUpperCase();
         marketStackController.updateStocks(code);
-        return exchangeToStockService.getStocksForExchange(code);
+        Long exchangeId = exchangeService.get(code).getId();
+        return exchangeToStockService.getStocksForExchange(exchangeId);
     }
 }

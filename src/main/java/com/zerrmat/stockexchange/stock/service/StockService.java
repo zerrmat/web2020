@@ -11,6 +11,7 @@ import org.springframework.core.convert.ConversionException;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -45,7 +46,7 @@ public class StockService {
 
 
     public boolean updateStocks(List<StockDto> actualStocks, ExchangeDto exchangeDto) {
-        List<StockDto> dbStocks = etsService.getStocksForExchange(exchangeDto.getSymbol());
+        List<StockDto> dbStocks = etsService.getStocksForExchange(exchangeDto.getId());
         List<StockDto> obsoleteStocks = repositoryFilter.getObsoleteStocks(actualStocks, dbStocks);
 
         obsoleteStocks.forEach(s -> {
@@ -64,10 +65,11 @@ public class StockService {
                 repository.insert(sm.getName(), sm.getValue(), sm.getCurrency(), sm.getSymbol());
             }
             repository.flush();
+            List<StockModel> newStocks = new ArrayList<>();
             for(StockModel sm : modelList) {
-                StockModel stock = repository.getBySymbol(sm.getSymbol());
-                //etsService.save();
+                newStocks.add(repository.getBySymbol(sm.getSymbol()));
             }
+            etsService.save(exchangeDto, converter.convertAllToDto(newStocks));
         } catch (ConversionException e) {
             return false;
         }
