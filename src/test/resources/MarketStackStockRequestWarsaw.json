@@ -1,0 +1,2527 @@
+{
+  "pagination": {
+    "limit": 1000,
+    "offset": 0,
+    "count": 418,
+    "total": 418
+  },
+  "data": {
+    "name": "Warsaw Stock Exchange",
+    "acronym": "GPW",
+    "mic": "XWAR",
+    "country": "Poland",
+    "country_code": "PL",
+    "city": "Warsaw",
+    "website": "www.gpw.pl",
+    "tickers": [
+      {
+        "name": "SANTANDER",
+        "symbol": "SAN.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "UNICREDIT",
+        "symbol": "UCG.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "TALANX",
+        "symbol": "TNX.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PKOBP",
+        "symbol": "PKO.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "CEZ",
+        "symbol": "CEZ.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PZU",
+        "symbol": "PZU.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "CDPROJEKT",
+        "symbol": "CDR.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SANPL",
+        "symbol": "SPL.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PKNORLEN",
+        "symbol": "PKN.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "INGBSK",
+        "symbol": "ING.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PEKAO",
+        "symbol": "PEO.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "MOL",
+        "symbol": "MOL.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PGNIG",
+        "symbol": "PGN.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "CYFRPLSAT",
+        "symbol": "CPS.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "DINOPL",
+        "symbol": "DNP.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "KGHM",
+        "symbol": "KGH.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "LPP",
+        "symbol": "LPP.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "MBANK",
+        "symbol": "MBK.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "LOTOS",
+        "symbol": "LTS.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "IIAAV",
+        "symbol": "IIA.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "KRKA",
+        "symbol": "KRK.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "BNPPPL",
+        "symbol": "BNP.XWAR",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "PGE",
+        "symbol": "PGE.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "AMREST",
+        "symbol": "EAT.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ORANGEPL",
+        "symbol": "OPL.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PLAY",
+        "symbol": "PLY.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "HANDLOWY",
+        "symbol": "BHW.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "MILLENNIUM",
+        "symbol": "MIL.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ASSECOPOL",
+        "symbol": "ACP.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ORBIS",
+        "symbol": "ORB.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ZYWIEC",
+        "symbol": "ZWC.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "BUDIMEX",
+        "symbol": "BDX.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "GTC",
+        "symbol": "GTC.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "KERNEL",
+        "symbol": "KER.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "KETY",
+        "symbol": "KTY.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ENERGA",
+        "symbol": "ENG.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "CCC",
+        "symbol": "CCC.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ALIOR",
+        "symbol": "ALR.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "INTERCARS",
+        "symbol": "CAR.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "BENEFIT",
+        "symbol": "BFT.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "EUROCASH",
+        "symbol": "EUR.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "KRUK",
+        "symbol": "KRU.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ENEA",
+        "symbol": "ENA.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "DOMDEV",
+        "symbol": "DOM.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "GRUPAAZOTY",
+        "symbol": "ATT.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "WIRTUALNA",
+        "symbol": "WPL.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PLAYWAY",
+        "symbol": "PLW.XWAR",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "TAURONPE",
+        "symbol": "TPE.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "TSGAMES",
+        "symbol": "TEN.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ECHO",
+        "symbol": "ECH.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "CIECH",
+        "symbol": "CIE.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "CLNPHARMA",
+        "symbol": "CLN.XWAR",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "JSW",
+        "symbol": "JSW.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "GPW",
+        "symbol": "GPW.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PROVIDENT",
+        "symbol": "IPF.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ORCOGROUP",
+        "symbol": "OPG.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "NEUCA",
+        "symbol": "NEU.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FAMUR",
+        "symbol": "FMF.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "COMARCH",
+        "symbol": "CMR.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ASSECOSEE",
+        "symbol": "ASE.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ATAL",
+        "symbol": "1AT.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PULAWY",
+        "symbol": "ZAP.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PEP",
+        "symbol": "PEP.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "NETIA",
+        "symbol": "NET.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "KRUSZWICA",
+        "symbol": "KSW.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ASSECOBS",
+        "symbol": "ABS.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "POLICE",
+        "symbol": "PCE.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "DEVELIA",
+        "symbol": "DVL.XWAR",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "LIVECHAT",
+        "symbol": "LVC.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "MENNICA",
+        "symbol": "MNC.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "TATRY",
+        "symbol": "TMR.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "DEBICA",
+        "symbol": "DBC.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "NEWAG",
+        "symbol": "NWG.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SOPHARMA",
+        "symbol": "SPH.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "BORYSZEW",
+        "symbol": "BRS.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "MLPGROUP",
+        "symbol": "MLG.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "11BIT",
+        "symbol": "11B.XWAR",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "SNIEZKA",
+        "symbol": "SKA.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "WAWEL",
+        "symbol": "WWL.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "STALPROD",
+        "symbol": "STP.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "AMICA",
+        "symbol": "AMC.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PCCROKITA",
+        "symbol": "PCR.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "VRG",
+        "symbol": "VRG.XWAR",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "CPGROUP",
+        "symbol": "CPG.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "CFI",
+        "symbol": "CFI.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FORTE",
+        "symbol": "FTE.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "STALEXP",
+        "symbol": "STX.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ENTER",
+        "symbol": "ENT.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "RYVU",
+        "symbol": "RVU.XWAR",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "SELVITA",
+        "symbol": "SLV.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "AUTOPARTN",
+        "symbol": "APR.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "EUROHOLD",
+        "symbol": "EHG.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PHN",
+        "symbol": "PHN.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PBKM",
+        "symbol": "BKM.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "MOBRUK",
+        "symbol": "MBR.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "BOGDANKA",
+        "symbol": "LWB.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "MABION",
+        "symbol": "MAB.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ALUMETAL",
+        "symbol": "AML.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PKPCARGO",
+        "symbol": "PKP.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "APATOR",
+        "symbol": "APT.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "BOS",
+        "symbol": "BOS.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "BEST",
+        "symbol": "BST.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "OVOSTAR",
+        "symbol": "OVO.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "MCI",
+        "symbol": "MCI.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "AGORA",
+        "symbol": "AGO.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "XTB",
+        "symbol": "XTB.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "KOGENERA",
+        "symbol": "KGN.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ARCHICOM",
+        "symbol": "ARH.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ACAUTOGAZ",
+        "symbol": "ACG.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "AMBRA",
+        "symbol": "AMB.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "BSCDRUK",
+        "symbol": "BSC.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "IMCOMPANY",
+        "symbol": "IMC.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SANOK",
+        "symbol": "SNK.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "POLIMEXMS",
+        "symbol": "PXM.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "LENTEX",
+        "symbol": "LTX.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "WARIMPEX",
+        "symbol": "WXF.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "R22",
+        "symbol": "R22.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ATMGRUPA",
+        "symbol": "ATG.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "INTERAOLT",
+        "symbol": "IRL.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ATM",
+        "symbol": "ATM.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "WIELTON",
+        "symbol": "WLT.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PCCEXOL",
+        "symbol": "PCX.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "POLNORD",
+        "symbol": "PND.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ASTARTA",
+        "symbol": "AST.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "COMP",
+        "symbol": "CMP.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ZEPAK",
+        "symbol": "ZEP.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "VOXEL",
+        "symbol": "VOX.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "AUGA",
+        "symbol": "AUG.XWAR",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "VIGOSYS",
+        "symbol": "VGO.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SILVANO",
+        "symbol": "SFG.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ABPL",
+        "symbol": "ABE.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "TOYA",
+        "symbol": "TOA.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "OPONEO.PL",
+        "symbol": "OPN.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ARCTIC",
+        "symbol": "ATC.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ENELMED",
+        "symbol": "ENE.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SELENAFM",
+        "symbol": "SEL.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FERRO",
+        "symbol": "FRO.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "MANGATA",
+        "symbol": "MGT.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "UNIBEP",
+        "symbol": "UNI.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "RAINBOW",
+        "symbol": "RBW.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ELEMENTAL",
+        "symbol": "EMT.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "GETINOBLE",
+        "symbol": "GNB.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "JWCONSTR",
+        "symbol": "JWC.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ULMA",
+        "symbol": "ULM.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PGSSOFT",
+        "symbol": "PSW.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "TIM",
+        "symbol": "TIM.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "LOKUM",
+        "symbol": "LKD.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "BIOTON",
+        "symbol": "BIO.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PEKABEX",
+        "symbol": "PBX.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "RAWLPLUG",
+        "symbol": "RWL.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ERBUD",
+        "symbol": "ERB.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FERRUM",
+        "symbol": "FER.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "DATAWALK",
+        "symbol": "DAT.XWAR",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "GETIN",
+        "symbol": "GTN.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "CITYSERV",
+        "symbol": "CTS.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ZPUE",
+        "symbol": "PUE.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "STELMET",
+        "symbol": "STL.XWAR",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "MARVIPOL",
+        "symbol": "MVP.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "INDYKPOL",
+        "symbol": "IND.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "WITTCHEN",
+        "symbol": "WTN.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "DECORA",
+        "symbol": "DCR.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "MBWS",
+        "symbol": "MBW.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "MERCATOR",
+        "symbol": "MRC.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ASMGROUP",
+        "symbol": "ASM.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "IMMOBILE",
+        "symbol": "GKI.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "UNIMOT",
+        "symbol": "UNT.XWAR",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "KINOPOL",
+        "symbol": "KPL.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "INPRO",
+        "symbol": "INP.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "TORPOL",
+        "symbol": "TOR.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ASBIS",
+        "symbol": "ASB.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "GOBARTO",
+        "symbol": "GOB.XWAR",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "MLSYSTEM",
+        "symbol": "MLS.XWAR",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "EMCINSMED",
+        "symbol": "EMC.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "QUERCUS",
+        "symbol": "QRS.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "XTPL",
+        "symbol": "XTP.XWAR",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "TARCZYNSKI",
+        "symbol": "TAR.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "OAT",
+        "symbol": "OAT.XWAR",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "DEKPOL",
+        "symbol": "DEK.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ORZBIALY",
+        "symbol": "OBL.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "MFO",
+        "symbol": "MFO.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SECOGROUP",
+        "symbol": "SWG.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "IDEABANK",
+        "symbol": "IDA.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "VOTUM",
+        "symbol": "VOT.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ESSYSTEM",
+        "symbol": "ESS.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PEPEES",
+        "symbol": "PPS.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ERGIS",
+        "symbol": "EGS.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PANOVA",
+        "symbol": "NVA.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "OPTEAM",
+        "symbol": "OPM.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "OEX",
+        "symbol": "OEX.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "CELTIC",
+        "symbol": "CPD.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "RONSON",
+        "symbol": "RON.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "MERCOR",
+        "symbol": "MCR.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "KREDYTIN",
+        "symbol": "KRI.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "COGNOR",
+        "symbol": "COG.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "CORMAY",
+        "symbol": "CRM.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SYNEKTIK",
+        "symbol": "SNT.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "APLISENS",
+        "symbol": "APN.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FEERUM",
+        "symbol": "FEE.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "INSTALKRK",
+        "symbol": "INK.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SKARBIEC",
+        "symbol": "SKH.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "JHMDEV",
+        "symbol": "JHM.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "IMS",
+        "symbol": "IMS.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "WASKO",
+        "symbol": "WAS.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "STALPROFI",
+        "symbol": "STF.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SONEL",
+        "symbol": "SON.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "TRAKCJA",
+        "symbol": "TRK.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "NOVATURAS",
+        "symbol": "NTU.XWAR",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "ATENDE",
+        "symbol": "ATD.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ZAMET",
+        "symbol": "ZMT.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "MDIENERGIA",
+        "symbol": "MDI.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "KONSSTALI",
+        "symbol": "KST.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ELZAB",
+        "symbol": "ELZ.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SERINUS",
+        "symbol": "SEN.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "CIGAMES",
+        "symbol": "CIG.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "NOVITA",
+        "symbol": "NVT.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "CNT",
+        "symbol": "CNT.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "CDRL",
+        "symbol": "CDL.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "EUROTEL",
+        "symbol": "ETL.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "MEDICALG",
+        "symbol": "MDG.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "TERMOREX",
+        "symbol": "TRR.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "KREC",
+        "symbol": "KRC.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PGO",
+        "symbol": "PGO.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ALTUSTFI",
+        "symbol": "ALI.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ROPCZYCE",
+        "symbol": "RPC.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "IMPEL",
+        "symbol": "IPL.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "MASTERPHA",
+        "symbol": "MPH.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ULTGAMES",
+        "symbol": "ULG.XWAR",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "POLWAX",
+        "symbol": "PWX.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PRAIRIE",
+        "symbol": "PDZ.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "KGL",
+        "symbol": "KGL.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "BIK",
+        "symbol": "BIK.XWAR",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "ODLEWNIE",
+        "symbol": "ODL.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "GLCOSMED",
+        "symbol": "GLC.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "LENA",
+        "symbol": "LEN.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ZUE",
+        "symbol": "ZUE.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "MIRBUD",
+        "symbol": "MRB.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ORION",
+        "symbol": "ORN.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "LUBAWA",
+        "symbol": "LBW.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PLASTBOX",
+        "symbol": "PLX.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "GRODNO",
+        "symbol": "GRN.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "MORIZON",
+        "symbol": "MZN.XWAR",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "IZOSTAL",
+        "symbol": "IZS.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "VINDEXUS",
+        "symbol": "VIN.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PROJPRZEM",
+        "symbol": "PJP.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "BIOMEDLUB",
+        "symbol": "BML.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ADIUVO",
+        "symbol": "ADV.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SYGNITY",
+        "symbol": "SGN.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "HYDROTOR",
+        "symbol": "HDR.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "BALTONA",
+        "symbol": "BAL.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "AILLERON",
+        "symbol": "ALL.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "MONNARI",
+        "symbol": "MON.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "BERLING",
+        "symbol": "BRG.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "I2DEV",
+        "symbol": "I2D.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "RAFAKO",
+        "symbol": "RFK.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "LSISOFT",
+        "symbol": "LSI.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "MOSTALWAR",
+        "symbol": "MSW.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ATLASEST",
+        "symbol": "ATL.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "AGROTON",
+        "symbol": "AGT.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "IPOPEMA",
+        "symbol": "IPE.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "EKOEXPORT",
+        "symbol": "EEX.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "OTLOG",
+        "symbol": "OTS.XWAR",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "SEKO",
+        "symbol": "SEK.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "DELKO",
+        "symbol": "DEL.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "TRANSPOL",
+        "symbol": "TRN.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "TESGAS",
+        "symbol": "TSG.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "KRVITAMIN",
+        "symbol": "KVT.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "WOJAS",
+        "symbol": "WOJ.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PHARMENA",
+        "symbol": "PHR.XWAR",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "PROTEKTOR",
+        "symbol": "PRT.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "MAKARONPL",
+        "symbol": "MAK.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "APSENERGY",
+        "symbol": "APE.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "INTERFERI",
+        "symbol": "INF.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SUWARY",
+        "symbol": "SUW.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "RELPOL",
+        "symbol": "RLP.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "INTERSPPL",
+        "symbol": "IPO.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "MOSTALZAB",
+        "symbol": "MSZ.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ELEKTROTI",
+        "symbol": "ELT.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "RADPOL",
+        "symbol": "RDL.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "INTROL",
+        "symbol": "INL.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "NORTCOAST",
+        "symbol": "NCT.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ESTAR",
+        "symbol": "EST.XWAR",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "SESCOM",
+        "symbol": "SES.XWAR",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "HELIO",
+        "symbol": "HEL.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PROCHEM",
+        "symbol": "PRM.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ACTION",
+        "symbol": "ACT.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "MIRACULUM",
+        "symbol": "MIR.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "RAFAMET",
+        "symbol": "RAF.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "VIVID",
+        "symbol": "VVD.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "BBIDEV",
+        "symbol": "BBD.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "STARHEDGE",
+        "symbol": "SHG.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FASING",
+        "symbol": "FSG.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "URSUS",
+        "symbol": "URS.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "KPPD",
+        "symbol": "KPD.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "RANKPROGR",
+        "symbol": "RNK.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SUNEX",
+        "symbol": "SNX.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "IZOBLOK",
+        "symbol": "IZB.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "LABOPRINT",
+        "symbol": "LAB.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ARTIFEX",
+        "symbol": "ART.XWAR",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "HMINWEST",
+        "symbol": "HMI.XWAR",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "PAMAPOL",
+        "symbol": "PMP.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "WORKSERV",
+        "symbol": "WSE.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "TALEX",
+        "symbol": "TLX.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "MAXCOM",
+        "symbol": "MXC.XWAR",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "SIMPLE",
+        "symbol": "SME.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "MEDIACAP",
+        "symbol": "MCP.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PATENTUS",
+        "symbol": "PAT.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "BAHOLDING",
+        "symbol": "BAH.XWAR",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "PEMANAGER",
+        "symbol": "PEM.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "WIKANA",
+        "symbol": "WIK.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "POZBUD",
+        "symbol": "POZ.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SILVAIR-REGS",
+        "symbol": "SVRS.XWAR",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "TOWERINVT",
+        "symbol": "TOW.XWAR",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "08OCTAVA",
+        "symbol": "08N.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ATLANTAPL",
+        "symbol": "ATP.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "NOWAGALA",
+        "symbol": "CNG.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "KOMPAP",
+        "symbol": "KMP.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "BUMECH",
+        "symbol": "BMC.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "OTMUCHOW",
+        "symbol": "OTM.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "NTTSYSTEM",
+        "symbol": "NTT.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PRAGMAFA",
+        "symbol": "PRF.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SWISSMED",
+        "symbol": "SWD.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "LARQ",
+        "symbol": "LRQ.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "BEDZIN",
+        "symbol": "BDZ.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "JWWINVEST",
+        "symbol": "JWW.XWAR",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "KCI",
+        "symbol": "KCI.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ENAP",
+        "symbol": "ENP.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SKOTAN",
+        "symbol": "SKT.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ELBUDOWA",
+        "symbol": "ELB.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "AIRWAY",
+        "symbol": "AWM.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "EUCO",
+        "symbol": "EUC.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "MWTRADE",
+        "symbol": "MWT.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "HERKULES",
+        "symbol": "HRS.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "MEGARON",
+        "symbol": "MEG.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "REINHOLD",
+        "symbol": "RHD.XWAR",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "VENTUREIN",
+        "symbol": "VTI.XWAR",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "VISTAL",
+        "symbol": "VTL.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "REMAK",
+        "symbol": "RMK.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "BOWIM",
+        "symbol": "BOW.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "LIBET",
+        "symbol": "LBT.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ESOTIQ",
+        "symbol": "EAH.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PRAGMAINK",
+        "symbol": "PRI.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ALTA",
+        "symbol": "AAT.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "IFIRMA",
+        "symbol": "IFI.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "AWBUD",
+        "symbol": "AWB.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "KOMPUTRON",
+        "symbol": "KOM.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "WADEX",
+        "symbol": "WAX.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "K2INTERNT",
+        "symbol": "K2I.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "4FUNMEDIA",
+        "symbol": "4FM.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "EFEKT",
+        "symbol": "EFK.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "MEXPOLSKA",
+        "symbol": "MEX.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PBG",
+        "symbol": "PBG.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ERG",
+        "symbol": "ERG.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ARTERIA",
+        "symbol": "ARR.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "QUANTUM",
+        "symbol": "QNT.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "CAPITAL",
+        "symbol": "CPA.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "TBULL",
+        "symbol": "TBL.XWAR",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "EVEREST",
+        "symbol": "EVE.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SFINKS",
+        "symbol": "SFS.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PRIMETECH",
+        "symbol": "PTH.XWAR",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "BETACOM",
+        "symbol": "BCM.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ATREM",
+        "symbol": "ATR.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "KSGAGRO",
+        "symbol": "KSG.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SKYLINE",
+        "symbol": "SKL.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PMPG",
+        "symbol": "PGM.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SOHODEV",
+        "symbol": "SHD.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "MILKILAND",
+        "symbol": "MLK.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SOLAR",
+        "symbol": "SOL.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ATLANTIS",
+        "symbol": "ATS.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "GROCLIN",
+        "symbol": "GCN.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ARCUS",
+        "symbol": "ARC.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "INC",
+        "symbol": "INC.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "TRITON",
+        "symbol": "TRI.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "DIGITREE",
+        "symbol": "DTR.XWAR",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "OPENFIN",
+        "symbol": "OPF.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ENERGOINS",
+        "symbol": "ENI.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "MOSTALPLC",
+        "symbol": "MSP.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PLAZACNTR",
+        "symbol": "PLZ.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "STAPORKOW",
+        "symbol": "ZUK.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "COMPERIA",
+        "symbol": "CPL.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SANWIL",
+        "symbol": "SNW.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ELKOP",
+        "symbol": "EKP.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FON",
+        "symbol": "FON.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "MOJ",
+        "symbol": "MOJ.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "RESBUD",
+        "symbol": "RES.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "REDAN",
+        "symbol": "RDN.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SLEEPZAG",
+        "symbol": "SLZ.XWAR",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "ZREMB",
+        "symbol": "ZRE.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "IMPERA",
+        "symbol": "IMP.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "DROZAPOL",
+        "symbol": "DPL.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "BRASTER",
+        "symbol": "BRA.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "IZOLACJA",
+        "symbol": "IZO.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "MUZA",
+        "symbol": "MZA.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ITMTRADE",
+        "symbol": "ITM.XWAR",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "PROCAD",
+        "symbol": "PRD.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "IFCAPITAL",
+        "symbol": "IFC.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "UNIMA",
+        "symbol": "U2K.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "YOLO",
+        "symbol": "YOL.XWAR",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "DGA",
+        "symbol": "DGA.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ZASTAL",
+        "symbol": "ZST.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "COALENERG",
+        "symbol": "CLE.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PBSFINANSE",
+        "symbol": "PBF.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "TXM",
+        "symbol": "TXM.XWAR",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "IQP",
+        "symbol": "IQP.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "INVISTA",
+        "symbol": "INV.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "INTERBUD",
+        "symbol": "ITB.XWAR",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "KBDOM",
+        "symbol": "KBD.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "RUBICON",
+        "symbol": "RBC.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "IBSM",
+        "symbol": "IBS.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "KRAKCHEM",
+        "symbol": "KCH.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "IDMSA",
+        "symbol": "IDM.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PLATYNINW",
+        "symbol": "PIW.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "IALBGR",
+        "symbol": "IAG.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "IFSA",
+        "symbol": "IFR.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "WINVEST",
+        "symbol": "WIS.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PRIMAMODA",
+        "symbol": "PMA.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FMG",
+        "symbol": "FMG.XWAR",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "DROP",
+        "symbol": "DRP.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "REGNON",
+        "symbol": "REG.XWAR",
+        "has_intraday": false,
+        "has_eod": true
+      }
+    ]
+  }
+}

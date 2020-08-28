@@ -50,9 +50,9 @@ public class MarketStackController {
     public void updateExchanges() {
         String exchangesEndpointName = "exchanges";
         CacheControlDto cacheControlDto = cacheControlService.getCacheDataFor(exchangesEndpointName);
-        //if (cacheControlDto != null && !cacheControlDto.isCacheOutdated()) {
-        //    return;
-        //}
+        if (cacheControlDto != null && !cacheControlDto.isCacheOutdated()) {
+            return;
+        }
 
         String response = this.makeMarketStackExchangesRequest();
         try {
@@ -73,11 +73,11 @@ public class MarketStackController {
     }
 
     @GetMapping("/exchanges/{exchangeId}/stocks")
-    public void updateStocks(@PathVariable String exchangeId) {
+    public List<StockDto> updateStocks(@PathVariable String exchangeId) {
         String stocksEndpointName = "stocks." + exchangeId;
         CacheControlDto cacheControlDto = cacheControlService.getCacheDataFor(stocksEndpointName);
         if (cacheControlDto != null && !cacheControlDto.isCacheOutdated()) {
-            return;
+            return null;
         }
 
         MarketStackPagination pagination = MarketStackPagination.builder().total(999999).build();
@@ -120,6 +120,8 @@ public class MarketStackController {
                         .lastAccess(LocalDateTime.now())
                         .build()
         );
+
+        return actualStockDtos;
     }
 
     private String makeMarketStackExchangesRequest() {

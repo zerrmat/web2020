@@ -92,9 +92,9 @@ public class ExchangeToStockServiceTest {
                 .value(stockValue11B)
                 .build();
 
-        String exchangeCode = exchangeModel.getSymbol();
+        Long exchangeCode = exchangeModel.getId();
 
-        Mockito.when(repository.findAllByExchange_Symbol(exchangeCode))
+        Mockito.when(repository.findAllByExchange_Id(exchangeCode))
                 .thenReturn(etsms);
         Mockito.when(stockConverter.toDto(etsms.get(0).getStock())).thenReturn(etsd1);
         Mockito.when(stockConverter.toDto(etsms.get(1).getStock())).thenReturn(etsd2);

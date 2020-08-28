@@ -1,5 +1,6 @@
 package com.zerrmat.stockexchange.stockexchange.stock;
 
+import com.zerrmat.stockexchange.exchange.dto.ExchangeDto;
 import com.zerrmat.stockexchange.exchangetostock.service.ExchangeToStockService;
 import com.zerrmat.stockexchange.stock.dao.StockRepository;
 import com.zerrmat.stockexchange.stock.dao.StockRepositoryFilter;
@@ -163,8 +164,15 @@ public class StockServiceTest {
         Mockito.when(repositoryFilter.getNewStocks(actualStocks, dbStocks))
                 .thenReturn(Collections.singletonList(sd3));
 
+        ExchangeDto exchangeDto = ExchangeDto.builder()
+                .id(1L)
+                .symbol("XWAR")
+                .name("Warsaw Stock Exchange")
+                .currency("EUR")
+                .build();
+
         // when
-        boolean result = service.updateStocks(actualStocks, "XWAR");
+        boolean result = service.updateStocks(actualStocks, exchangeDto);
 
         // then
         Assertions.assertThat(result).isNotNull();
