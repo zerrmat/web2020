@@ -8,8 +8,8 @@ import com.zerrmat.stockexchange.cachecontrol.service.CacheControlService;
 import com.zerrmat.stockexchange.exchange.dto.ExchangeDto;
 import com.zerrmat.stockexchange.marketstack.fragments.MarketStackPagination;
 import com.zerrmat.stockexchange.exchange.service.ExchangeService;
-import com.zerrmat.stockexchange.rest.ExternalRequests;
-import com.zerrmat.stockexchange.rest.MarketStackController;
+import com.zerrmat.stockexchange.rest.ExternalStocksController;
+import com.zerrmat.stockexchange.rest.service.ExternalRequestsService;
 import com.zerrmat.stockexchange.stock.dto.StockDto;
 import com.zerrmat.stockexchange.stock.marketstack.dto.StockMarketStackResponseWrapper;
 import com.zerrmat.stockexchange.stock.service.StockService;
@@ -29,9 +29,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.eq;
 
-public class MarketStackControllerTest {
-    private MarketStackController controller;
+public class ExternalStocksControllerTest {
+    private ExternalStocksController controller;
 
     @Mock
     private ExchangeService exchangeService;
@@ -40,12 +41,12 @@ public class MarketStackControllerTest {
     @Mock
     private CacheControlService cacheControlService;
     @Mock
-    private ExternalRequests externalRequests;
+    private ExternalRequestsService externalRequestsService;
 
     @BeforeEach
     public void setup() {
         MockitoAnnotations.initMocks(this);
-        controller = new MarketStackController(exchangeService, stockService, cacheControlService, externalRequests);
+        controller = new ExternalStocksController(cacheControlService, externalRequestsService, exchangeService, stockService);
     }
 
     @Test
@@ -71,11 +72,14 @@ public class MarketStackControllerTest {
                 .build();
         Mockito.when(exchangeService.get(exchangeId)).thenReturn(exchangeDto);
 
-        Mockito.when(externalRequests.makeMarketStackStocksRequest(any(MarketStackPagination.class), any(String.class)))
+        Mockito.when(externalRequestsService.makeExternalMarketStackStocksRequest(
+                any(MarketStackPagination.class), any(String.class)))
                 .thenReturn(this.generateRequestBody("MarketStackStockRequestWarsaw.json"));
+        Mockito.when(externalRequestsService.makeMarketStackStocksRequest(any(String.class), eq(exchangeService)))
+                .thenReturn(responseDtos);
 
         // when
-        List<StockDto> result = controller.updateStocks(exchangeId);
+        List<StockDto> result = controller.executeEndpoint(exchangeId);
 
         // then
         Assertions.assertThat(result).isNotNull();
@@ -116,13 +120,15 @@ public class MarketStackControllerTest {
                 .currency("USD")
                 .build();
         Mockito.when(exchangeService.get(exchangeId)).thenReturn(exchangeDto);
-        Mockito.when(externalRequests.makeMarketStackStocksRequest(any(MarketStackPagination.class), any(String.class)))
+        Mockito.when(externalRequestsService.makeExternalMarketStackStocksRequest(any(MarketStackPagination.class), any(String.class)))
                 .thenReturn(this.generateRequestBody("MarketStackStockRequestNYSEARCA1.json"))
                 .thenReturn(this.generateRequestBody("MarketStackStockRequestNYSEARCA2.json"))
                 .thenReturn(this.generateRequestBody("MarketStackStockRequestNYSEARCA3.json"));
+        Mockito.when(externalRequestsService.makeMarketStackStocksRequest(any(String.class), eq(exchangeService)))
+                .thenReturn(responseDtos);
 
         // when
-        List<StockDto> result = controller.updateStocks(exchangeId);
+        List<StockDto> result = controller.executeEndpoint(exchangeId);
 
         // then
         Assertions.assertThat(result).isNotNull();

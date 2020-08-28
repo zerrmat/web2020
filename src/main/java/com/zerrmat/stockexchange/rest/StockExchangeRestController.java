@@ -18,16 +18,20 @@ public class StockExchangeRestController {
     private StockService stockService;
     private ExchangeService exchangeService;
     private ExchangeToStockService exchangeToStockService;
-    private MarketStackController marketStackController;
+    //private MarketStackController marketStackController;
+    private ExternalExchangesController externalExchangesController;
+    private ExternalStocksController externalStocksController;
 
     @Autowired
     public StockExchangeRestController(StockService stockService, ExchangeService exchangeService,
                                        ExchangeToStockService exchangeToStockService,
-                                       MarketStackController marketStackController) {
+                                       ExternalExchangesController externalExchangesController,
+                                       ExternalStocksController externalStocksController) {
         this.stockService = stockService;
         this.exchangeService = exchangeService;
         this.exchangeToStockService = exchangeToStockService;
-        this.marketStackController = marketStackController;
+        this.externalExchangesController = externalExchangesController;
+        this.externalStocksController = externalStocksController;
     }
 
     @GetMapping("/stock/{id}")
@@ -38,7 +42,7 @@ public class StockExchangeRestController {
     @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("/exchange")
     public List<ExchangeDto> getAllExchanges() {
-        marketStackController.updateExchanges();
+        externalExchangesController.executeEndpoint();
         return exchangeService.getAll();
     }
 
@@ -50,7 +54,7 @@ public class StockExchangeRestController {
     @GetMapping("/exchange/{code}/stocks")
     public List<StockDto> getAllStocks(@PathVariable String code) {
         code = code.toUpperCase();
-        marketStackController.updateStocks(code);
+        externalStocksController.executeEndpoint(code);
         Long exchangeId = exchangeService.get(code).getId();
         return exchangeToStockService.getStocksForExchange(exchangeId);
     }

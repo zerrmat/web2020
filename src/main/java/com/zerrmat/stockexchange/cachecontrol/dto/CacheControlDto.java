@@ -13,7 +13,11 @@ public class CacheControlDto {
     private String endpointName;
     private LocalDateTime lastAccess;
 
-    public boolean isCacheOutdated() {
+    public boolean isLongCacheOutdated() {
         return lastAccess.isBefore(LocalDateTime.now().minusDays(1));
+    }
+
+    public boolean isStockCacheOutdated() {
+        return lastAccess.isBefore(LocalDateTime.now().minusMinutes(15));
     }
 }
