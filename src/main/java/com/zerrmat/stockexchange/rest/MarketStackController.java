@@ -7,6 +7,7 @@ import com.zerrmat.stockexchange.cachecontrol.dto.CacheControlDto;
 import com.zerrmat.stockexchange.cachecontrol.service.CacheControlService;
 import com.zerrmat.stockexchange.exchange.dto.ExchangeDto;
 import com.zerrmat.stockexchange.exchange.marketstack.dto.ExchangeMarketStackResponseWrapper;
+import com.zerrmat.stockexchange.exchange.marketstack.dto.fragments.MarketStackPagination;
 import com.zerrmat.stockexchange.exchange.service.ExchangeService;
 import com.zerrmat.stockexchange.stock.dto.StockDto;
 import com.zerrmat.stockexchange.stock.marketstack.dto.StockMarketStackResponseWrapper;
@@ -20,6 +21,7 @@ import org.springframework.web.reactive.function.client.WebClient;
 
 import java.net.URI;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -78,36 +80,46 @@ public class MarketStackController {
             return;
         }
 
-        final String urlEndpointAddress = "http://api.marketstack.com/v1/exchanges/" + exchangeId + "/tickers";
-        final String accessKey = "166af8c956780fd148bc9dd925968daf";
+        MarketStackPagination pagination = MarketStackPagination.builder().total(999999).build();
+        String exchangeSymbol = "";
+        List<StockDto> actualStockDtos = new ArrayList<>();
 
-        String fullUrl = urlEndpointAddress + "?" + "access_key=" + accessKey + "&limit=1000";
+        while (pagination.getOffset() < pagination.getTotal()) {
+            final String urlEndpointAddress = "http://api.marketstack.com/v1/exchanges/" + exchangeId + "/tickers";
+            final String accessKey = "166af8c956780fd148bc9dd925968daf";
 
-        WebClient webClient = WebClient.create();
-        WebClient.RequestHeadersSpec<?> requestHeadersSpec = webClient
-                .get()
-                .uri(URI.create(fullUrl));
+            String fullUrl = urlEndpointAddress + "?" + "access_key=" + accessKey + "&limit=1000" + "&offset=" + (pagination.getOffset());
 
-        String response = Objects.requireNonNull(requestHeadersSpec.exchange())
-                .block()
-                .bodyToMono(String.class)
-                .block();
+            WebClient webClient = WebClient.create();
+            WebClient.RequestHeadersSpec<?> requestHeadersSpec = webClient
+                    .get()
+                    .uri(URI.create(fullUrl));
 
-        try {
-            StockMarketStackResponseWrapper responseWrapper = new ObjectMapper()
-                    .readValue(response, new TypeReference<StockMarketStackResponseWrapper>(){});
-            List<StockDto> actualStockDtos = responseWrapper.extract(exchangeService.get(exchangeId).getCurrency());
-            stockService.updateStocks(actualStockDtos, exchangeService.get(responseWrapper.getData().getMic()));
+            String response = Objects.requireNonNull(requestHeadersSpec.exchange())
+                    .block()
+                    .bodyToMono(String.class)
+                    .block();
 
-            cacheControlService.updateOne(
-                    CacheControlDto.builder()
+            try {
+                StockMarketStackResponseWrapper responseWrapper = new ObjectMapper()
+                        .readValue(response, new TypeReference<StockMarketStackResponseWrapper>(){});
+                exchangeSymbol = responseWrapper.getData().getMic();
+                pagination = responseWrapper.getPagination();
+                pagination.setOffset(pagination.getOffset() + 1000);
+                actualStockDtos.addAll(responseWrapper.extract(exchangeService.get(exchangeId).getCurrency()));
+            } catch(JsonProcessingException e) {
+                e.printStackTrace();
+            }
+        }
+
+        stockService.updateStocks(actualStockDtos, exchangeService.get(exchangeSymbol));
+
+        cacheControlService.updateOne(
+                CacheControlDto.builder()
                         .endpointName(stocksEndpointName)
                         .lastAccess(LocalDateTime.now())
                         .build()
-            );
-        } catch(JsonProcessingException e) {
-            e.printStackTrace();
-        }
+        );
     }
 
     private String makeMarketStackExchangesRequest() {
