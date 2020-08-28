@@ -36,14 +36,17 @@ public class MarketStackController {
     private ExchangeService exchangeService;
     private StockService stockService;
     private CacheControlService cacheControlService;
+    private ExternalRequests externalRequests;
 
     @Autowired
     public MarketStackController(ExchangeService exchangeService,
                                  StockService stockService,
-                                 CacheControlService cacheControlService) {
+                                 CacheControlService cacheControlService,
+                                 ExternalRequests externalRequests) {
         this.exchangeService = exchangeService;
         this.stockService = stockService;
         this.cacheControlService = cacheControlService;
+        this.externalRequests = externalRequests;
     }
 
     @GetMapping("/exchanges")
@@ -75,44 +78,14 @@ public class MarketStackController {
     @GetMapping("/exchanges/{exchangeId}/stocks")
     public List<StockDto> updateStocks(@PathVariable String exchangeId) {
         String stocksEndpointName = "stocks." + exchangeId;
-        CacheControlDto cacheControlDto = cacheControlService.getCacheDataFor(stocksEndpointName);
-        if (cacheControlDto != null && !cacheControlDto.isCacheOutdated()) {
+        if (!isShouldUpdate(stocksEndpointName)) {
             return null;
         }
 
         MarketStackPagination pagination = MarketStackPagination.builder().total(999999).build();
-        String exchangeSymbol = "";
-        List<StockDto> actualStockDtos = new ArrayList<>();
+        List<StockDto> actualStockDtos = this.accumulateData(pagination, exchangeId);
 
-        while (pagination.getOffset() < pagination.getTotal()) {
-            final String urlEndpointAddress = "http://api.marketstack.com/v1/exchanges/" + exchangeId + "/tickers";
-            final String accessKey = "166af8c956780fd148bc9dd925968daf";
-
-            String fullUrl = urlEndpointAddress + "?" + "access_key=" + accessKey + "&limit=1000" + "&offset=" + (pagination.getOffset());
-
-            WebClient webClient = WebClient.create();
-            WebClient.RequestHeadersSpec<?> requestHeadersSpec = webClient
-                    .get()
-                    .uri(URI.create(fullUrl));
-
-            String response = Objects.requireNonNull(requestHeadersSpec.exchange())
-                    .block()
-                    .bodyToMono(String.class)
-                    .block();
-
-            try {
-                StockMarketStackResponseWrapper responseWrapper = new ObjectMapper()
-                        .readValue(response, new TypeReference<StockMarketStackResponseWrapper>(){});
-                exchangeSymbol = responseWrapper.getData().getMic();
-                pagination = responseWrapper.getPagination();
-                pagination.setOffset(pagination.getOffset() + 1000);
-                actualStockDtos.addAll(responseWrapper.extract(exchangeService.get(exchangeId).getCurrency()));
-            } catch(JsonProcessingException e) {
-                e.printStackTrace();
-            }
-        }
-
-        stockService.updateStocks(actualStockDtos, exchangeService.get(exchangeSymbol));
+        stockService.updateStocks(actualStockDtos, exchangeService.get(exchangeId));
 
         cacheControlService.updateOne(
                 CacheControlDto.builder()
@@ -122,6 +95,32 @@ public class MarketStackController {
         );
 
         return actualStockDtos;
+    }
+
+    private List<StockDto> accumulateData(MarketStackPagination pagination, String exchangeId) {
+        List<StockDto> result = new ArrayList<>();
+        while (pagination.getOffset() < pagination.getTotal()) {
+            String response = externalRequests.makeMarketStackStocksRequest(pagination, exchangeId);
+
+            try {
+                StockMarketStackResponseWrapper responseWrapper = new ObjectMapper()
+                        .readValue(response, new TypeReference<StockMarketStackResponseWrapper>(){});
+                pagination = responseWrapper.getPagination();
+                pagination.setOffset(pagination.getOffset() + 1000);
+                result.addAll(responseWrapper.extract(exchangeService.get(exchangeId).getCurrency()));
+            } catch(JsonProcessingException e) {
+                e.printStackTrace();
+            }
+        }
+        return result;
+    }
+
+    private boolean isShouldUpdate(String stocksEndpointName) {
+        CacheControlDto cacheControlDto = cacheControlService.getCacheDataFor(stocksEndpointName);
+        if (cacheControlDto != null && !cacheControlDto.isCacheOutdated()) {
+            return false;
+        }
+        return true;
     }
 
     private String makeMarketStackExchangesRequest() {
