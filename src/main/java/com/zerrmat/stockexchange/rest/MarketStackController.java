@@ -26,7 +26,6 @@ import java.util.List;
 import java.util.Objects;
 
 /* TODO: real data for stocks from specific exchange, data has to be taken from:
-    http://api.marketstack.com/v1/exchanges/XNAS/tickers?access_key=166af8c956780fd148bc9dd925968daf&limit=1000 (stock names and codes)
     http://api.marketstack.com/v1/tickers/AAPL/intraday?access_key=166af8c956780fd148bc9dd925968daf&limit=1&symbols=AAPL&interval=15min (stock actual day, real-time data)
 */
 
@@ -37,6 +36,7 @@ public class MarketStackController {
     private StockService stockService;
     private CacheControlService cacheControlService;
     private ExternalRequests externalRequests;
+    private int oneRequestDtoLimit = 1000;
 
     @Autowired
     public MarketStackController(ExchangeService exchangeService,
@@ -78,13 +78,11 @@ public class MarketStackController {
     @GetMapping("/exchanges/{exchangeId}/stocks")
     public List<StockDto> updateStocks(@PathVariable String exchangeId) {
         String stocksEndpointName = "stocks." + exchangeId;
-        if (!isShouldUpdate(stocksEndpointName)) {
-            return null;
+        if (!hasShouldUpdate(stocksEndpointName)) {
+            return new ArrayList<>();
         }
 
-        MarketStackPagination pagination = MarketStackPagination.builder().total(999999).build();
-        List<StockDto> actualStockDtos = this.accumulateData(pagination, exchangeId);
-
+        List<StockDto> actualStockDtos = this.accumulateData(exchangeId);
         stockService.updateStocks(actualStockDtos, exchangeService.get(exchangeId));
 
         cacheControlService.updateOne(
@@ -97,25 +95,26 @@ public class MarketStackController {
         return actualStockDtos;
     }
 
-    private List<StockDto> accumulateData(MarketStackPagination pagination, String exchangeId) {
-        List<StockDto> result = new ArrayList<>();
-        while (pagination.getOffset() < pagination.getTotal()) {
+    private List<StockDto> accumulateData(String exchangeId) {
+        List<StockDto> obtainedStockDtos = new ArrayList<>();
+        MarketStackPagination pagination = new MarketStackPagination();
+        do {
             String response = externalRequests.makeMarketStackStocksRequest(pagination, exchangeId);
 
             try {
                 StockMarketStackResponseWrapper responseWrapper = new ObjectMapper()
                         .readValue(response, new TypeReference<StockMarketStackResponseWrapper>(){});
                 pagination = responseWrapper.getPagination();
-                pagination.setOffset(pagination.getOffset() + 1000);
-                result.addAll(responseWrapper.extract(exchangeService.get(exchangeId).getCurrency()));
+                pagination.setOffset(pagination.getOffset() + oneRequestDtoLimit);
+                obtainedStockDtos.addAll(responseWrapper.extract(exchangeService.get(exchangeId).getCurrency()));
             } catch(JsonProcessingException e) {
                 e.printStackTrace();
             }
-        }
-        return result;
+        } while (pagination.getOffset() < pagination.getTotal());
+        return obtainedStockDtos;
     }
 
-    private boolean isShouldUpdate(String stocksEndpointName) {
+    private boolean hasShouldUpdate(String stocksEndpointName) {
         CacheControlDto cacheControlDto = cacheControlService.getCacheDataFor(stocksEndpointName);
         if (cacheControlDto != null && !cacheControlDto.isCacheOutdated()) {
             return false;
