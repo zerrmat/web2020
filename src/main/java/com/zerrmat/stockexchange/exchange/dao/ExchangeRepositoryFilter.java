@@ -1,7 +1,6 @@
 package com.zerrmat.stockexchange.exchange.dao;
 
 import com.zerrmat.stockexchange.exchange.dto.ExchangeDto;
-import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;
 

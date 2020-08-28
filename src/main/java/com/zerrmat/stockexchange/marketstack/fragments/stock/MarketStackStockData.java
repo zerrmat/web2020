@@ -1,13 +1,15 @@
-package com.zerrmat.stockexchange.exchange.marketstack.dto.fragments;
+package com.zerrmat.stockexchange.marketstack.fragments.stock;
 
 import lombok.*;
 
+import java.util.List;
+
 @Getter
 @Setter
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
-public class MarketStackExchangeData {
+public class MarketStackStockData {
     private String name;
     private String acronym;
     private String mic;
@@ -15,6 +17,5 @@ public class MarketStackExchangeData {
     private String country_code;
     private String city;
     private String website;
-    private MarketStackTimezone timezone;
-    private MarketStackCurrency currency;
+    private List<MarketStackStockTicker> tickers;
 }

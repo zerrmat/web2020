@@ -7,7 +7,7 @@ import com.zerrmat.stockexchange.cachecontrol.dto.CacheControlDto;
 import com.zerrmat.stockexchange.cachecontrol.service.CacheControlService;
 import com.zerrmat.stockexchange.exchange.dto.ExchangeDto;
 import com.zerrmat.stockexchange.exchange.marketstack.dto.ExchangeMarketStackResponseWrapper;
-import com.zerrmat.stockexchange.exchange.marketstack.dto.fragments.MarketStackPagination;
+import com.zerrmat.stockexchange.marketstack.fragments.MarketStackPagination;
 import com.zerrmat.stockexchange.exchange.service.ExchangeService;
 import com.zerrmat.stockexchange.stock.dto.StockDto;
 import com.zerrmat.stockexchange.stock.marketstack.dto.StockMarketStackResponseWrapper;

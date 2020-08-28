@@ -1,9 +1,8 @@
 package com.zerrmat.stockexchange.stock.marketstack.dto;
 
-import com.zerrmat.stockexchange.exchange.marketstack.dto.fragments.MarketStackPagination;
+import com.zerrmat.stockexchange.marketstack.fragments.MarketStackPagination;
 import com.zerrmat.stockexchange.stock.dto.StockDto;
-import com.zerrmat.stockexchange.stock.marketstack.dto.fragments.MarketStackStockData;
-import com.zerrmat.stockexchange.util.DummyCurrencyUnit;
+import com.zerrmat.stockexchange.marketstack.fragments.stock.MarketStackStockData;
 import lombok.*;
 
 import javax.money.Monetary;

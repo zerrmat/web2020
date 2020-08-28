@@ -1,8 +1,8 @@
 package com.zerrmat.stockexchange.exchange.marketstack.dto;
 
 import com.zerrmat.stockexchange.exchange.dto.ExchangeDto;
-import com.zerrmat.stockexchange.exchange.marketstack.dto.fragments.MarketStackExchangeData;
-import com.zerrmat.stockexchange.exchange.marketstack.dto.fragments.MarketStackPagination;
+import com.zerrmat.stockexchange.marketstack.fragments.exchange.MarketStackExchangeData;
+import com.zerrmat.stockexchange.marketstack.fragments.MarketStackPagination;
 import lombok.*;
 
 import java.util.List;

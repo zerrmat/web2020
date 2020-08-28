@@ -1,11 +1,6 @@
 package com.zerrmat.stockexchange.rest;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.zerrmat.stockexchange.exchange.dto.ExchangeDto;
-import com.zerrmat.stockexchange.exchange.marketstack.dto.ExchangeMarketStackResponseWrapper;
-import com.zerrmat.stockexchange.exchange.marketstack.dto.fragments.MarketStackPagination;
+import com.zerrmat.stockexchange.marketstack.fragments.MarketStackPagination;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 

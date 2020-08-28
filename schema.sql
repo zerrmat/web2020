@@ -43,23 +43,23 @@ CREATE TABLE cachecontrol (
 );
 
 
-INSERT INTO stock(name, symbol, value, currency) VALUES ('CD Projekt', 'CDR', 320.48, 'PLN');
-INSERT INTO stock(name, symbol, value, currency) VALUES ('11 bit studios', '11B', 507.00, 'PLN');
+INSERT INTO stock(name, symbol, value, currency) VALUES ('CDPROJEKT', 'CDR.XWAR', 320.48, 'EUR');
+INSERT INTO stock(name, symbol, value, currency) VALUES ('11BIT', '11B.XWAR', 507.00, 'EUR');
 INSERT INTO stock(name, symbol, value, currency) VALUES ('Apple', 'AAPL', 461.90, 'USD');
 
-INSERT INTO exchangetostock(exchange_id, stock_id) VALUES (1322, 2);
-INSERT INTO exchangetostock(exchange_id, stock_id) VALUES (1322, 3);
-INSERT INTO exchangetostock(exchange_id, stock_id) VALUES (1351, 4);
+--INSERT INTO exchangetostock(exchange_id, stock_id) VALUES (1322, 2);
+--INSERT INTO exchangetostock(exchange_id, stock_id) VALUES (1322, 3);
+--INSERT INTO exchangetostock(exchange_id, stock_id) VALUES (1351, 4);
 
-INSERT INTO exchange(symbol, currency, name) VALUES ('WA', 'PLN', 'WARSAW STOCK EXCHANGE/EQUITIES/MAIN MARKET');
-INSERT INTO exchange(symbol, currency, name) VALUES ('BK', 'THB', 'STOCK EXCHANGE OF THAILAND');
-INSERT INTO exchange(symbol, currency, name) VALUES ('KS', 'KRW', 'KOREA EXCHANGE (STOCK MARKET)');
+INSERT INTO exchange(symbol, currency, name) VALUES ('XWAR', 'EUR', 'Warsaw Stock Exchange');
+INSERT INTO exchange(symbol, currency, name) VALUES ('XNAS', 'USD', 'NASDAQ Stock Exchange');
 
 INSERT INTO cachecontrol(endpoint_name, last_access) VALUES ('exchanges', '2020-07-31 16:15:14');
+INSERT INTO cachecontrol(endpoint_name, last_access) VALUES ('stocks.ARCX', '2020-07-31 17:15:14');
 
-update cachecontrol set last_access = '2020-07-29 16:48:00' where endpoint_name = 'exchanges';
+--update cachecontrol set last_access = '2020-07-29 16:48:00' where endpoint_name = 'exchanges';
 SET CLIENT_ENCODING TO 'UTF-8';
 
-SELECT ets.id, e.name, s.name, s.symbol, s.value, s.currency
-FROM exchangetostock ets, exchange e, stock s
-WHERE ets.exchange_id = e.id AND ets.stock_id = s.id;
+--SELECT ets.id, e.name, s.name, s.symbol, s.value, s.currency
+--FROM exchangetostock ets, exchange e, stock s
+--WHERE ets.exchange_id = e.id AND ets.stock_id = s.id;

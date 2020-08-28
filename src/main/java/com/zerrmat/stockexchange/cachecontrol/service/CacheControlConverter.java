@@ -6,8 +6,6 @@ import com.zerrmat.stockexchange.util.GenericConverter;
 import org.springframework.core.convert.ConversionException;
 import org.springframework.stereotype.Component;
 
-import javax.persistence.Converter;
-
 @Component
 public class CacheControlConverter implements GenericConverter<CacheControlModel, CacheControlDto> {
     @Override

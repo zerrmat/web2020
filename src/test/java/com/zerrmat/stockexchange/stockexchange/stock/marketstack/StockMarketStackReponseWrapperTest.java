@@ -1,10 +1,10 @@
 package com.zerrmat.stockexchange.stockexchange.stock.marketstack;
 
-import com.zerrmat.stockexchange.exchange.marketstack.dto.fragments.MarketStackPagination;
+import com.zerrmat.stockexchange.marketstack.fragments.MarketStackPagination;
 import com.zerrmat.stockexchange.stock.dto.StockDto;
 import com.zerrmat.stockexchange.stock.marketstack.dto.StockMarketStackResponseWrapper;
-import com.zerrmat.stockexchange.stock.marketstack.dto.fragments.MarketStackStockData;
-import com.zerrmat.stockexchange.stock.marketstack.dto.fragments.MarketStackStockTicker;
+import com.zerrmat.stockexchange.marketstack.fragments.stock.MarketStackStockData;
+import com.zerrmat.stockexchange.marketstack.fragments.stock.MarketStackStockTicker;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 

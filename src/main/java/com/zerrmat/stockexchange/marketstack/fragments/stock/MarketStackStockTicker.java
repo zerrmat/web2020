@@ -1,4 +1,4 @@
-package com.zerrmat.stockexchange.stock.marketstack.dto.fragments;
+package com.zerrmat.stockexchange.marketstack.fragments.stock;
 
 import lombok.*;
 
