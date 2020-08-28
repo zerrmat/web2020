@@ -14,7 +14,7 @@ import java.util.List;
 
 @RestController
 public class ExternalStocksController extends ExternalController {
-    private String exchangeId;
+    private String exchangeSymbol;
 
     private ExternalRequestsService externalRequestsService;
     private ExchangeService exchangeService;
@@ -28,26 +28,26 @@ public class ExternalStocksController extends ExternalController {
         this.externalRequestsService = externalRequestsService;
         this.exchangeService = exchangeService;
         this.stockService = stockService;
-        this.exchangeId = "";
+        this.exchangeSymbol = "";
     }
 
-    @GetMapping("/external/exchanges/{exchangeId}/stocks")
-    public List<StockDto> executeEndpoint(@PathVariable String exchangeId) {
-        this.exchangeId = exchangeId;
+    @GetMapping("/external/exchanges/{exchangeSymbol}/stocks")
+    public List<StockDto> executeEndpoint(@PathVariable String exchangeSymbol) {
+        this.exchangeSymbol = exchangeSymbol;
         return this.updateDataTemplateMethod();
     }
 
     @Override
     protected boolean shouldUpdateData() {
-        endpointName = "stocks." + exchangeId;
+        endpointName = "stocks." + exchangeSymbol;
         return super.shouldUpdateData();
     }
 
     @Override
     protected List<StockDto> updateData() {
         List<StockDto> actualStockDtos = externalRequestsService
-                .makeMarketStackStocksRequest(exchangeId, exchangeService);
-        stockService.updateStocks(actualStockDtos, exchangeService.get(exchangeId));
+                .makeMarketStackStocksRequest(exchangeSymbol, exchangeService);
+        stockService.updateStocks(actualStockDtos, exchangeService.getBySymbol(exchangeSymbol));
         return actualStockDtos;
     }
 }

@@ -25,7 +25,7 @@ public class ExchangeService {
         this.repositoryFilter = repositoryFilter;
     }
 
-    public ExchangeDto get(String code) {
+    public ExchangeDto getBySymbol(String code) {
         ExchangeModel model = repository.findBySymbol(code);
         return converter.toDto(model);
     }

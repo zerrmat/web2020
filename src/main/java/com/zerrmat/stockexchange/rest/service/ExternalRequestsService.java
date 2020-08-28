@@ -21,18 +21,18 @@ import java.util.Objects;
 public class ExternalRequestsService {
     private final int oneRequestDtoLimit = 1000;
 
-    public List<StockDto> makeMarketStackStocksRequest(String exchangeId, ExchangeService exchangeService) {
+    public List<StockDto> makeMarketStackStocksRequest(String exchangeSymbol, ExchangeService exchangeService) {
         List<StockDto> obtainedStockDtos = new ArrayList<>();
         MarketStackPagination pagination = new MarketStackPagination();
         do {
-            String response = this.makeExternalMarketStackStocksRequest(pagination, exchangeId);
+            String response = this.makeExternalMarketStackStocksRequest(pagination, exchangeSymbol);
 
             try {
                 StockMarketStackResponseWrapper responseWrapper = new ObjectMapper()
                         .readValue(response, new TypeReference<StockMarketStackResponseWrapper>(){});
                 pagination = responseWrapper.getPagination();
                 pagination.setOffset(pagination.getOffset() + oneRequestDtoLimit);
-                obtainedStockDtos.addAll(responseWrapper.extract(exchangeService.get(exchangeId).getCurrency()));
+                obtainedStockDtos.addAll(responseWrapper.extract(exchangeService.getBySymbol(exchangeSymbol).getCurrency()));
             } catch(JsonProcessingException e) {
                 e.printStackTrace();
             }
@@ -40,8 +40,8 @@ public class ExternalRequestsService {
         return obtainedStockDtos;
     }
 
-    public String makeExternalMarketStackStocksRequest(MarketStackPagination pagination, String exchangeId) {
-        final String urlEndpointAddress = "http://api.marketstack.com/v1/exchanges/" + exchangeId + "/tickers";
+    public String makeExternalMarketStackStocksRequest(MarketStackPagination pagination, String exchangeSymbol) {
+        final String urlEndpointAddress = "http://api.marketstack.com/v1/exchanges/" + exchangeSymbol + "/tickers";
         final String accessKey = "166af8c956780fd148bc9dd925968daf";
 
         String fullUrl = urlEndpointAddress + "?" + "access_key=" + accessKey + "&limit=1000" + "&offset=" + (pagination.getOffset());

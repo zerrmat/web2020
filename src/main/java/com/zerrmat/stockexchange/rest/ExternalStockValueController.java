@@ -13,9 +13,9 @@ public class ExternalStockValueController extends ExternalController {
 
     @Override
     protected boolean shouldUpdateData() {
-        String exchangeId = "dummy";
-        String stockId = "stock";
-        endpointName = "stocks." + exchangeId + stockId;
+        String exchangeSymbol = "dummy";
+        String stockSymbol = "stock";
+        endpointName = "stocks." + exchangeSymbol + stockSymbol;
 
         CacheControlDto cacheControlDto = cacheControlService.getCacheDataFor(endpointName);
         if (cacheControlDto != null && !cacheControlDto.isStockCacheOutdated()) {

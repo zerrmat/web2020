@@ -48,14 +48,14 @@ public class StockExchangeRestController {
 
     @GetMapping("/exchange/{code}")
     public List<ExchangeDto> getExchange(@PathVariable String code) {
-        return Collections.singletonList(exchangeService.get(code));
+        return Collections.singletonList(exchangeService.getBySymbol(code));
     }
 
     @GetMapping("/exchange/{code}/stocks")
     public List<StockDto> getAllStocks(@PathVariable String code) {
         code = code.toUpperCase();
         externalStocksController.executeEndpoint(code);
-        Long exchangeId = exchangeService.get(code).getId();
+        Long exchangeId = exchangeService.getBySymbol(code).getId();
         return exchangeToStockService.getStocksForExchange(exchangeId);
     }
 }

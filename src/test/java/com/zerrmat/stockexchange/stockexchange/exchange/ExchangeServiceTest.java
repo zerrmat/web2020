@@ -75,7 +75,7 @@ public class ExchangeServiceTest {
         Mockito.when(converter.toDto(em)).thenReturn(ed);
 
         // when
-        ExchangeDto result = service.get("ABC");
+        ExchangeDto result = service.getBySymbol("ABC");
 
         // then
         Assertions.assertThat(result).isNotNull();

@@ -6,24 +6,21 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.zerrmat.stockexchange.cachecontrol.dto.CacheControlDto;
 import com.zerrmat.stockexchange.cachecontrol.service.CacheControlService;
 import com.zerrmat.stockexchange.exchange.dto.ExchangeDto;
-import com.zerrmat.stockexchange.marketstack.fragments.MarketStackPagination;
 import com.zerrmat.stockexchange.exchange.service.ExchangeService;
+import com.zerrmat.stockexchange.marketstack.fragments.MarketStackPagination;
 import com.zerrmat.stockexchange.rest.ExternalStocksController;
 import com.zerrmat.stockexchange.rest.service.ExternalRequestsService;
 import com.zerrmat.stockexchange.stock.dto.StockDto;
 import com.zerrmat.stockexchange.stock.marketstack.dto.StockMarketStackResponseWrapper;
 import com.zerrmat.stockexchange.stock.service.StockService;
+import com.zerrmat.stockexchange.stockexchange.util.RestTestUtils;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
-import org.springframework.core.io.ClassPathResource;
-import org.springframework.util.StreamUtils;
 
-import java.io.IOException;
-import java.nio.charset.Charset;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -52,34 +49,35 @@ public class ExternalStocksControllerTest {
     @Test
     public void shouldConsumeResponse() throws JsonProcessingException {
         // given
-        String exchangeId = "XWAR";
+        String exchangeSymbol = "XWAR";
+        String responseFilename = "MarketStackStockRequestWarsaw.json";
+        String responseBody = RestTestUtils.generateResponseBody(responseFilename);
 
         StockMarketStackResponseWrapper responseWrapper = new ObjectMapper().readValue(
-                this.generateRequestBody("MarketStackStockRequestWarsaw.json"),
-                new TypeReference<StockMarketStackResponseWrapper>(){});
+                responseBody, new TypeReference<StockMarketStackResponseWrapper>(){});
         List<StockDto> responseDtos = responseWrapper.extract("EUR");
         CacheControlDto cacheControlDto = CacheControlDto.builder()
-                .endpointName("stocks.XWAR")
+                .endpointName("stocks." + exchangeSymbol)
                 .lastAccess(LocalDateTime.now().minusDays(2))
                 .build();
-        Mockito.when(cacheControlService.getCacheDataFor("stocks.XWAR")).thenReturn(cacheControlDto);
+        Mockito.when(cacheControlService.getCacheDataFor("stocks." + exchangeSymbol))
+                .thenReturn(cacheControlDto);
 
         ExchangeDto exchangeDto = ExchangeDto.builder()
                 .id(1L)
-                .symbol("XWAR")
+                .symbol(exchangeSymbol)
                 .name("Warsaw Stock Exchange")
                 .currency("EUR")
                 .build();
-        Mockito.when(exchangeService.get(exchangeId)).thenReturn(exchangeDto);
+        Mockito.when(exchangeService.getBySymbol(exchangeSymbol)).thenReturn(exchangeDto);
 
         Mockito.when(externalRequestsService.makeExternalMarketStackStocksRequest(
-                any(MarketStackPagination.class), any(String.class)))
-                .thenReturn(this.generateRequestBody("MarketStackStockRequestWarsaw.json"));
+                any(MarketStackPagination.class), any(String.class))).thenReturn(responseBody);
         Mockito.when(externalRequestsService.makeMarketStackStocksRequest(any(String.class), eq(exchangeService)))
                 .thenReturn(responseDtos);
 
         // when
-        List<StockDto> result = controller.executeEndpoint(exchangeId);
+        List<StockDto> result = controller.executeEndpoint(exchangeSymbol);
 
         // then
         Assertions.assertThat(result).isNotNull();
@@ -92,43 +90,36 @@ public class ExternalStocksControllerTest {
     }
 
     @Test
-    public void shouldConsumeMultipleResponse() throws JsonProcessingException {
+    public void shouldConsumeMultipartResponse() throws JsonProcessingException {
         // given
-        String exchangeId = "ARCX";
+        String exchangeSymbol = "ARCX";
+        String responseFilename = "MarketStackStockRequestNYSEARCA";
 
-        int parts = 3;
-        int part = 1;
-        List<StockDto> responseDtos = new ArrayList<>();
-        while (part <= parts) {
-            StockMarketStackResponseWrapper responseWrapper = new ObjectMapper().readValue(
-                    this.generateRequestBody("MarketStackStockRequestNYSEARCA" + part + ".json"),
-                    new TypeReference<StockMarketStackResponseWrapper>(){});
-            responseDtos.addAll(responseWrapper.extract("USD"));
-            ++part;
-        }
+        List<StockDto> responseDtos = this.generateMultipartResponse(3, responseFilename);
 
         CacheControlDto cacheControlDto = CacheControlDto.builder()
-                .endpointName("stocks.ARCX")
+                .endpointName("stocks." + exchangeSymbol)
                 .lastAccess(LocalDateTime.now().minusDays(2))
                 .build();
-        Mockito.when(cacheControlService.getCacheDataFor("stocks.ARCX")).thenReturn(cacheControlDto);
+        Mockito.when(cacheControlService.getCacheDataFor("stocks." + exchangeSymbol))
+                .thenReturn(cacheControlDto);
 
         ExchangeDto exchangeDto = ExchangeDto.builder()
                 .id(1L)
-                .symbol("ARCX")
+                .symbol(exchangeSymbol)
                 .name("NYSE ARCA")
                 .currency("USD")
                 .build();
-        Mockito.when(exchangeService.get(exchangeId)).thenReturn(exchangeDto);
+        Mockito.when(exchangeService.getBySymbol(exchangeSymbol)).thenReturn(exchangeDto);
         Mockito.when(externalRequestsService.makeExternalMarketStackStocksRequest(any(MarketStackPagination.class), any(String.class)))
-                .thenReturn(this.generateRequestBody("MarketStackStockRequestNYSEARCA1.json"))
-                .thenReturn(this.generateRequestBody("MarketStackStockRequestNYSEARCA2.json"))
-                .thenReturn(this.generateRequestBody("MarketStackStockRequestNYSEARCA3.json"));
+                .thenReturn(RestTestUtils.generateResponseBody(responseFilename + "1.json"))
+                .thenReturn(RestTestUtils.generateResponseBody(responseFilename + "2.json"))
+                .thenReturn(RestTestUtils.generateResponseBody(responseFilename + "3.json"));
         Mockito.when(externalRequestsService.makeMarketStackStocksRequest(any(String.class), eq(exchangeService)))
                 .thenReturn(responseDtos);
 
         // when
-        List<StockDto> result = controller.executeEndpoint(exchangeId);
+        List<StockDto> result = controller.executeEndpoint(exchangeSymbol);
 
         // then
         Assertions.assertThat(result).isNotNull();
@@ -140,15 +131,18 @@ public class ExternalStocksControllerTest {
         }
     }
 
-    private String generateRequestBody(String jsonName) {
-        String requestBody = "";
-        try {
-            requestBody = StreamUtils.copyToString(
-                    new ClassPathResource(jsonName).getInputStream(),
-                    Charset.defaultCharset());
-        } catch (IOException e) {
-            e.printStackTrace();
+    private List<StockDto> generateMultipartResponse(int parts, String responseFilename) throws JsonProcessingException {
+        int actualPart = 1;
+        List<StockDto> result = new ArrayList<>();
+
+        while (actualPart <= parts) {
+            StockMarketStackResponseWrapper responseWrapper = new ObjectMapper().readValue(
+                    RestTestUtils.generateResponseBody(responseFilename + actualPart + ".json"),
+                    new TypeReference<StockMarketStackResponseWrapper>(){});
+            result.addAll(responseWrapper.extract("USD"));
+            ++actualPart;
         }
-        return requestBody;
+
+        return result;
     }
 }
