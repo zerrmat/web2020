@@ -6,10 +6,12 @@ import com.zerrmat.stockexchange.stock.dao.StockRepository;
 import com.zerrmat.stockexchange.stock.dao.StockRepositoryFilter;
 import com.zerrmat.stockexchange.stock.dto.StockDto;
 import com.zerrmat.stockexchange.stock.model.StockModel;
+import com.zerrmat.stockexchange.ticker.dto.TickerDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.ConversionException;
 import org.springframework.stereotype.Service;
 
+import javax.money.MonetaryAmount;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -43,6 +45,12 @@ public class StockService {
         return converter.convertAllToDto(modelAll);
     }
 
+    public StockDto updateStockValue(TickerDto dto) {
+        StockModel stock = repository.getBySymbol(dto.getSymbol());
+        stock.setValue(dto.getClose());
+        StockModel saved = repository.save(stock);
+        return converter.toDto(saved);
+    }
 
     public boolean updateStocks(List<StockDto> actualStocks, ExchangeDto exchangeDto) {
         List<StockDto> dbStocks = etsService.getStocksForExchange(exchangeDto.getId());

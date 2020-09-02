@@ -6,11 +6,13 @@ import com.zerrmat.stockexchange.exchangetostock.service.ExchangeToStockService;
 import com.zerrmat.stockexchange.stock.dto.StockDto;
 import com.zerrmat.stockexchange.stock.model.StockModel;
 import com.zerrmat.stockexchange.stock.service.StockService;
+import com.zerrmat.stockexchange.ticker.dto.TickerDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api")
@@ -18,20 +20,22 @@ public class StockExchangeRestController {
     private StockService stockService;
     private ExchangeService exchangeService;
     private ExchangeToStockService exchangeToStockService;
-    //private MarketStackController marketStackController;
     private ExternalExchangesController externalExchangesController;
     private ExternalStocksController externalStocksController;
+    private ExternalTickersController externalTickersController;
 
     @Autowired
     public StockExchangeRestController(StockService stockService, ExchangeService exchangeService,
                                        ExchangeToStockService exchangeToStockService,
                                        ExternalExchangesController externalExchangesController,
-                                       ExternalStocksController externalStocksController) {
+                                       ExternalStocksController externalStocksController,
+                                       ExternalTickersController externalTickersController) {
         this.stockService = stockService;
         this.exchangeService = exchangeService;
         this.exchangeToStockService = exchangeToStockService;
         this.externalExchangesController = externalExchangesController;
         this.externalStocksController = externalStocksController;
+        this.externalTickersController = externalTickersController;
     }
 
     @GetMapping("/stock/{id}")
@@ -57,5 +61,24 @@ public class StockExchangeRestController {
         externalStocksController.executeEndpoint(code);
         Long exchangeId = exchangeService.getBySymbol(code).getId();
         return exchangeToStockService.getStocksForExchange(exchangeId);
+    }
+
+    @GetMapping("exchange/{code}/stock/{id}/ticker/latest")
+    public StockDto getLatestEODForStock(@PathVariable String code, @PathVariable String id) {
+        code = code.toUpperCase();
+        String stockId = id.toUpperCase();
+
+        TickerDto tickerDto;
+
+        Long excId = exchangeService.getBySymbol(code).getId();
+        List<StockDto> stocksForExchange = exchangeToStockService.getStocksForExchange(excId);
+        if (stocksForExchange.stream().filter(s -> s.getSymbol().equals(stockId)).count() == 1) {
+            externalTickersController.executeEndpoint(id, code);
+            return stockService.getBySymbol(id);
+        } else {
+            String symbol = stockId + "." + code;
+            externalTickersController.executeEndpoint(symbol);
+            return stockService.getBySymbol(symbol);
+        }
     }
 }

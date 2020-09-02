@@ -3,6 +3,7 @@ package com.zerrmat.stockexchange.rest.service;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.module.SimpleModule;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.zerrmat.stockexchange.exchange.dto.ExchangeDto;
 import com.zerrmat.stockexchange.exchange.marketstack.dto.ExchangeMarketStackResponseWrapper;
@@ -12,10 +13,12 @@ import com.zerrmat.stockexchange.stock.dto.StockDto;
 import com.zerrmat.stockexchange.stock.marketstack.dto.StockMarketStackResponseWrapper;
 import com.zerrmat.stockexchange.ticker.dto.TickerDto;
 import com.zerrmat.stockexchange.ticker.marketstack.dto.TickerEODLatestMarketStackResponseWrapper;
+import com.zerrmat.stockexchange.util.ZonedDateTimeDeserializer;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 
 import java.net.URI;
+import java.time.ZonedDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -28,8 +31,12 @@ public class ExternalRequestsService {
         String response = this.makeExternalMarketStackTickersRequest(stockSymbol);
         List<TickerDto> obtainedTickerDtos = new ArrayList<>();
         try {
+            SimpleModule simpleModule = new SimpleModule();
+            simpleModule.addDeserializer(ZonedDateTime.class, new ZonedDateTimeDeserializer());
+
             ObjectMapper objectMapper = new ObjectMapper();
-            objectMapper.registerModule(new JavaTimeModule());
+            objectMapper.registerModule(simpleModule);
+
             TickerEODLatestMarketStackResponseWrapper responseWrapper = objectMapper.readValue(
                     response, new TypeReference<TickerEODLatestMarketStackResponseWrapper>(){});
             obtainedTickerDtos.add(responseWrapper.extract());
