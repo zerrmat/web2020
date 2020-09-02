@@ -41,7 +41,7 @@ public abstract class ExternalController {
         return new ArrayList<>();
     }
 
-    private void updateCache() {
+    protected void updateCache() {
         cacheControlService.updateOne(
                 CacheControlDto.builder()
                         .endpointName(endpointName)

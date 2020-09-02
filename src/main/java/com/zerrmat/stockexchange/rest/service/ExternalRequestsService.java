@@ -3,12 +3,15 @@ package com.zerrmat.stockexchange.rest.service;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.zerrmat.stockexchange.exchange.dto.ExchangeDto;
 import com.zerrmat.stockexchange.exchange.marketstack.dto.ExchangeMarketStackResponseWrapper;
 import com.zerrmat.stockexchange.exchange.service.ExchangeService;
 import com.zerrmat.stockexchange.marketstack.fragments.MarketStackPagination;
 import com.zerrmat.stockexchange.stock.dto.StockDto;
 import com.zerrmat.stockexchange.stock.marketstack.dto.StockMarketStackResponseWrapper;
+import com.zerrmat.stockexchange.ticker.dto.TickerDto;
+import com.zerrmat.stockexchange.ticker.marketstack.dto.TickerEODLatestMarketStackResponseWrapper;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 
@@ -20,6 +23,39 @@ import java.util.Objects;
 @Service
 public class ExternalRequestsService {
     private final int oneRequestDtoLimit = 1000;
+
+    public List<TickerDto> makeMarketStackTickersRequest(String stockSymbol) {
+        String response = this.makeExternalMarketStackTickersRequest(stockSymbol);
+        List<TickerDto> obtainedTickerDtos = new ArrayList<>();
+        try {
+            ObjectMapper objectMapper = new ObjectMapper();
+            objectMapper.registerModule(new JavaTimeModule());
+            TickerEODLatestMarketStackResponseWrapper responseWrapper = objectMapper.readValue(
+                    response, new TypeReference<TickerEODLatestMarketStackResponseWrapper>(){});
+            obtainedTickerDtos.add(responseWrapper.extract());
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
+
+        return obtainedTickerDtos;
+    }
+
+    public String makeExternalMarketStackTickersRequest(String stockSymbol) {
+        final String urlEndpointAddress = "http://api.marketstack.com/v1/tickers/" + stockSymbol + "/eod/latest";
+        final String accessKey = "166af8c956780fd148bc9dd925968daf";
+
+        String fullUrl = urlEndpointAddress + "?" + "access_key=" + accessKey;
+
+        WebClient webClient = WebClient.create();
+        WebClient.RequestHeadersSpec<?> requestHeadersSpec = webClient
+                .get()
+                .uri(URI.create(fullUrl));
+
+        return Objects.requireNonNull(requestHeadersSpec.exchange())
+                .block()
+                .bodyToMono(String.class)
+                .block();
+    }
 
     public List<StockDto> makeMarketStackStocksRequest(String exchangeSymbol, ExchangeService exchangeService) {
         List<StockDto> obtainedStockDtos = new ArrayList<>();
