@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -47,8 +48,8 @@ public class ExternalTickersController extends ExternalController {
     @Override
     protected boolean shouldUpdateData() {
         if (exchangeSymbol == null) {
-            String[] split = stockSymbol.split(".");
-            endpointName = "stocks." + split[2] + "." + split[0];
+            String[] split = stockSymbol.split("\\.");
+            endpointName = "stocks." + split[1] + "." + split[0];
         } else {
             endpointName = "stocks." + exchangeSymbol + "." + stockSymbol;
         }
@@ -58,7 +59,10 @@ public class ExternalTickersController extends ExternalController {
     @Override
     protected List updateData() {
         List<TickerDto> tickerDtos = externalRequestsService.makeMarketStackTickersRequest(this.stockSymbol);
-        List<StockDto> stockDtos = Collections.singletonList(stockService.updateStockValue(tickerDtos.get(0)));
+        List<StockDto> stockDtos = new ArrayList<>();
+        if (tickerDtos.size() != 0) {
+            stockDtos = Collections.singletonList(stockService.updateStockValue(tickerDtos.get(0)));
+        }
         return stockDtos;
     }
 }

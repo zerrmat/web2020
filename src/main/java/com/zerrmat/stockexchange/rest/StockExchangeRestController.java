@@ -68,11 +68,10 @@ public class StockExchangeRestController {
         code = code.toUpperCase();
         String stockId = id.toUpperCase();
 
-        TickerDto tickerDto;
-
         Long excId = exchangeService.getBySymbol(code).getId();
         List<StockDto> stocksForExchange = exchangeToStockService.getStocksForExchange(excId);
-        if (stocksForExchange.stream().filter(s -> s.getSymbol().equals(stockId)).count() == 1) {
+        long count = stocksForExchange.stream().filter(s -> s.getSymbol().equals(stockId)).count();
+        if (count == 1) {
             externalTickersController.executeEndpoint(id, code);
             return stockService.getBySymbol(id);
         } else {
