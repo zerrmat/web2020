@@ -32,14 +32,14 @@ public class ExternalTickersController extends ExternalController {
     }
 
     @GetMapping("/external/tickers/{stockSymbol}/eod/latest")
-    public List<TickerDto> executeEndpoint(@PathVariable String stockSymbol) {
+    public List<StockDto> executeEndpoint(@PathVariable String stockSymbol) {
         this.stockSymbol = stockSymbol;
 
-        List<TickerDto> response = this.updateDataTemplateMethod();
+        List<StockDto> response = this.updateDataTemplateMethod();
         return response;
     }
 
-    public List<TickerDto> executeEndpoint(String stockSymbol, String exchangeSymbol) {
+    public List<StockDto> executeEndpoint(String stockSymbol, String exchangeSymbol) {
         this.exchangeSymbol = exchangeSymbol;
         return this.executeEndpoint(stockSymbol);
     }

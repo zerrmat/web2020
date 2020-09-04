@@ -8,6 +8,7 @@ import com.zerrmat.stockexchange.stock.dto.StockDto;
 import com.zerrmat.stockexchange.stock.model.StockModel;
 import com.zerrmat.stockexchange.stock.service.StockConverter;
 import com.zerrmat.stockexchange.stock.service.StockService;
+import com.zerrmat.stockexchange.ticker.dto.TickerDto;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -18,9 +19,13 @@ import org.mockito.MockitoAnnotations;
 import javax.money.Monetary;
 import javax.money.MonetaryAmount;
 import java.math.BigDecimal;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+
+import static org.mockito.ArgumentMatchers.any;
 
 public class StockServiceTest {
     private StockService service;
@@ -177,5 +182,53 @@ public class StockServiceTest {
         // then
         Assertions.assertThat(result).isNotNull();
         Assertions.assertThat(result).isTrue();
+    }
+
+    @Test
+    public void shouldUpdateValue() {
+        // given
+        TickerDto tickerDto = TickerDto.builder()
+                .open(BigDecimal.valueOf(438.5))
+                .high(BigDecimal.valueOf(447.8))
+                .low(BigDecimal.valueOf(436.4))
+                .close(BigDecimal.valueOf(440.7))
+                .volume(279982L)
+                .symbol("CDR.XWAR")
+                .date(ZonedDateTime.of(2020, 9, 1, 0, 0, 0, 0, ZoneId.of("Etc/UTC")))
+                .build();
+
+        MonetaryAmount value = Monetary.getDefaultAmountFactory().setCurrency("PLN")
+                .setNumber(tickerDto.getClose()).create();
+        StockDto stockDto = StockDto.builder()
+                .id(1L)
+                .name("CD Projekt")
+                .symbol("CDR")
+                .value(value)
+                .build();
+        StockModel stockModel = StockModel.builder()
+                .id(1L)
+                .name("CD Projekt")
+                .symbol("CDR")
+                .value(value.getNumber().numberValue(BigDecimal.class))
+                .currency("PLN")
+                .build();
+
+        Mockito.when(repository.getBySymbol(tickerDto.getSymbol())).thenReturn(stockModel);
+        Mockito.when(repository.save(stockModel)).thenReturn(stockModel);
+        Mockito.when(converter.toDto(stockModel)).thenReturn(stockDto);
+
+        // when
+        StockDto result = service.updateStockValue(tickerDto);
+
+        // then
+        Assertions.assertThat(result.getName()).isEqualTo("CD Projekt");
+
+        MonetaryAmount resultCDR = Monetary.getDefaultAmountFactory().setCurrency("PLN")
+                .setNumber(BigDecimal.valueOf(440.7)).create();
+        BigDecimal bigDecimal = resultCDR.getNumber().numberValue(BigDecimal.class);
+        Assertions.assertThat(result.getValue().getNumber().numberValue(BigDecimal.class)
+                .compareTo(bigDecimal)).isEqualTo(0);
+
+        Assertions.assertThat(result.getSymbol()).isEqualTo("CDR");
     }
 }
