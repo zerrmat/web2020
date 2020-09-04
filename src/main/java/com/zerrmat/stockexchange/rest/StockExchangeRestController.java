@@ -10,6 +10,8 @@ import com.zerrmat.stockexchange.ticker.dto.TickerDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -23,19 +25,22 @@ public class StockExchangeRestController {
     private ExternalExchangesController externalExchangesController;
     private ExternalStocksController externalStocksController;
     private ExternalTickersController externalTickersController;
+    private ExternalHistoricalController externalHistoricalController;
 
     @Autowired
     public StockExchangeRestController(StockService stockService, ExchangeService exchangeService,
                                        ExchangeToStockService exchangeToStockService,
                                        ExternalExchangesController externalExchangesController,
                                        ExternalStocksController externalStocksController,
-                                       ExternalTickersController externalTickersController) {
+                                       ExternalTickersController externalTickersController,
+                                       ExternalHistoricalController externalHistoricalController) {
         this.stockService = stockService;
         this.exchangeService = exchangeService;
         this.exchangeToStockService = exchangeToStockService;
         this.externalExchangesController = externalExchangesController;
         this.externalStocksController = externalStocksController;
         this.externalTickersController = externalTickersController;
+        this.externalHistoricalController = externalHistoricalController;
     }
 
     @GetMapping("/stock/{id}")
@@ -79,5 +84,22 @@ public class StockExchangeRestController {
             externalTickersController.executeEndpoint(symbol);
             return stockService.getBySymbol(symbol);
         }
+    }
+
+    @GetMapping("exchange/{code}/stock{id}/ticker/historical")
+    public List<TickerDto> getHistoricalData(@PathVariable String code,
+                                             @PathVariable String id,
+                                             @RequestParam("from") LocalDate from,
+                                             @RequestParam("to") LocalDate to) {
+        List<TickerDto> tickerDtos = new ArrayList<>();
+        String exchangeSymbol = code.toUpperCase();
+        String stockSymbol = id.toUpperCase();
+        System.out.println(from);
+        System.out.println(to);
+
+        ExchangeDto exchangeDto = exchangeService.getBySymbol(exchangeSymbol);
+        externalHistoricalController.executeEndpoint(exchangeDto, stockSymbol, from, to));
+
+        return tickerDtos;
     }
 }

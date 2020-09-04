@@ -8,16 +8,20 @@ import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.zerrmat.stockexchange.exchange.dto.ExchangeDto;
 import com.zerrmat.stockexchange.exchange.marketstack.dto.ExchangeMarketStackResponseWrapper;
 import com.zerrmat.stockexchange.exchange.service.ExchangeService;
+import com.zerrmat.stockexchange.historical.dto.HistoricalDto;
 import com.zerrmat.stockexchange.marketstack.fragments.MarketStackPagination;
 import com.zerrmat.stockexchange.stock.dto.StockDto;
 import com.zerrmat.stockexchange.stock.marketstack.dto.StockMarketStackResponseWrapper;
 import com.zerrmat.stockexchange.ticker.dto.TickerDto;
 import com.zerrmat.stockexchange.ticker.marketstack.dto.TickerEODLatestMarketStackResponseWrapper;
+import com.zerrmat.stockexchange.ticker.marketstack.dto.TickerHistoricalMarketStackResponseWrapper;
 import com.zerrmat.stockexchange.util.ZonedDateTimeDeserializer;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 
 import java.net.URI;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.ZonedDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -26,6 +30,21 @@ import java.util.Objects;
 @Service
 public class ExternalRequestsService {
     private final int oneRequestDtoLimit = 1000;
+
+    public List<HistoricalDto> makeMarketStackHistoricalRequest(String stockSymbol, ZonedDateTime from,
+                                                                ZonedDateTime to) {
+        String response = this.makeExternalMarketStackHistoricalRequest(stockSymbol, from, to);
+        List<HistoricalDto> obtainedHistoricalDtos = new ArrayList<>();
+        try {
+            TickerHistoricalMarketStackResponseWrapper responseWrapper = new ObjectMapper().readValue(
+                    response, new TypeReference<TickerHistoricalMarketStackResponseWrapper>(){});
+            obtainedHistoricalDtos.addAll(responseWrapper.extract());
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
+
+        return obtainedHistoricalDtos;
+    }
 
     public List<TickerDto> makeMarketStackTickersRequest(String stockSymbol) {
         String response = this.makeExternalMarketStackTickersRequest(stockSymbol);
@@ -45,6 +64,38 @@ public class ExternalRequestsService {
         }
 
         return obtainedTickerDtos;
+    }
+
+    // api.marketstack.com/v1/eod?access_key=166af8c956780fd148bc9dd925968daf&symbols=CDR.XWAR
+// &date_from=2020-08-03&date_to=2020-09-03&limit=1000&offset=1000
+    public String makeExternalMarketStackHistoricalRequest(String stockSymbol, ZonedDateTime from,
+                                                           ZonedDateTime to) {
+        final String urlEndpointAddress = "http://api.marketstack.com/v1/eod";
+        final String accessKey = "166af8c956780fd148bc9dd925968daf";
+        final String symbols = stockSymbol;
+        final String dateFrom = from.getYear() + "-"
+                + ((from.getMonthValue() < 10) ? "0" : "")
+                + from.getMonthValue() + "-"
+                + ((from.getDayOfMonth() < 10) ? "0" : "")
+                + from.getDayOfMonth();
+        final String dateTo = to.getYear() + "-"
+                + ((to.getMonthValue() < 10) ? "0" : "")
+                + to.getMonthValue() + "-"
+                + ((to.getDayOfMonth() < 10) ? "0" : "")
+                + to.getDayOfMonth();
+
+        String fullUrl = urlEndpointAddress + "?" + "access_key=" + accessKey + "&symbols=" + symbols
+                + "&date_from=" + dateFrom + "&date_to=" + dateTo + "&limit=" + oneRequestDtoLimit;
+
+        WebClient webClient = WebClient.create();
+        WebClient.RequestHeadersSpec<?> requestHeadersSpec = webClient
+                .get()
+                .uri(URI.create(fullUrl));
+
+        return Objects.requireNonNull(requestHeadersSpec.exchange())
+                .block()
+                .bodyToMono(String.class)
+                .block();
     }
 
     public String makeExternalMarketStackTickersRequest(String stockSymbol) {
