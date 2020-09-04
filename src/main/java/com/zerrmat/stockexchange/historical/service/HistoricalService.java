@@ -3,6 +3,7 @@ package com.zerrmat.stockexchange.historical.service;
 import com.zerrmat.stockexchange.historical.dao.HistoricalRepository;
 import com.zerrmat.stockexchange.historical.dto.HistoricalDto;
 import com.zerrmat.stockexchange.historical.model.HistoricalModel;
+import org.springframework.core.convert.ConversionException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -16,6 +17,16 @@ public class HistoricalService {
     public HistoricalService(HistoricalRepository repository, HistoricalConverter converter) {
         this.repository = repository;
         this.converter = converter;
+    }
+
+    public boolean insertData(List<HistoricalDto> data) {
+        try {
+            List<HistoricalModel> historicalModels = converter.convertAllToEntity(data);
+            repository.saveAll(historicalModels);
+        } catch (ConversionException e) {
+            return false;
+        }
+        return true;
     }
 
     public List<HistoricalDto> getHistoricalDataForStock(String exchangeSymbol, String stockSymbol) {

@@ -31,19 +31,56 @@ import java.util.Objects;
 public class ExternalRequestsService {
     private final int oneRequestDtoLimit = 1000;
 
-    public List<HistoricalDto> makeMarketStackHistoricalRequest(String stockSymbol, ZonedDateTime from,
-                                                                ZonedDateTime to) {
+    public List<HistoricalDto> makeMarketStackHistoricalRequest(String exchangeCurrency, String stockSymbol,
+                                                                LocalDate from, LocalDate to) {
         String response = this.makeExternalMarketStackHistoricalRequest(stockSymbol, from, to);
         List<HistoricalDto> obtainedHistoricalDtos = new ArrayList<>();
         try {
-            TickerHistoricalMarketStackResponseWrapper responseWrapper = new ObjectMapper().readValue(
+            SimpleModule simpleModule = new SimpleModule();
+            simpleModule.addDeserializer(ZonedDateTime.class, new ZonedDateTimeDeserializer());
+
+            ObjectMapper objectMapper = new ObjectMapper();
+            objectMapper.registerModule(simpleModule);
+
+            TickerHistoricalMarketStackResponseWrapper responseWrapper = objectMapper.readValue(
                     response, new TypeReference<TickerHistoricalMarketStackResponseWrapper>(){});
-            obtainedHistoricalDtos.addAll(responseWrapper.extract());
+            obtainedHistoricalDtos.addAll(responseWrapper.extract(exchangeCurrency));
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }
 
         return obtainedHistoricalDtos;
+    }
+
+    // api.marketstack.com/v1/eod?access_key=166af8c956780fd148bc9dd925968daf&symbols=CDR.XWAR
+// &date_from=2020-08-03&date_to=2020-09-03&limit=1000&offset=1000
+    public String makeExternalMarketStackHistoricalRequest(String stockSymbol, LocalDate from,
+                                                           LocalDate to) {
+        final String urlEndpointAddress = "http://api.marketstack.com/v1/eod";
+        final String accessKey = "166af8c956780fd148bc9dd925968daf";
+        final String dateFrom = from.getYear() + "-"
+                + ((from.getMonthValue() < 10) ? "0" : "")
+                + from.getMonthValue() + "-"
+                + ((from.getDayOfMonth() < 10) ? "0" : "")
+                + from.getDayOfMonth();
+        final String dateTo = to.getYear() + "-"
+                + ((to.getMonthValue() < 10) ? "0" : "")
+                + to.getMonthValue() + "-"
+                + ((to.getDayOfMonth() < 10) ? "0" : "")
+                + to.getDayOfMonth();
+
+        String fullUrl = urlEndpointAddress + "?" + "access_key=" + accessKey + "&symbols=" + stockSymbol
+                + "&date_from=" + dateFrom + "&date_to=" + dateTo + "&limit=" + oneRequestDtoLimit;
+
+        WebClient webClient = WebClient.create();
+        WebClient.RequestHeadersSpec<?> requestHeadersSpec = webClient
+                .get()
+                .uri(URI.create(fullUrl));
+
+        return Objects.requireNonNull(requestHeadersSpec.exchange())
+                .block()
+                .bodyToMono(String.class)
+                .block();
     }
 
     public List<TickerDto> makeMarketStackTickersRequest(String stockSymbol) {
@@ -64,38 +101,6 @@ public class ExternalRequestsService {
         }
 
         return obtainedTickerDtos;
-    }
-
-    // api.marketstack.com/v1/eod?access_key=166af8c956780fd148bc9dd925968daf&symbols=CDR.XWAR
-// &date_from=2020-08-03&date_to=2020-09-03&limit=1000&offset=1000
-    public String makeExternalMarketStackHistoricalRequest(String stockSymbol, ZonedDateTime from,
-                                                           ZonedDateTime to) {
-        final String urlEndpointAddress = "http://api.marketstack.com/v1/eod";
-        final String accessKey = "166af8c956780fd148bc9dd925968daf";
-        final String symbols = stockSymbol;
-        final String dateFrom = from.getYear() + "-"
-                + ((from.getMonthValue() < 10) ? "0" : "")
-                + from.getMonthValue() + "-"
-                + ((from.getDayOfMonth() < 10) ? "0" : "")
-                + from.getDayOfMonth();
-        final String dateTo = to.getYear() + "-"
-                + ((to.getMonthValue() < 10) ? "0" : "")
-                + to.getMonthValue() + "-"
-                + ((to.getDayOfMonth() < 10) ? "0" : "")
-                + to.getDayOfMonth();
-
-        String fullUrl = urlEndpointAddress + "?" + "access_key=" + accessKey + "&symbols=" + symbols
-                + "&date_from=" + dateFrom + "&date_to=" + dateTo + "&limit=" + oneRequestDtoLimit;
-
-        WebClient webClient = WebClient.create();
-        WebClient.RequestHeadersSpec<?> requestHeadersSpec = webClient
-                .get()
-                .uri(URI.create(fullUrl));
-
-        return Objects.requireNonNull(requestHeadersSpec.exchange())
-                .block()
-                .bodyToMono(String.class)
-                .block();
     }
 
     public String makeExternalMarketStackTickersRequest(String stockSymbol) {

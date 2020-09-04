@@ -5,16 +5,14 @@ import com.zerrmat.stockexchange.exchange.dto.ExchangeDto;
 import com.zerrmat.stockexchange.historical.dto.HistoricalDto;
 import com.zerrmat.stockexchange.historical.service.HistoricalService;
 import com.zerrmat.stockexchange.rest.service.ExternalRequestsService;
-import com.zerrmat.stockexchange.ticker.dto.TickerDto;
 import com.zerrmat.stockexchange.util.ExternalController;
 import org.springframework.stereotype.Controller;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.ZonedDateTime;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Controller
 public class ExternalHistoricalController extends ExternalController {
@@ -23,8 +21,9 @@ public class ExternalHistoricalController extends ExternalController {
 
     private ExchangeDto exchangeDto;
     private String stockSymbol;
-    private ZonedDateTime from;
-    private ZonedDateTime to;
+    private LocalDate from;
+    private LocalDate to;
+    List<HistoricalDto> actualData;
 
     public ExternalHistoricalController(CacheControlService cacheControlService,
                                         ExternalRequestsService externalRequestsService,
@@ -35,7 +34,7 @@ public class ExternalHistoricalController extends ExternalController {
     }
 
     public List<HistoricalDto> executeEndpoint(ExchangeDto exchangeDto, String stockSymbol,
-                                               ZonedDateTime from, ZonedDateTime to) {
+                                               LocalDate from, LocalDate to) {
         this.exchangeDto = exchangeDto;
         this.stockSymbol = stockSymbol;
         this.from = from;
@@ -47,27 +46,36 @@ public class ExternalHistoricalController extends ExternalController {
     @Override
     protected boolean shouldUpdateData() {
         // should take data from db, if there's complete data, then omit update
-        List<HistoricalDto> actualData = historicalService
-                .getHistoricalDataForStock(this.exchangeSymbol, this.stockSymbol);
+        actualData = historicalService.getHistoricalDataForStock(this.exchangeDto.getSymbol(),
+                this.stockSymbol);
         actualData.sort(Comparator.comparing(HistoricalDto::getDate));
-        ZonedDateTime fromDate = actualData.get(0).getDate();
-        ZonedDateTime toDate = actualData.get(actualData.size() - 1).getDate();
-        if (fromDate.isAfter(from) || toDate.isBefore(to)) {
-            return true;
+        if (actualData.size() > 0) {
+            LocalDate fromDate = actualData.get(0).getDate().toLocalDate();
+            LocalDate toDate = actualData.get(actualData.size() - 1).getDate().toLocalDate();
+
+            if (fromDate.isAfter(from) || toDate.isBefore(to)) {
+                return true;
+            } else {
+                return false;
+            }
         } else {
-            return false;
+            return true;
         }
     }
 
     @Override
     protected List updateData() {
-        List<HistoricalDto> result = new ArrayList<>();
-        externalRequestsService.makeMarketStackHistoricalRequest(this.stockSymbol, this.from, this.to);
-        return ;
+        List<HistoricalDto> historicalDtos = externalRequestsService.makeMarketStackHistoricalRequest(
+                this.exchangeDto.getCurrency(), this.stockSymbol, this.from, this.to);
+        historicalDtos = historicalDtos.stream()
+                .filter(h -> !actualData.contains(h))
+                .collect(Collectors.toList());
+        if (historicalDtos.size() != 0) {
+            historicalService.insertData(historicalDtos);
+        }
+        return historicalDtos;
     }
 
     @Override
-    protected void updateCache() {
-        super.updateCache();
-    }
+    protected void updateCache() {}
 }

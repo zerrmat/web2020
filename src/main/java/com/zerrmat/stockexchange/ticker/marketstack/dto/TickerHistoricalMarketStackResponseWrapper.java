@@ -4,12 +4,18 @@ import com.zerrmat.stockexchange.historical.dto.HistoricalDto;
 import com.zerrmat.stockexchange.marketstack.fragments.MarketStackPagination;
 import com.zerrmat.stockexchange.marketstack.fragments.MarketStackTickerData;
 import com.zerrmat.stockexchange.ticker.dto.TickerDto;
+import lombok.*;
 
 import javax.money.Monetary;
 import javax.money.MonetaryAmount;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Getter
+@Setter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class TickerHistoricalMarketStackResponseWrapper {
     private MarketStackPagination pagination;
     private List<MarketStackTickerData> data;

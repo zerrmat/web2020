@@ -6,6 +6,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.module.SimpleModule;
 import com.zerrmat.stockexchange.rest.ExternalTickersController;
 import com.zerrmat.stockexchange.rest.service.ExternalRequestsService;
+import com.zerrmat.stockexchange.stock.service.StockService;
 import com.zerrmat.stockexchange.stockexchange.util.RestTestUtils;
 import com.zerrmat.stockexchange.ticker.dto.TickerDto;
 import com.zerrmat.stockexchange.ticker.marketstack.dto.TickerEODLatestMarketStackResponseWrapper;
@@ -21,17 +22,20 @@ import java.math.BigDecimal;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.util.Collections;
+import java.util.List;
 
 public class ExternalTickersControllerTest {
     @Mock
     private ExternalRequestsService externalRequestsService;
+    @Mock
+    private StockService stockService;
 
     private ExternalTickersController tickersController;
 
     @BeforeEach
     public void setup() {
         MockitoAnnotations.initMocks(this);
-        tickersController = new ExternalTickersController(null, externalRequestsService);
+        tickersController = new ExternalTickersController(null, externalRequestsService, stockService);
     }
 
     @Test
@@ -57,17 +61,18 @@ public class ExternalTickersControllerTest {
                 .thenReturn(Collections.singletonList(responseDto));
 
         // when
-        TickerDto result = tickersController.executeEndpoint(stockSymbol);
+        List<TickerDto> result = tickersController.executeEndpoint(stockSymbol);
 
         // then
         Assertions.assertThat(result).isNotNull();
-        Assertions.assertThat(result.getOpen().compareTo(BigDecimal.valueOf(438.5))).isEqualTo(0);
-        Assertions.assertThat(result.getHigh().compareTo(BigDecimal.valueOf(447.8))).isEqualTo(0);
-        Assertions.assertThat(result.getLow().compareTo(BigDecimal.valueOf(436.4))).isEqualTo(0);
-        Assertions.assertThat(result.getClose().compareTo(BigDecimal.valueOf(440.7))).isEqualTo(0);
-        Assertions.assertThat(result.getVolume()).isEqualTo(279982);
-        Assertions.assertThat(result.getSymbol()).isEqualTo(stockSymbol);
+        Assertions.assertThat(result.size()).isEqualTo(1);
+        Assertions.assertThat(result.get(0).getOpen().compareTo(BigDecimal.valueOf(438.5))).isEqualTo(0);
+        Assertions.assertThat(result.get(0).getHigh().compareTo(BigDecimal.valueOf(447.8))).isEqualTo(0);
+        Assertions.assertThat(result.get(0).getLow().compareTo(BigDecimal.valueOf(436.4))).isEqualTo(0);
+        Assertions.assertThat(result.get(0).getClose().compareTo(BigDecimal.valueOf(440.7))).isEqualTo(0);
+        Assertions.assertThat(result.get(0).getVolume()).isEqualTo(279982);
+        Assertions.assertThat(result.get(0).getSymbol()).isEqualTo(stockSymbol);
         ZoneId zoneUTC = ZoneId.of("Etc/UTC");
-        Assertions.assertThat(result.getDate()).isEqualTo(ZonedDateTime.of(2020, 9, 1, 0, 0, 0, 0, zoneUTC));
+        Assertions.assertThat(result.get(0).getDate()).isEqualTo(ZonedDateTime.of(2020, 9, 1, 0, 0, 0, 0, zoneUTC));
     }
 }

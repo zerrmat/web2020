@@ -3,6 +3,8 @@ package com.zerrmat.stockexchange.rest;
 import com.zerrmat.stockexchange.exchange.dto.ExchangeDto;
 import com.zerrmat.stockexchange.exchange.service.ExchangeService;
 import com.zerrmat.stockexchange.exchangetostock.service.ExchangeToStockService;
+import com.zerrmat.stockexchange.historical.dto.HistoricalDto;
+import com.zerrmat.stockexchange.historical.service.HistoricalService;
 import com.zerrmat.stockexchange.stock.dto.StockDto;
 import com.zerrmat.stockexchange.stock.model.StockModel;
 import com.zerrmat.stockexchange.stock.service.StockService;
@@ -21,6 +23,7 @@ import java.util.stream.Collectors;
 public class StockExchangeRestController {
     private StockService stockService;
     private ExchangeService exchangeService;
+    private HistoricalService historicalService;
     private ExchangeToStockService exchangeToStockService;
     private ExternalExchangesController externalExchangesController;
     private ExternalStocksController externalStocksController;
@@ -29,6 +32,7 @@ public class StockExchangeRestController {
 
     @Autowired
     public StockExchangeRestController(StockService stockService, ExchangeService exchangeService,
+                                       HistoricalService historicalService,
                                        ExchangeToStockService exchangeToStockService,
                                        ExternalExchangesController externalExchangesController,
                                        ExternalStocksController externalStocksController,
@@ -36,6 +40,7 @@ public class StockExchangeRestController {
                                        ExternalHistoricalController externalHistoricalController) {
         this.stockService = stockService;
         this.exchangeService = exchangeService;
+        this.historicalService = historicalService;
         this.exchangeToStockService = exchangeToStockService;
         this.externalExchangesController = externalExchangesController;
         this.externalStocksController = externalStocksController;
@@ -87,19 +92,19 @@ public class StockExchangeRestController {
     }
 
     @GetMapping("exchange/{code}/stock{id}/ticker/historical")
-    public List<TickerDto> getHistoricalData(@PathVariable String code,
+    public List<HistoricalDto> getHistoricalData(@PathVariable String code,
                                              @PathVariable String id,
                                              @RequestParam("from") LocalDate from,
                                              @RequestParam("to") LocalDate to) {
-        List<TickerDto> tickerDtos = new ArrayList<>();
         String exchangeSymbol = code.toUpperCase();
         String stockSymbol = id.toUpperCase();
         System.out.println(from);
         System.out.println(to);
 
         ExchangeDto exchangeDto = exchangeService.getBySymbol(exchangeSymbol);
-        externalHistoricalController.executeEndpoint(exchangeDto, stockSymbol, from, to));
+        externalHistoricalController.executeEndpoint(exchangeDto, stockSymbol, from, to);
+        List<HistoricalDto> result = historicalService.getHistoricalDataForStock(exchangeSymbol, stockSymbol);
 
-        return tickerDtos;
+        return result;
     }
 }
