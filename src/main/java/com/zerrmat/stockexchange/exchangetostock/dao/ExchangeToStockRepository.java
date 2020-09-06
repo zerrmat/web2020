@@ -10,6 +10,7 @@ import java.util.List;
 
 public interface ExchangeToStockRepository extends JpaRepository<ExchangeToStockModel, Long> {
     List<ExchangeToStockModel> findAllByExchange_Id(Long exchangeId);
+    ExchangeToStockModel findAllByExchange_SymbolAndStock_Symbol(String exchangeSymbol, String stockSymbol);
 
     @Transactional
     @Modifying

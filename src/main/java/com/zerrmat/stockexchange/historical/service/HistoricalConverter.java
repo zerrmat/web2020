@@ -23,9 +23,12 @@ public class HistoricalConverter implements GenericConverter<HistoricalModel, Hi
                 .setNumber(entity.getValue()).create();
 
         return HistoricalDto.builder()
+                .etsId(entity.getEts().getId())
+                .exchangeId(entity.getEts().getExchange().getId())
                 .exchangeName(entity.getEts().getExchange().getName())
                 .exchangeSymbol(entity.getEts().getExchange().getSymbol())
                 .exchangeCurrency(entity.getEts().getExchange().getCurrency())
+                .stockId(entity.getEts().getStock().getId())
                 .stockName(entity.getEts().getStock().getName())
                 .stockSymbol(entity.getEts().getStock().getSymbol())
                 .value(value)
@@ -37,18 +40,21 @@ public class HistoricalConverter implements GenericConverter<HistoricalModel, Hi
     @Override
     public HistoricalModel toEntity(HistoricalDto data) throws ConversionException {
         ExchangeModel exchangeModel = ExchangeModel.builder()
+                .id(data.getExchangeId())
                 .name(data.getExchangeName())
                 .symbol(data.getExchangeSymbol())
                 .currency(data.getExchangeCurrency())
                 .build();
 
         StockModel stockModel = StockModel.builder()
+                .id(data.getStockId())
                 .name(data.getStockName())
                 .symbol(data.getStockSymbol())
                 .currency(data.getValue().getCurrency().getCurrencyCode())
                 .build();
 
         ExchangeToStockModel etsModel = ExchangeToStockModel.builder()
+                .id(data.getEtsId())
                 .exchange(exchangeModel)
                 .stock(stockModel)
                 .build();

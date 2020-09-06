@@ -22,7 +22,9 @@ public class HistoricalService {
     public boolean insertData(List<HistoricalDto> data) {
         try {
             List<HistoricalModel> historicalModels = converter.convertAllToEntity(data);
-            repository.saveAll(historicalModels);
+            for(HistoricalModel hm : historicalModels) {
+                repository.insert(hm.getEts().getId(), hm.getValue(), hm.getVolume(), hm.getDate());
+            }
         } catch (ConversionException e) {
             return false;
         }
@@ -33,10 +35,6 @@ public class HistoricalService {
         List<HistoricalModel> all = repository.findAll();
         List<HistoricalModel> filtered;
         filtered = extractData(all, exchangeSymbol, stockSymbol);
-        if (filtered.size() == 0) {
-            String fixedStockSymbol = stockSymbol + "." + exchangeSymbol;
-            filtered = extractData(all, exchangeSymbol, fixedStockSymbol);
-        }
         return converter.convertAllToDto(filtered);
     }
 

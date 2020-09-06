@@ -30,6 +30,11 @@ public class ExchangeToStockService {
         return converter.convertAllToDto(models);
     }
 
+    public ExchangeToStockDto getOne(String exchangeSymbol, String stockSymbol) {
+        ExchangeToStockModel one = repository.findAllByExchange_SymbolAndStock_Symbol(exchangeSymbol, stockSymbol);
+        return converter.toDto(one);
+    }
+
     public List<StockDto> getStocksForExchange(Long exchangeId) {
         List<ExchangeToStockModel> models = repository.findAllByExchange_Id(exchangeId);
         return models.stream()

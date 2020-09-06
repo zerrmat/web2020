@@ -12,9 +12,12 @@ import java.time.ZonedDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 public class HistoricalDto {
+    private Long etsId;
+    private Long exchangeId;
     private String exchangeName;
     private String exchangeSymbol;
     private String exchangeCurrency;
+    private Long stockId;
     private String stockName;
     private String stockSymbol;
     private MonetaryAmount value;

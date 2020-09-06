@@ -10,8 +10,10 @@ import com.zerrmat.stockexchange.stock.model.StockModel;
 import com.zerrmat.stockexchange.stock.service.StockService;
 import com.zerrmat.stockexchange.ticker.dto.TickerDto;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.*;
 
+import java.text.DateFormat;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -91,18 +93,29 @@ public class StockExchangeRestController {
         }
     }
 
-    @GetMapping("exchange/{code}/stock{id}/ticker/historical")
+    @GetMapping("exchange/{code}/stock/{id}/ticker/historical")
     public List<HistoricalDto> getHistoricalData(@PathVariable String code,
-                                             @PathVariable String id,
-                                             @RequestParam("from") LocalDate from,
-                                             @RequestParam("to") LocalDate to) {
+                                                 @PathVariable String id,
+                                                 @RequestParam("from")
+                                                     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate from,
+                                                 @RequestParam("to")
+                                                     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate to) {
         String exchangeSymbol = code.toUpperCase();
         String stockSymbol = id.toUpperCase();
-        System.out.println(from);
-        System.out.println(to);
 
         ExchangeDto exchangeDto = exchangeService.getBySymbol(exchangeSymbol);
-        externalHistoricalController.executeEndpoint(exchangeDto, stockSymbol, from, to);
+        List<StockDto> stocksForExchange = exchangeToStockService.getStocksForExchange(exchangeDto.getId());
+        String finalStockSymbol = stockSymbol;
+        long count = stocksForExchange.stream().filter(s -> s.getSymbol().equals(finalStockSymbol)).count();
+        if (count == 1) {
+            externalHistoricalController.executeEndpoint(exchangeDto.getSymbol(), exchangeDto.getCurrency(),
+                    stockSymbol, from, to);
+        } else {
+            stockSymbol = stockSymbol + "." + exchangeDto.getSymbol();
+            externalHistoricalController.executeEndpoint(null, exchangeDto.getCurrency(),
+                    stockSymbol, from, to);
+        }
+
         List<HistoricalDto> result = historicalService.getHistoricalDataForStock(exchangeSymbol, stockSymbol);
 
         return result;
