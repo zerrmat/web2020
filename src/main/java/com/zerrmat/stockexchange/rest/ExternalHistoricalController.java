@@ -1,7 +1,6 @@
 package com.zerrmat.stockexchange.rest;
 
 import com.zerrmat.stockexchange.cachecontrol.service.CacheControlService;
-import com.zerrmat.stockexchange.exchange.dto.ExchangeDto;
 import com.zerrmat.stockexchange.exchangetostock.dto.ExchangeToStockDto;
 import com.zerrmat.stockexchange.exchangetostock.service.ExchangeToStockService;
 import com.zerrmat.stockexchange.historical.dto.HistoricalDto;
@@ -10,9 +9,7 @@ import com.zerrmat.stockexchange.rest.service.ExternalRequestsService;
 import com.zerrmat.stockexchange.util.ExternalController;
 import org.springframework.stereotype.Controller;
 
-import java.sql.Timestamp;
-import java.time.LocalDate;
-import java.time.ZonedDateTime;
+import java.time.*;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -27,10 +24,9 @@ public class ExternalHistoricalController extends ExternalController {
     private String exchangeSymbol;
     private String exchangeCurrency;
     private String fullStockSymbol;
-    private String stockSymbol;
     private LocalDate from;
     private LocalDate to;
-    List<HistoricalDto> actualData;
+    List<HistoricalDto> cachedData;
 
     public ExternalHistoricalController(CacheControlService cacheControlService,
                                         ExternalRequestsService externalRequestsService,
@@ -46,13 +42,12 @@ public class ExternalHistoricalController extends ExternalController {
                                                String stockSymbol, LocalDate from, LocalDate to) {
         if (exchangeSymbol == null) {
             String[] split = stockSymbol.split("\\.");
-            this.fullStockSymbol = split[0] + "." + split[1];
+            this.fullStockSymbol = stockSymbol;
             this.exchangeSymbol = split[1];
         } else {
             this.fullStockSymbol = stockSymbol;
             this.exchangeSymbol = exchangeSymbol;
         }
-        this.stockSymbol = stockSymbol;
         this.exchangeCurrency = exchangeCurrency;
         this.from = from;
         this.to = to;
@@ -63,12 +58,12 @@ public class ExternalHistoricalController extends ExternalController {
     @Override
     protected boolean shouldUpdateData() {
         // should take data from db, if there's complete data, then omit update
-        actualData = historicalService.getHistoricalDataForStock(this.exchangeSymbol,
-                this.stockSymbol);
-        actualData.sort(Comparator.comparing(HistoricalDto::getDate));
-        if (actualData.size() > 0) {
-            LocalDate fromDate = actualData.get(0).getDate().toLocalDate();
-            LocalDate toDate = actualData.get(actualData.size() - 1).getDate().toLocalDate();
+        cachedData = historicalService.getHistoricalDataForStock(this.exchangeSymbol,
+                this.fullStockSymbol);
+        cachedData.sort(Comparator.comparing(HistoricalDto::getDate));
+        if (cachedData.size() > 0) {
+            LocalDate fromDate = cachedData.get(0).getDate().toLocalDate();
+            LocalDate toDate = cachedData.get(cachedData.size() - 1).getDate().toLocalDate();
 
             if (fromDate.isAfter(from) || toDate.isBefore(to)) {
                 return true;
@@ -91,34 +86,64 @@ public class ExternalHistoricalController extends ExternalController {
 
     @Override
     protected List updateData() {
-        List<ZonedDateTime> actualDates = actualData.stream().map(HistoricalDto::getDate)
+        List<ZonedDateTime> cachedDates = cachedData.stream().map(HistoricalDto::getDate)
                 .sorted(Comparator.comparing(ZonedDateTime::toLocalDate))
                 .collect(Collectors.toList());
-        ZonedDateTime min = actualDates.get(0);
-        ZonedDateTime max = actualDates.get(actualDates.size() - 1);
 
         List<HistoricalDto> historicalDtos = new ArrayList<>();
-            historicalDtos = externalRequestsService.makeMarketStackHistoricalRequest(
-                    this.exchangeCurrency, this.stockSymbol, this.from, this.to);
-            ExchangeToStockDto one = exchangeToStockService.getOne(this.exchangeSymbol, this.fullStockSymbol);
-            historicalDtos.stream().forEach(h -> {
-                h.setEtsId(one.getId());
-                h.setExchangeId(one.getExchangeId());
-                h.setExchangeName(one.getExchangeName());
-                h.setStockId(one.getStockId());
-                h.setStockName(one.getStockName());
-            });
-
-            historicalDtos = historicalDtos.stream()
-                    .filter(h -> !containsDate(actualDates, h.getDate()))
+        if (cachedDates.size() == 0) {
+            historicalDtos = this.update(cachedDates);
+        } else {
+            List<ZonedDateTime> possibleRequestDates = this.generateDates(from, to);
+            possibleRequestDates = possibleRequestDates.stream()
+                    .filter(d -> !containsDate(cachedDates, d))
                     .collect(Collectors.toList());
-            if (historicalDtos.size() != 0) {
-                historicalService.insertData(historicalDtos);
-            }
+
+            from = possibleRequestDates.get(0).toLocalDate();
+            to = possibleRequestDates.get(possibleRequestDates.size() - 1).toLocalDate();
+
+            historicalDtos = this.update(cachedDates);
+        }
+
 
         return historicalDtos;
     }
 
     @Override
     protected void updateCache() {}
+
+    private List<ZonedDateTime> generateDates(LocalDate from, LocalDate to) {
+        List<ZonedDateTime> dates = new ArrayList<>();
+        while (!from.isAfter(to)) {
+            dates.add(ZonedDateTime.of(from, LocalTime.of(0,0), ZoneId.of("Etc/UTC")));
+            from = from.plusDays(1);
+        }
+        dates = dates.stream()
+                .filter(d -> d.getDayOfWeek() != DayOfWeek.SATURDAY)
+                .filter(d -> d.getDayOfWeek() != DayOfWeek.SUNDAY)
+                .collect(Collectors.toList());
+        return dates;
+    }
+
+    private List<HistoricalDto> update(List<ZonedDateTime> cachedDates) {
+        List<HistoricalDto> historicalDtos = externalRequestsService.makeMarketStackHistoricalRequest(
+                this.exchangeCurrency, this.fullStockSymbol, this.from, this.to);
+        ExchangeToStockDto one = exchangeToStockService.getOne(this.exchangeSymbol, this.fullStockSymbol);
+        historicalDtos.forEach(h -> {
+            h.setEtsId(one.getId());
+            h.setExchangeId(one.getExchangeId());
+            h.setExchangeName(one.getExchangeName());
+            h.setStockId(one.getStockId());
+            h.setStockName(one.getStockName());
+        });
+
+        historicalDtos = historicalDtos.stream()
+                .filter(h -> !containsDate(cachedDates, h.getDate()))
+                .collect(Collectors.toList());
+        if (historicalDtos.size() != 0) {
+            historicalService.insertData(historicalDtos);
+        }
+
+        return historicalDtos;
+    }
 }

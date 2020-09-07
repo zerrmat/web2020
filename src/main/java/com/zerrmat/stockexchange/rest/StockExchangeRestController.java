@@ -102,6 +102,7 @@ public class StockExchangeRestController {
                                                      @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate from,
                                                  @RequestParam("to")
                                                      @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate to) {
+        // TODO: from should be before to
         String exchangeSymbol = code.toUpperCase();
         String stockSymbol = id.toUpperCase();
 
