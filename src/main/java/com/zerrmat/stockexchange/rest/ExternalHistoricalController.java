@@ -91,23 +91,31 @@ public class ExternalHistoricalController extends ExternalController {
 
     @Override
     protected List updateData() {
-        List<HistoricalDto> historicalDtos = externalRequestsService.makeMarketStackHistoricalRequest(
-                this.exchangeCurrency, this.stockSymbol, this.from, this.to);
-        ExchangeToStockDto one = exchangeToStockService.getOne(this.exchangeSymbol, this.fullStockSymbol);
-        historicalDtos.stream().forEach(h -> {
-            h.setEtsId(one.getId());
-            h.setExchangeId(one.getExchangeId());
-            h.setExchangeName(one.getExchangeName());
-            h.setStockId(one.getStockId());
-            h.setStockName(one.getStockName());
-        });
-        List<ZonedDateTime> actualDates = actualData.stream().map(a -> a.getDate()).collect(Collectors.toList());
-        historicalDtos = historicalDtos.stream()
-                .filter(h -> !containsDate(actualDates, h.getDate()))
+        List<ZonedDateTime> actualDates = actualData.stream().map(HistoricalDto::getDate)
+                .sorted(Comparator.comparing(ZonedDateTime::toLocalDate))
                 .collect(Collectors.toList());
-        if (historicalDtos.size() != 0) {
-            historicalService.insertData(historicalDtos);
-        }
+        ZonedDateTime min = actualDates.get(0);
+        ZonedDateTime max = actualDates.get(actualDates.size() - 1);
+
+        List<HistoricalDto> historicalDtos = new ArrayList<>();
+            historicalDtos = externalRequestsService.makeMarketStackHistoricalRequest(
+                    this.exchangeCurrency, this.stockSymbol, this.from, this.to);
+            ExchangeToStockDto one = exchangeToStockService.getOne(this.exchangeSymbol, this.fullStockSymbol);
+            historicalDtos.stream().forEach(h -> {
+                h.setEtsId(one.getId());
+                h.setExchangeId(one.getExchangeId());
+                h.setExchangeName(one.getExchangeName());
+                h.setStockId(one.getStockId());
+                h.setStockName(one.getStockName());
+            });
+
+            historicalDtos = historicalDtos.stream()
+                    .filter(h -> !containsDate(actualDates, h.getDate()))
+                    .collect(Collectors.toList());
+            if (historicalDtos.size() != 0) {
+                historicalService.insertData(historicalDtos);
+            }
+
         return historicalDtos;
     }
 

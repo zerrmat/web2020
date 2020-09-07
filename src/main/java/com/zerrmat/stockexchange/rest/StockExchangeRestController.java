@@ -15,8 +15,10 @@ import org.springframework.web.bind.annotation.*;
 
 import java.text.DateFormat;
 import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -117,7 +119,15 @@ public class StockExchangeRestController {
         }
 
         List<HistoricalDto> result = historicalService.getHistoricalDataForStock(exchangeSymbol, stockSymbol);
-
+        ZoneId zoneZero = ZoneId.of("Etc/UTC");
+        result = result.stream()
+                .sorted(Comparator.comparing(HistoricalDto::getDate))
+                .filter(h -> (
+                    h.getDate().isAfter(from.atStartOfDay(zoneZero))
+                    && h.getDate().isBefore(to.atStartOfDay(zoneZero))
+                    || h.getDate().isEqual(from.atStartOfDay(zoneZero))
+                    || h.getDate().isEqual(to.atStartOfDay(zoneZero))
+                )).collect(Collectors.toList());
         return result;
     }
 }
