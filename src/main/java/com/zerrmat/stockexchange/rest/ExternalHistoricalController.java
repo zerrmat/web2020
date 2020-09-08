@@ -26,7 +26,7 @@ public class ExternalHistoricalController extends ExternalController {
     private String fullStockSymbol;
     private LocalDate from;
     private LocalDate to;
-    List<HistoricalDto> cachedData;
+    private List<ZonedDateTime> cachedDates;
 
     public ExternalHistoricalController(CacheControlService cacheControlService,
                                         ExternalRequestsService externalRequestsService,
@@ -40,14 +40,8 @@ public class ExternalHistoricalController extends ExternalController {
 
     public List<HistoricalDto> executeEndpoint(String exchangeSymbol, String exchangeCurrency,
                                                String stockSymbol, LocalDate from, LocalDate to) {
-        if (exchangeSymbol == null) {
-            String[] split = stockSymbol.split("\\.");
-            this.fullStockSymbol = stockSymbol;
-            this.exchangeSymbol = split[1];
-        } else {
-            this.fullStockSymbol = stockSymbol;
-            this.exchangeSymbol = exchangeSymbol;
-        }
+        this.fullStockSymbol = stockSymbol;
+        this.exchangeSymbol = exchangeSymbol;
         this.exchangeCurrency = exchangeCurrency;
         this.from = from;
         this.to = to;
@@ -58,20 +52,27 @@ public class ExternalHistoricalController extends ExternalController {
     @Override
     protected boolean shouldUpdateData() {
         // should take data from db, if there's complete data, then omit update
-        cachedData = historicalService.getHistoricalDataForStock(this.exchangeSymbol,
+        List<HistoricalDto> cachedData = historicalService.getHistoricalDataForStock(this.exchangeSymbol,
                 this.fullStockSymbol);
         cachedData.sort(Comparator.comparing(HistoricalDto::getDate));
-        if (cachedData.size() > 0) {
-            LocalDate fromDate = cachedData.get(0).getDate().toLocalDate();
-            LocalDate toDate = cachedData.get(cachedData.size() - 1).getDate().toLocalDate();
+        cachedDates = cachedData.stream().map(HistoricalDto::getDate)
+                .sorted(Comparator.comparing(ZonedDateTime::toLocalDate))
+                .collect(Collectors.toList());
+        if (cachedDates.size() == 0) {
+            return true;
+        } else {
+            List<ZonedDateTime> possibleRequestDates = this.generateDates(from, to);
+            possibleRequestDates = possibleRequestDates.stream()
+                    .filter(d -> !containsDate(cachedDates, d))
+                    .collect(Collectors.toList());
 
-            if (fromDate.isAfter(from) || toDate.isBefore(to)) {
+            if (possibleRequestDates.size() > 0) {
+                from = possibleRequestDates.get(0).toLocalDate();
+                to = possibleRequestDates.get(possibleRequestDates.size() - 1).toLocalDate();
                 return true;
             } else {
                 return false;
             }
-        } else {
-            return true;
         }
     }
 
@@ -86,27 +87,7 @@ public class ExternalHistoricalController extends ExternalController {
 
     @Override
     protected List updateData() {
-        List<ZonedDateTime> cachedDates = cachedData.stream().map(HistoricalDto::getDate)
-                .sorted(Comparator.comparing(ZonedDateTime::toLocalDate))
-                .collect(Collectors.toList());
-
-        List<HistoricalDto> historicalDtos = new ArrayList<>();
-        if (cachedDates.size() == 0) {
-            historicalDtos = this.update(cachedDates);
-        } else {
-            List<ZonedDateTime> possibleRequestDates = this.generateDates(from, to);
-            possibleRequestDates = possibleRequestDates.stream()
-                    .filter(d -> !containsDate(cachedDates, d))
-                    .collect(Collectors.toList());
-
-            from = possibleRequestDates.get(0).toLocalDate();
-            to = possibleRequestDates.get(possibleRequestDates.size() - 1).toLocalDate();
-
-            historicalDtos = this.update(cachedDates);
-        }
-
-
-        return historicalDtos;
+        return this.update(cachedDates);
     }
 
     @Override
@@ -114,7 +95,7 @@ public class ExternalHistoricalController extends ExternalController {
 
     private List<ZonedDateTime> generateDates(LocalDate from, LocalDate to) {
         List<ZonedDateTime> dates = new ArrayList<>();
-        while (!from.isAfter(to)) {
+        while (!from.isAfter(to) && from.isBefore(LocalDate.now())) {
             dates.add(ZonedDateTime.of(from, LocalTime.of(0,0), ZoneId.of("Etc/UTC")));
             from = from.plusDays(1);
         }

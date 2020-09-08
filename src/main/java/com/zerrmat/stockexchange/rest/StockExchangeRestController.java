@@ -103,6 +103,11 @@ public class StockExchangeRestController {
                                                  @RequestParam("to")
                                                      @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate to) {
         // TODO: from should be before to
+        if (from.isAfter(to)) {
+            LocalDate tmp = from;
+            from = to;
+            to = tmp;
+        }
         String exchangeSymbol = code.toUpperCase();
         String stockSymbol = id.toUpperCase();
 
@@ -110,24 +115,23 @@ public class StockExchangeRestController {
         List<StockDto> stocksForExchange = exchangeToStockService.getStocksForExchange(exchangeDto.getId());
         String finalStockSymbol = stockSymbol;
         long count = stocksForExchange.stream().filter(s -> s.getSymbol().equals(finalStockSymbol)).count();
-        if (count == 1) {
-            externalHistoricalController.executeEndpoint(exchangeDto.getSymbol(), exchangeDto.getCurrency(),
-                    stockSymbol, from, to);
-        } else {
+        if (count == 0) {
             stockSymbol = stockSymbol + "." + exchangeDto.getSymbol();
-            externalHistoricalController.executeEndpoint(null, exchangeDto.getCurrency(),
-                    stockSymbol, from, to);
         }
+        externalHistoricalController.executeEndpoint(exchangeDto.getSymbol(), exchangeDto.getCurrency(),
+                stockSymbol, from, to);
 
         List<HistoricalDto> result = historicalService.getHistoricalDataForStock(exchangeSymbol, stockSymbol);
         ZoneId zoneZero = ZoneId.of("Etc/UTC");
+        LocalDate finalFrom = from;
+        LocalDate finalTo = to;
         result = result.stream()
                 .sorted(Comparator.comparing(HistoricalDto::getDate))
                 .filter(h -> (
-                    h.getDate().isAfter(from.atStartOfDay(zoneZero))
-                    && h.getDate().isBefore(to.atStartOfDay(zoneZero))
-                    || h.getDate().isEqual(from.atStartOfDay(zoneZero))
-                    || h.getDate().isEqual(to.atStartOfDay(zoneZero))
+                    h.getDate().isAfter(finalFrom.atStartOfDay(zoneZero))
+                    && h.getDate().isBefore(finalTo.atStartOfDay(zoneZero))
+                    || h.getDate().isEqual(finalFrom.atStartOfDay(zoneZero))
+                    || h.getDate().isEqual(finalTo.atStartOfDay(zoneZero))
                 )).collect(Collectors.toList());
         return result;
     }
