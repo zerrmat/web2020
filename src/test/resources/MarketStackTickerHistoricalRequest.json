@@ -7,6 +7,36 @@
   },
   "data": [
     {
+      "open": 443.4,
+      "high": 446.8,
+      "low": 429.8,
+      "close": 430.6,
+      "volume": 302440,
+      "adj_high": null,
+      "adj_low": null,
+      "adj_close": 430.6,
+      "adj_open": null,
+      "adj_volume": null,
+      "symbol": "CDR.XWAR",
+      "exchange": "XWAR",
+      "date": "2020-09-03T00:00:00+0000"
+    },
+    {
+      "open": 439.1,
+      "high": 451,
+      "low": 438.1,
+      "close": 439.9,
+      "volume": 167363,
+      "adj_high": null,
+      "adj_low": null,
+      "adj_close": 439.9,
+      "adj_open": null,
+      "adj_volume": null,
+      "symbol": "CDR.XWAR",
+      "exchange": "XWAR",
+      "date": "2020-09-02T00:00:00+0000"
+    },
+    {
       "open": 438.5,
       "high": 447.8,
       "low": 436.4,

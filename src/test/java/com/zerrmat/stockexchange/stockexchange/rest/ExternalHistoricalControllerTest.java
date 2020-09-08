@@ -22,6 +22,7 @@ import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
+import org.springframework.test.web.client.match.JsonPathRequestMatchers;
 
 import javax.money.Monetary;
 import javax.money.MonetaryAmount;
@@ -191,6 +192,140 @@ public class ExternalHistoricalControllerTest {
             Assertions.assertThat(result.get(i).getVolume()).isEqualTo(result.get(i).getVolume());
             Assertions.assertThat(result.get(i).getDate()).isEqualTo(result.get(i).getDate());
         }
+    }
+
+    @Test
+    public void shouldUpdateDataWhenThereAreNewNotCachedData() throws JsonProcessingException{
+        // given
+        String exchangeSymbol = "XWAR";
+        String fullStockSymbol = "CDR.XWAR";
+        String responseFilename = "MarketStackTickerHistoricalRequest.json";
+        String currency = "EUR";
+
+        SimpleModule simpleModule = new SimpleModule();
+        simpleModule.addDeserializer(ZonedDateTime.class, new ZonedDateTimeDeserializer());
+
+        ObjectMapper objectMapper = new ObjectMapper();
+        objectMapper.registerModule(simpleModule);
+
+        String responseBody = RestTestUtils.generateResponseBody(responseFilename);
+        TickerHistoricalMarketStackResponseWrapper responseWrapper = objectMapper.readValue(
+                responseBody, new TypeReference<TickerHistoricalMarketStackResponseWrapper>(){});
+        List<HistoricalDto> responseDtos = responseWrapper.extract(currency);
+        List<HistoricalDto> cachedDtos = responseDtos.subList(3, responseDtos.size());
+
+        ExchangeDto exchangeDto = ExchangeDto.builder()
+                .id(1L)
+                .symbol(exchangeSymbol)
+                .name("Warsaw Stock Exchange")
+                .currency(currency)
+                .build();
+        MonetaryAmount value = Monetary.getDefaultAmountFactory().setCurrency("PLN")
+                .setNumber(BigDecimal.valueOf(392.60)).create();
+        StockDto stockDto = StockDto.builder()
+                .id(1L)
+                .name("CD Projekt")
+                .symbol("CDR")
+                .value(value)
+                .build();
+        ExchangeToStockDto etsd = ExchangeToStockDto.builder()
+                .id(1L)
+                .exchangeId(exchangeDto.getId())
+                .exchangeSymbol(exchangeSymbol)
+                .exchangeName(exchangeDto.getName())
+                .stockId(stockDto.getId())
+                .stockName(stockDto.getName())
+                .stockSymbol(stockDto.getSymbol())
+                .stockValue(stockDto.getValue())
+                .build();
+
+        LocalDate from = LocalDate.of(2020, 8, 24);
+        LocalDate to = LocalDate.of(2020, 9, 3);
+
+        Mockito.when(historicalService.getHistoricalDataForStock(exchangeSymbol, fullStockSymbol))
+                .thenReturn(cachedDtos);
+        Mockito.when(externalRequestsService.makeExternalMarketStackHistoricalRequest(eq(fullStockSymbol),
+                any(LocalDate.class), any(LocalDate.class))).thenReturn(RestTestUtils.generateResponseBody(responseFilename));
+        Mockito.when(externalRequestsService.makeMarketStackHistoricalRequest(eq(exchangeDto.getCurrency()),
+                eq(fullStockSymbol), any(LocalDate.class), any(LocalDate.class))).thenReturn(responseDtos);
+        Mockito.when(exchangeToStockService.getOne(exchangeSymbol, fullStockSymbol)).thenReturn(etsd);
+
+        // when
+        List<HistoricalDto> result = controller.executeEndpoint(exchangeDto.getSymbol(),
+                exchangeDto.getCurrency(), fullStockSymbol, from, to);
+
+        // then
+        Assertions.assertThat(result).isNotNull();
+        Assertions.assertThat(result.size()).isEqualTo(3);
+        Assertions.assertThat(result.get(0).getDate().toLocalDate().isEqual(LocalDate.of(2020, 9, 3)));
+        Assertions.assertThat(result.get(1).getDate().toLocalDate().isEqual(LocalDate.of(2020, 9, 2)));
+        Assertions.assertThat(result.get(2).getDate().toLocalDate().isEqual(LocalDate.of(2020, 9, 1)));
+    }
+
+    @Test
+    public void shouldNotUpdateWhenThereAreCachedData() throws JsonProcessingException {
+        // given
+        String exchangeSymbol = "XWAR";
+        String fullStockSymbol = "CDR.XWAR";
+        String responseFilename = "MarketStackTickerHistoricalRequest.json";
+        String currency = "EUR";
+
+        SimpleModule simpleModule = new SimpleModule();
+        simpleModule.addDeserializer(ZonedDateTime.class, new ZonedDateTimeDeserializer());
+
+        ObjectMapper objectMapper = new ObjectMapper();
+        objectMapper.registerModule(simpleModule);
+
+        String responseBody = RestTestUtils.generateResponseBody(responseFilename);
+        TickerHistoricalMarketStackResponseWrapper responseWrapper = objectMapper.readValue(
+                responseBody, new TypeReference<TickerHistoricalMarketStackResponseWrapper>(){});
+        List<HistoricalDto> responseDtos = responseWrapper.extract(currency);
+
+        ExchangeDto exchangeDto = ExchangeDto.builder()
+                .id(1L)
+                .symbol(exchangeSymbol)
+                .name("Warsaw Stock Exchange")
+                .currency(currency)
+                .build();
+        MonetaryAmount value = Monetary.getDefaultAmountFactory().setCurrency("PLN")
+                .setNumber(BigDecimal.valueOf(392.60)).create();
+        StockDto stockDto = StockDto.builder()
+                .id(1L)
+                .name("CD Projekt")
+                .symbol("CDR")
+                .value(value)
+                .build();
+        ExchangeToStockDto etsd = ExchangeToStockDto.builder()
+                .id(1L)
+                .exchangeId(exchangeDto.getId())
+                .exchangeSymbol(exchangeSymbol)
+                .exchangeName(exchangeDto.getName())
+                .stockId(stockDto.getId())
+                .stockName(stockDto.getName())
+                .stockSymbol(stockDto.getSymbol())
+                .stockValue(stockDto.getValue())
+                .build();
+
+        LocalDate from = LocalDate.of(2020, 8, 24);
+        LocalDate to = LocalDate.of(2020, 9, 3);
+
+        Mockito.when(historicalService.getHistoricalDataForStock(exchangeSymbol, fullStockSymbol))
+                .thenReturn(responseDtos);
+
+        // when
+        List<HistoricalDto> result = controller.executeEndpoint(exchangeDto.getSymbol(),
+                exchangeDto.getCurrency(), fullStockSymbol, from, to);
+
+        // then
+        Assertions.assertThat(result).isNotNull();
+        Assertions.assertThat(result.size()).isEqualTo(0);
+        Mockito.verify(externalRequestsService, Mockito.times(0))
+                .makeMarketStackHistoricalRequest(eq(exchangeDto.getCurrency()), eq(fullStockSymbol),
+                        any(LocalDate.class), any(LocalDate.class));
+        Mockito.verify(externalRequestsService, Mockito.times(0))
+                .makeExternalMarketStackHistoricalRequest(any(String.class), any(LocalDate.class), any(LocalDate.class));
+        Mockito.verify(exchangeToStockService, Mockito.times(0))
+                .getOne(exchangeSymbol, fullStockSymbol);
     }
 
     private List<HistoricalDto> generateMultipartResponse(int parts, String responseFilename) throws JsonProcessingException {
