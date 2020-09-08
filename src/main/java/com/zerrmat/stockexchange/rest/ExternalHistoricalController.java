@@ -87,26 +87,6 @@ public class ExternalHistoricalController extends ExternalController {
 
     @Override
     protected List updateData() {
-        return this.update(cachedDates);
-    }
-
-    @Override
-    protected void updateCache() {}
-
-    private List<ZonedDateTime> generateDates(LocalDate from, LocalDate to) {
-        List<ZonedDateTime> dates = new ArrayList<>();
-        while (!from.isAfter(to) && from.isBefore(LocalDate.now())) {
-            dates.add(ZonedDateTime.of(from, LocalTime.of(0,0), ZoneId.of("Etc/UTC")));
-            from = from.plusDays(1);
-        }
-        dates = dates.stream()
-                .filter(d -> d.getDayOfWeek() != DayOfWeek.SATURDAY)
-                .filter(d -> d.getDayOfWeek() != DayOfWeek.SUNDAY)
-                .collect(Collectors.toList());
-        return dates;
-    }
-
-    private List<HistoricalDto> update(List<ZonedDateTime> cachedDates) {
         List<HistoricalDto> historicalDtos = externalRequestsService.makeMarketStackHistoricalRequest(
                 this.exchangeCurrency, this.fullStockSymbol, this.from, this.to);
         ExchangeToStockDto one = exchangeToStockService.getOne(this.exchangeSymbol, this.fullStockSymbol);
@@ -126,5 +106,21 @@ public class ExternalHistoricalController extends ExternalController {
         }
 
         return historicalDtos;
+    }
+
+    @Override
+    protected void updateCache() {}
+
+    private List<ZonedDateTime> generateDates(LocalDate from, LocalDate to) {
+        List<ZonedDateTime> dates = new ArrayList<>();
+        while (!from.isAfter(to) && from.isBefore(LocalDate.now())) {
+            dates.add(ZonedDateTime.of(from, LocalTime.of(0,0), ZoneId.of("Etc/UTC")));
+            from = from.plusDays(1);
+        }
+        dates = dates.stream()
+                .filter(d -> d.getDayOfWeek() != DayOfWeek.SATURDAY)
+                .filter(d -> d.getDayOfWeek() != DayOfWeek.SUNDAY)
+                .collect(Collectors.toList());
+        return dates;
     }
 }
