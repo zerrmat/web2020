@@ -22,8 +22,10 @@ public class ExchangeToStockConverter implements GenericConverter<ExchangeToStoc
 
         return ExchangeToStockDto.builder()
                 .id(entity.getId())
+                .exchangeId(entity.getExchange().getId())
                 .exchangeName(entity.getExchange().getName())
                 .exchangeSymbol(entity.getExchange().getSymbol())
+                .stockId(entity.getStock().getId())
                 .stockName(entity.getStock().getName())
                 .stockSymbol(entity.getStock().getSymbol())
                 .stockValue(stockValue)

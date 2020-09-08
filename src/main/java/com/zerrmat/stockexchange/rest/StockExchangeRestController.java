@@ -10,11 +10,15 @@ import com.zerrmat.stockexchange.stock.model.StockModel;
 import com.zerrmat.stockexchange.stock.service.StockService;
 import com.zerrmat.stockexchange.ticker.dto.TickerDto;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.*;
 
+import java.text.DateFormat;
 import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -91,20 +95,44 @@ public class StockExchangeRestController {
         }
     }
 
-    @GetMapping("exchange/{code}/stock{id}/ticker/historical")
+    @GetMapping("exchange/{code}/stock/{id}/ticker/historical")
     public List<HistoricalDto> getHistoricalData(@PathVariable String code,
-                                             @PathVariable String id,
-                                             @RequestParam("from") LocalDate from,
-                                             @RequestParam("to") LocalDate to) {
+                                                 @PathVariable String id,
+                                                 @RequestParam("from")
+                                                     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate from,
+                                                 @RequestParam("to")
+                                                     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate to) {
+        // TODO: from should be before to
+        if (from.isAfter(to)) {
+            LocalDate tmp = from;
+            from = to;
+            to = tmp;
+        }
         String exchangeSymbol = code.toUpperCase();
         String stockSymbol = id.toUpperCase();
-        System.out.println(from);
-        System.out.println(to);
 
         ExchangeDto exchangeDto = exchangeService.getBySymbol(exchangeSymbol);
-        externalHistoricalController.executeEndpoint(exchangeDto, stockSymbol, from, to);
-        List<HistoricalDto> result = historicalService.getHistoricalDataForStock(exchangeSymbol, stockSymbol);
+        List<StockDto> stocksForExchange = exchangeToStockService.getStocksForExchange(exchangeDto.getId());
+        String finalStockSymbol = stockSymbol;
+        long count = stocksForExchange.stream().filter(s -> s.getSymbol().equals(finalStockSymbol)).count();
+        if (count == 0) {
+            stockSymbol = stockSymbol + "." + exchangeDto.getSymbol();
+        }
+        externalHistoricalController.executeEndpoint(exchangeDto.getSymbol(), exchangeDto.getCurrency(),
+                stockSymbol, from, to);
 
+        List<HistoricalDto> result = historicalService.getHistoricalDataForStock(exchangeSymbol, stockSymbol);
+        ZoneId zoneZero = ZoneId.of("Etc/UTC");
+        LocalDate finalFrom = from;
+        LocalDate finalTo = to;
+        result = result.stream()
+                .sorted(Comparator.comparing(HistoricalDto::getDate))
+                .filter(h -> (
+                    h.getDate().isAfter(finalFrom.atStartOfDay(zoneZero))
+                    && h.getDate().isBefore(finalTo.atStartOfDay(zoneZero))
+                    || h.getDate().isEqual(finalFrom.atStartOfDay(zoneZero))
+                    || h.getDate().isEqual(finalTo.atStartOfDay(zoneZero))
+                )).collect(Collectors.toList());
         return result;
     }
 }
