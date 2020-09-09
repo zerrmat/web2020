@@ -52,6 +52,7 @@ public class StockExchangeRestController {
         this.externalHistoricalController = externalHistoricalController;
     }
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("/stock/{id}")
     public List<StockModel> getStock(@PathVariable Long id) {
         return Collections.singletonList(stockService.getStock(id));
@@ -64,11 +65,14 @@ public class StockExchangeRestController {
         return exchangeService.getAll();
     }
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("/exchange/{code}")
     public List<ExchangeDto> getExchange(@PathVariable String code) {
+        code = code.toUpperCase();
         return Collections.singletonList(exchangeService.getBySymbol(code));
     }
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("/exchange/{code}/stocks")
     public List<StockDto> getAllStocks(@PathVariable String code) {
         code = code.toUpperCase();
@@ -77,6 +81,7 @@ public class StockExchangeRestController {
         return exchangeToStockService.getStocksForExchange(exchangeId);
     }
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("exchange/{code}/stock/{id}/ticker/latest")
     public StockDto getLatestEODForStock(@PathVariable String code, @PathVariable String id) {
         code = code.toUpperCase();
@@ -86,8 +91,8 @@ public class StockExchangeRestController {
         List<StockDto> stocksForExchange = exchangeToStockService.getStocksForExchange(excId);
         long count = stocksForExchange.stream().filter(s -> s.getSymbol().equals(stockId)).count();
         if (count == 1) {
-            externalTickersController.executeEndpoint(id, code);
-            return stockService.getBySymbol(id);
+            externalTickersController.executeEndpoint(stockId, code);
+            return stockService.getBySymbol(stockId);
         } else {
             String symbol = stockId + "." + code;
             externalTickersController.executeEndpoint(symbol);
@@ -95,6 +100,7 @@ public class StockExchangeRestController {
         }
     }
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("exchange/{code}/stock/{id}/ticker/historical")
     public List<HistoricalDto> getHistoricalData(@PathVariable String code,
                                                  @PathVariable String id,

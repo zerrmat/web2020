@@ -123,4 +123,15 @@ public class ExternalHistoricalController extends ExternalController {
                 .collect(Collectors.toList());
         return dates;
     }
+
+    @Override
+    protected void resetState() {
+        super.resetState();
+        this.exchangeSymbol = null;
+        this.exchangeCurrency = null;
+        this.fullStockSymbol = null;
+        this.from = null;
+        this.to = null;
+        this.cachedDates = null;
+    }
 }

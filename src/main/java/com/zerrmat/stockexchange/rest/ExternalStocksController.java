@@ -50,4 +50,10 @@ public class ExternalStocksController extends ExternalController {
         stockService.updateStocks(actualStockDtos, exchangeService.getBySymbol(exchangeSymbol));
         return actualStockDtos;
     }
+
+    @Override
+    protected void resetState() {
+        super.resetState();
+        this.exchangeSymbol = null;
+    }
 }

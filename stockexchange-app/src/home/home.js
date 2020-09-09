@@ -1,7 +1,7 @@
 import React from 'react';
 
-import ExchangeSelect from "./exchangeselect";
-import StockSelect from "./stockselect";
+import ExchangeSelect from "../sharedcomponents/exchangeselect";
+import StockTicker from "./stockticker";
 
 class Home extends React.Component {
     constructor(props) {
@@ -9,7 +9,11 @@ class Home extends React.Component {
         this.state = {
             exchange: [],
             exchangeValue: "default",
-            stockSelectDisabled: true
+            stock: [],
+            stockValue: "default",
+            stockTicker: [],
+            stockSelectDisabled: true,
+            stockTickerDisabled: true
         };
     }
 
@@ -27,22 +31,70 @@ class Home extends React.Component {
 
     render() {
         const {exchange} = this.state;
+        const {stock} = this.state;
+        const {stockTicker} = this.state;
 
         return (
             <div className="container">
-                <ExchangeSelect value={this.state.exchangeValue} data={{exchange}}
-                                onExchangeChange={this.setExchange}/>
-                <StockSelect disabled={this.state.stockSelectDisabled ? 'disabled' : null}/>
+                <ExchangeSelect exchangeValue={this.state.exchangeValue}
+                                exchangeData={{exchange}}
+                                onExchangeChange={this.setExchange}
+                                stockDisabled={this.state.stockSelectDisabled ? 'disabled' : null}
+                                stockValue={this.state.stockValue}
+                                stockData={{stock}}
+                                onStockChange={this.setStock}/>
+                <StockTicker hidden={this.state.stockTickerDisabled ? 'hidden' : null} value={this.state.stockTicker.symbol}
+                             data={{stockTicker}}/>
+
             </div>
         );
     }
 
     setExchange = (value) => {
         this.setState({exchangeValue: value});
+        this.setState({stockTickerDisabled: true});
         if (value !== undefined && value !== 'default') {
             this.setState({stockSelectDisabled: false});
+
+            fetch("http://localhost:8080/api/exchange/" + value + "/stocks")
+                .then(data => data.json())
+                .then(
+                    (data) => {
+                        this.setState({
+                            stock: data
+                        });
+                    }
+                )
         } else {
-            this.setState({stockSelectDisabled: true});
+            this.setState({
+                stock: [],
+                stockValue: "default",
+                stockTicker: [],
+                stockSelectDisabled: true,
+            });
+        }
+    };
+
+    setStock = (value) => {
+        this.setState({stockValue: value});
+        if (value !== undefined && value !== 'default') {
+            this.setState({stockTickerDisabled: false});
+
+            fetch("http://localhost:8080/api/exchange/" + this.state.exchangeValue + "/stock/"
+                + value + "/ticker/latest")
+                .then(data => data.json())
+                .then(
+                    (data) => {
+                        this.setState({
+                            stockTicker: data
+                        });
+                    }
+                )
+        } else {
+            this.setState({stockTickerDisabled: true});
+            this.setState({
+                stockTicker: []
+            })
         }
     }
 }

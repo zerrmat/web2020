@@ -63,6 +63,14 @@ public class ExternalTickersController extends ExternalController {
         if (tickerDtos.size() != 0) {
             stockDtos = Collections.singletonList(stockService.updateStockValue(tickerDtos.get(0)));
         }
+
         return stockDtos;
+    }
+
+    @Override
+    protected void resetState() {
+        super.resetState();
+        this.stockSymbol = null;
+        this.exchangeSymbol = null;
     }
 }

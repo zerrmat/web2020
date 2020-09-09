@@ -1,18 +1,24 @@
 import React from "react";
 
-class StockTicker extends React.component {
-    render() {
-        const ticker = this.props.data.ticker;
+class StockTicker extends React.Component {
+    Ready(props) {
+        const ticker = props.data.stockTicker;
+        if (ticker.value != null) {
+            return (
+                <div>
+                    <p>{ticker.id}</p>
+                    <p>{ticker.name}</p>
+                    <p>{ticker.symbol}</p>
+                    <p>{ticker.value.number}</p>
+                    <p>{ticker.value.currency.currencyCode}</p>
+                </div>);
+        } else {
+            return (<div></div>);
+        }
+    }
 
-        return (
-            <div>
-                <p>{ticker.id}</p>
-                <p>{ticker.name}</p>
-                <p>{ticker.symbol}</p>
-                <p>{ticker.value.number}</p>
-                <p>{ticker.value.currency}</p>
-            </div>
-        );
+    render() {
+        return this.Ready(this.props);
     }
 }
 

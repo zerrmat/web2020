@@ -21,10 +21,12 @@ public abstract class ExternalController {
     protected final List updateDataTemplateMethod() {
         List result;
         if (!shouldUpdateData()) {
+            resetState();
             return new ArrayList<>();
         }
         result = updateData();
         updateCache();
+        resetState();
 
         return result;
     }
@@ -48,5 +50,9 @@ public abstract class ExternalController {
                         .lastAccess(LocalDateTime.now())
                         .build()
         );
+    }
+
+    protected void resetState() {
+        this.endpointName = null;
     }
 }

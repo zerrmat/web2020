@@ -39,4 +39,10 @@ public class ExternalExchangesController extends ExternalController {
         return externalRequestsService
                 .makeMarketStackExchangesRequest(exchangeService);
     }
+
+    @Override
+    protected void resetState() {
+        super.resetState();
+        this.endpointName = null;
+    }
 }
