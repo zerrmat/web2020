@@ -57,7 +57,7 @@ public class ExternalRequestsService {
     public String makeExternalMarketStackHistoricalRequest(String stockSymbol, LocalDate from,
                                                            LocalDate to) {
         final String urlEndpointAddress = "http://api.marketstack.com/v1/eod";
-        final String accessKey = "166af8c956780fd148bc9dd925968daf";
+        final String accessKey = "7253ba2f2803e2edf18061137079b347";
         final String dateFrom = from.getYear() + "-"
                 + ((from.getMonthValue() < 10) ? "0" : "")
                 + from.getMonthValue() + "-"
@@ -105,7 +105,7 @@ public class ExternalRequestsService {
 
     public String makeExternalMarketStackTickersRequest(String stockSymbol) {
         final String urlEndpointAddress = "http://api.marketstack.com/v1/tickers/" + stockSymbol + "/eod/latest";
-        final String accessKey = "166af8c956780fd148bc9dd925968daf";
+        final String accessKey = "7253ba2f2803e2edf18061137079b347";
 
         String fullUrl = urlEndpointAddress + "?" + "access_key=" + accessKey;
 
@@ -141,7 +141,7 @@ public class ExternalRequestsService {
 
     public String makeExternalMarketStackStocksRequest(MarketStackPagination pagination, String exchangeSymbol) {
         final String urlEndpointAddress = "http://api.marketstack.com/v1/exchanges/" + exchangeSymbol + "/tickers";
-        final String accessKey = "166af8c956780fd148bc9dd925968daf";
+        final String accessKey = "7253ba2f2803e2edf18061137079b347";
 
         String fullUrl = urlEndpointAddress + "?" + "access_key=" + accessKey + "&limit=1000" + "&offset=" + (pagination.getOffset());
 
@@ -174,7 +174,7 @@ public class ExternalRequestsService {
 
     public String makeExternalMarketStackExchangesRequest() {
         final String urlEndpointAddress = "http://api.marketstack.com/v1/exchanges";
-        final String accessKey = "166af8c956780fd148bc9dd925968daf";
+        final String accessKey = "7253ba2f2803e2edf18061137079b347";
 
         StringBuilder sb = new StringBuilder();
         String fullURL = sb.append(urlEndpointAddress).append("?").append("access_key=")
