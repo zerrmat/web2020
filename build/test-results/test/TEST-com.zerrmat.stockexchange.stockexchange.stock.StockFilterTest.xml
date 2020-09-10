@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.zerrmat.stockexchange.stockexchange.stock.StockFilterTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2020-09-10T14:59:31" hostname="JA-KOMPUTER" time="0.003">
+<testsuite name="com.zerrmat.stockexchange.stockexchange.stock.StockFilterTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2020-09-10T16:28:42" hostname="JA-KOMPUTER" time="0.002">
   <properties/>
-  <testcase name="shouldDeleteObsoleteValuesFromGivenSet()" classname="com.zerrmat.stockexchange.stockexchange.stock.StockFilterTest" time="0.002"/>
+  <testcase name="shouldDeleteObsoleteValuesFromGivenSet()" classname="com.zerrmat.stockexchange.stockexchange.stock.StockFilterTest" time="0.001"/>
   <testcase name="shouldAddNewValuesToGivenSet()" classname="com.zerrmat.stockexchange.stockexchange.stock.StockFilterTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

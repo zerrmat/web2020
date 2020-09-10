@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.zerrmat.stockexchange.stockexchange.rest.ExternalHistoricalControllerTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2020-09-10T14:59:31" hostname="JA-KOMPUTER" time="0.127">
+<testsuite name="com.zerrmat.stockexchange.stockexchange.rest.ExternalHistoricalControllerTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2020-09-10T16:28:42" hostname="JA-KOMPUTER" time="0.154">
   <properties/>
-  <testcase name="shouldNotUpdateWhenThereAreCachedData()" classname="com.zerrmat.stockexchange.stockexchange.rest.ExternalHistoricalControllerTest" time="0.05"/>
-  <testcase name="shouldConsumeResponse()" classname="com.zerrmat.stockexchange.stockexchange.rest.ExternalHistoricalControllerTest" time="0.015"/>
-  <testcase name="shouldConsumeMultipartResponse()" classname="com.zerrmat.stockexchange.stockexchange.rest.ExternalHistoricalControllerTest" time="0.05"/>
-  <testcase name="shouldUpdateDataWhenThereAreNewNotCachedData()" classname="com.zerrmat.stockexchange.stockexchange.rest.ExternalHistoricalControllerTest" time="0.011"/>
+  <testcase name="shouldNotUpdateWhenThereAreCachedData()" classname="com.zerrmat.stockexchange.stockexchange.rest.ExternalHistoricalControllerTest" time="0.076"/>
+  <testcase name="shouldConsumeResponse()" classname="com.zerrmat.stockexchange.stockexchange.rest.ExternalHistoricalControllerTest" time="0.013"/>
+  <testcase name="shouldConsumeMultipartResponse()" classname="com.zerrmat.stockexchange.stockexchange.rest.ExternalHistoricalControllerTest" time="0.052"/>
+  <testcase name="shouldUpdateDataWhenThereAreNewNotCachedData()" classname="com.zerrmat.stockexchange.stockexchange.rest.ExternalHistoricalControllerTest" time="0.013"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

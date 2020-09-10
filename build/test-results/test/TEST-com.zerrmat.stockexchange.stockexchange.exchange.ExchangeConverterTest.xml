@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.zerrmat.stockexchange.stockexchange.exchange.ExchangeConverterTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2020-09-10T14:59:30" hostname="JA-KOMPUTER" time="0.004">
+<testsuite name="com.zerrmat.stockexchange.stockexchange.exchange.ExchangeConverterTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2020-09-10T16:28:42" hostname="JA-KOMPUTER" time="0.006">
   <properties/>
-  <testcase name="shouldConvertDtoToModel()" classname="com.zerrmat.stockexchange.stockexchange.exchange.ExchangeConverterTest" time="0.003"/>
-  <testcase name="shouldConvertModelToDto()" classname="com.zerrmat.stockexchange.stockexchange.exchange.ExchangeConverterTest" time="0.0"/>
+  <testcase name="shouldConvertDtoToModel()" classname="com.zerrmat.stockexchange.stockexchange.exchange.ExchangeConverterTest" time="0.005"/>
+  <testcase name="shouldConvertModelToDto()" classname="com.zerrmat.stockexchange.stockexchange.exchange.ExchangeConverterTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

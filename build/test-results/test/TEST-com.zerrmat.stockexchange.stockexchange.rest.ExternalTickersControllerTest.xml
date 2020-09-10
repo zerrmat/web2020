@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.zerrmat.stockexchange.stockexchange.rest.ExternalTickersControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-09-10T14:59:31" hostname="JA-KOMPUTER" time="0.005">
+<testsuite name="com.zerrmat.stockexchange.stockexchange.rest.ExternalTickersControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-09-10T16:28:42" hostname="JA-KOMPUTER" time="0.006">
   <properties/>
-  <testcase name="shouldConsumeResponseWhenExchangeNull()" classname="com.zerrmat.stockexchange.stockexchange.rest.ExternalTickersControllerTest" time="0.005"/>
+  <testcase name="shouldConsumeResponseWhenExchangeNull()" classname="com.zerrmat.stockexchange.stockexchange.rest.ExternalTickersControllerTest" time="0.006"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

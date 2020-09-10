@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.zerrmat.stockexchange.stockexchange.exchangetostock.ExchangeToStockConverterTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2020-09-10T14:59:30" hostname="JA-KOMPUTER" time="0.05">
+<testsuite name="com.zerrmat.stockexchange.stockexchange.exchangetostock.ExchangeToStockConverterTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2020-09-10T16:28:42" hostname="JA-KOMPUTER" time="0.047">
   <properties/>
-  <testcase name="shouldConvertDtoToModel()" classname="com.zerrmat.stockexchange.stockexchange.exchangetostock.ExchangeToStockConverterTest" time="0.046"/>
-  <testcase name="shouldConvertModelToDto()" classname="com.zerrmat.stockexchange.stockexchange.exchangetostock.ExchangeToStockConverterTest" time="0.003"/>
+  <testcase name="shouldConvertDtoToModel()" classname="com.zerrmat.stockexchange.stockexchange.exchangetostock.ExchangeToStockConverterTest" time="0.043"/>
+  <testcase name="shouldConvertModelToDto()" classname="com.zerrmat.stockexchange.stockexchange.exchangetostock.ExchangeToStockConverterTest" time="0.004"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[wrz 10, 2020 4:59:30 PM org.javamoney.moneta.DefaultMonetaryContextFactory createMonetaryContextNonNullConfig
+  <system-err><![CDATA[wrz 10, 2020 6:28:42 PM org.javamoney.moneta.DefaultMonetaryContextFactory createMonetaryContextNonNullConfig
 INFO: Using custom MathContext: precision=256, roundingMode=HALF_EVEN
 ]]></system-err>
 </testsuite>
