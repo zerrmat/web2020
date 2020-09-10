@@ -18,7 +18,7 @@ class Home extends React.Component {
     }
 
     componentDidMount() {
-        fetch("http://localhost:8080/api/exchange")
+        fetch("http://localhost:8080/stockexchange/api/exchange")
             .then(data => data.json())
             .then(
                 (data) => {
@@ -56,7 +56,7 @@ class Home extends React.Component {
         if (value !== undefined && value !== 'default') {
             this.setState({stockSelectDisabled: false});
 
-            fetch("http://localhost:8080/api/exchange/" + value + "/stocks")
+            fetch("http://localhost:8080/stockexchange/api/exchange/" + value + "/stocks")
                 .then(data => data.json())
                 .then(
                     (data) => {
@@ -80,7 +80,7 @@ class Home extends React.Component {
         if (value !== undefined && value !== 'default') {
             this.setState({stockTickerDisabled: false});
 
-            fetch("http://localhost:8080/api/exchange/" + this.state.exchangeValue + "/stock/"
+            fetch("http://localhost:8080/stockexchange/api/exchange/" + this.state.exchangeValue + "/stock/"
                 + value + "/ticker/latest")
                 .then(data => data.json())
                 .then(

@@ -6,10 +6,10 @@ class Header extends React.Component {
         return (
             <ul id="header-ul">
                 <li className="headerPos" id="home-header-container">
-                    <Link to="/home" id="home-header" className="link">Home</Link>
+                    <Link to="/stockexchange/home" id="home-header" className="link">Home</Link>
                 </li>
                 <li className="headerPos" id="history-header-container">
-                    <Link to="/history" id="history-header" className="link">History</Link>
+                    <Link to="/stockexchange/history" id="history-header" className="link">History</Link>
                 </li>
             </ul>
         );

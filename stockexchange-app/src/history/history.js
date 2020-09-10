@@ -22,7 +22,7 @@ class History extends React.Component {
     }
 
     componentDidMount() {
-        fetch("http://localhost:8080/api/exchange")
+        fetch("http://localhost:8080/stockexchange/api/exchange")
             .then(data => data.json())
             .then(
                 (data) => {
@@ -75,7 +75,7 @@ class History extends React.Component {
         const from = document.getElementById("from").value;
         const to = document.getElementById("to").value;
 
-        const url = "http://localhost:8080/api/exchange/" + exchange + "/stock/" + stock
+        const url = "http://localhost:8080/stockexchange/api/exchange/" + exchange + "/stock/" + stock
             + "/ticker/historical?from=" + from + "&to=" + to;
         fetch(url)
             .then(data => data.json())
@@ -111,7 +111,7 @@ class History extends React.Component {
         if (value !== undefined && value !== 'default') {
             this.setState({stockSelectDisabled: false});
 
-            fetch("http://localhost:8080/api/exchange/" + value + "/stocks")
+            fetch("http://localhost:8080/stockexchange/api/exchange/" + value + "/stocks")
                 .then(data => data.json())
                 .then(
                     (data) => {

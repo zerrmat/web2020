@@ -14,11 +14,11 @@ class App extends React.Component {
                 <div id="logo" name="logo">
                     <span id="logo-text" name="logo-text">Stock Exchange</span>
                 </div>
-                <Router>
+                <Router basename={process.env.REACT_APP_ROUTER_BASE || ''}>
                     <div className="container">
                         <Header />
-                        <Route exact path="/home" component={Home} />
-                        <Route path="/history" component={History} />
+                        <Route exact path="/stockexchange/home" component={Home} />
+                        <Route path="/stockexchange/history" component={History} />
                     </div>
                 </Router>
             </div>

@@ -5,12 +5,13 @@ import com.zerrmat.stockexchange.exchange.dto.ExchangeDto;
 import com.zerrmat.stockexchange.exchange.service.ExchangeService;
 import com.zerrmat.stockexchange.rest.service.ExternalRequestsService;
 import com.zerrmat.stockexchange.util.ExternalController;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@RestController
+@Controller
 public class ExternalExchangesController extends ExternalController {
     private ExternalRequestsService externalRequestsService;
     private ExchangeService exchangeService;

@@ -6,6 +6,7 @@ import com.zerrmat.stockexchange.stock.dto.StockDto;
 import com.zerrmat.stockexchange.stock.service.StockService;
 import com.zerrmat.stockexchange.ticker.dto.TickerDto;
 import com.zerrmat.stockexchange.util.ExternalController;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,7 +16,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-@RestController
+@Controller
 public class ExternalTickersController extends ExternalController {
     private String stockSymbol;
     private String exchangeSymbol;

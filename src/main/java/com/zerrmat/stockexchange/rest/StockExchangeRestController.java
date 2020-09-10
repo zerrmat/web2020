@@ -54,27 +54,27 @@ public class StockExchangeRestController {
         this.externalHistoricalController = externalHistoricalController;
     }
 
-    @CrossOrigin(origins = "http://localhost:3000")
+    //@CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("/stock/{id}")
     public List<StockModel> getStock(@PathVariable Long id) {
         return Collections.singletonList(stockService.getStock(id));
     }
 
-    @CrossOrigin(origins = "http://localhost:3000")
+   // @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("/exchange")
     public List<ExchangeDto> getAllExchanges() {
         externalExchangesController.executeEndpoint();
         return exchangeService.getAll();
     }
 
-    @CrossOrigin(origins = "http://localhost:3000")
+    //@CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("/exchange/{code}")
     public List<ExchangeDto> getExchange(@PathVariable String code) {
         code = code.toUpperCase();
         return Collections.singletonList(exchangeService.getBySymbol(code));
     }
 
-    @CrossOrigin(origins = "http://localhost:3000")
+  //  @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("/exchange/{code}/stocks")
     public List<StockDto> getAllStocks(@PathVariable String code) {
         code = code.toUpperCase();
@@ -83,7 +83,7 @@ public class StockExchangeRestController {
         return exchangeToStockService.getStocksForExchange(exchangeId);
     }
 
-    @CrossOrigin(origins = "http://localhost:3000")
+   // @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("exchange/{code}/stock/{id}/ticker/latest")
     public StockDto getLatestEODForStock(@PathVariable String code, @PathVariable String id) {
         code = code.toUpperCase();
@@ -102,7 +102,7 @@ public class StockExchangeRestController {
         }
     }
 
-    @CrossOrigin(origins = "http://localhost:3000")
+    //@CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("exchange/{code}/stock/{id}/ticker/historical")
     public List<HistoricalDto> getHistoricalData(@PathVariable String code,
                                                  @PathVariable String id,

@@ -2,6 +2,7 @@ plugins {
 	id 'org.springframework.boot' version '2.3.0.RELEASE'
 	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
 	id 'java'
+	
 }
 
 group = 'com.zerrmat.stockexchange'
@@ -20,6 +21,7 @@ repositories {
 }
 
 dependencies {
+	apply plugin: 'war'
 	testImplementation('org.springframework.boot:spring-boot-starter-test')
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
