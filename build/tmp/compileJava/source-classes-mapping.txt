@@ -1,0 +1,126 @@
+com/zerrmat/stockexchange/stock/dao/StockRepositoryFilter.java
+ com.zerrmat.stockexchange.stock.dao.StockRepositoryFilter
+com/zerrmat/stockexchange/historical/dao/HistoricalRepository.java
+ com.zerrmat.stockexchange.historical.dao.HistoricalRepository
+com/zerrmat/stockexchange/marketstack/fragments/exchange/MarketStackTimezone.java
+ com.zerrmat.stockexchange.marketstack.fragments.exchange.MarketStackTimezone
+ com.zerrmat.stockexchange.marketstack.fragments.exchange.MarketStackTimezone$MarketStackTimezoneBuilder
+com/zerrmat/stockexchange/exchangetostock/dto/ExchangeToStockDto.java
+ com.zerrmat.stockexchange.exchangetostock.dto.ExchangeToStockDto
+ com.zerrmat.stockexchange.exchangetostock.dto.ExchangeToStockDto$ExchangeToStockDtoBuilder
+com/zerrmat/stockexchange/marketstack/fragments/exchange/MarketStackExchangeData.java
+ com.zerrmat.stockexchange.marketstack.fragments.exchange.MarketStackExchangeData
+ com.zerrmat.stockexchange.marketstack.fragments.exchange.MarketStackExchangeData$MarketStackExchangeDataBuilder
+com/zerrmat/stockexchange/exchange/service/ExchangeService.java
+ com.zerrmat.stockexchange.exchange.service.ExchangeService
+com/zerrmat/stockexchange/stock/dto/StockDto.java
+ com.zerrmat.stockexchange.stock.dto.StockDto
+ com.zerrmat.stockexchange.stock.dto.StockDto$StockDtoBuilder
+com/zerrmat/stockexchange/stock/service/StockService.java
+ com.zerrmat.stockexchange.stock.service.StockService
+com/zerrmat/stockexchange/historical/dto/HistoricalDto.java
+ com.zerrmat.stockexchange.historical.dto.HistoricalDto
+ com.zerrmat.stockexchange.historical.dto.HistoricalDto$HistoricalDtoBuilder
+com/zerrmat/stockexchange/ticker/marketstack/dto/TickerEODLatestMarketStackResponseWrapper.java
+ com.zerrmat.stockexchange.ticker.marketstack.dto.TickerEODLatestMarketStackResponseWrapper
+ com.zerrmat.stockexchange.ticker.marketstack.dto.TickerEODLatestMarketStackResponseWrapper$TickerEODLatestMarketStackResponseWrapperBuilder
+com/zerrmat/stockexchange/rest/StockExchangeRestController.java
+ com.zerrmat.stockexchange.rest.StockExchangeRestController
+com/zerrmat/stockexchange/exchange/dao/ExchangeRepository.java
+ com.zerrmat.stockexchange.exchange.dao.ExchangeRepository
+com/zerrmat/stockexchange/ticker/dto/TickerDto.java
+ com.zerrmat.stockexchange.ticker.dto.TickerDto
+ com.zerrmat.stockexchange.ticker.dto.TickerDto$TickerDtoBuilder
+com/zerrmat/stockexchange/rest/ExternalTickersController.java
+ com.zerrmat.stockexchange.rest.ExternalTickersController
+com/zerrmat/stockexchange/util/ResponseConverter.java
+ com.zerrmat.stockexchange.util.ResponseConverter
+com/zerrmat/stockexchange/exchange/dto/ExchangeDto.java
+ com.zerrmat.stockexchange.exchange.dto.ExchangeDto
+ com.zerrmat.stockexchange.exchange.dto.ExchangeDto$ExchangeDtoBuilder
+com/zerrmat/stockexchange/marketstack/fragments/exchange/MarketStackCurrency.java
+ com.zerrmat.stockexchange.marketstack.fragments.exchange.MarketStackCurrency
+ com.zerrmat.stockexchange.marketstack.fragments.exchange.MarketStackCurrency$MarketStackCurrencyBuilder
+com/zerrmat/stockexchange/exchangetostock/service/ExchangeToStockService.java
+ com.zerrmat.stockexchange.exchangetostock.service.ExchangeToStockService
+com/zerrmat/stockexchange/stock/marketstack/dto/StockMarketStackResponseWrapper.java
+ com.zerrmat.stockexchange.stock.marketstack.dto.StockMarketStackResponseWrapper
+ com.zerrmat.stockexchange.stock.marketstack.dto.StockMarketStackResponseWrapper$StockMarketStackResponseWrapperBuilder
+com/zerrmat/stockexchange/marketstack/fragments/MarketStackTickerData.java
+ com.zerrmat.stockexchange.marketstack.fragments.MarketStackTickerData
+ com.zerrmat.stockexchange.marketstack.fragments.MarketStackTickerData$MarketStackTickerDataBuilder
+com/zerrmat/stockexchange/historical/model/HistoricalModel.java
+ com.zerrmat.stockexchange.historical.model.HistoricalModel
+ com.zerrmat.stockexchange.historical.model.HistoricalModel$HistoricalModelBuilder
+com/zerrmat/stockexchange/StockExchangeApplication.java
+ com.zerrmat.stockexchange.StockExchangeApplication
+com/zerrmat/stockexchange/cachecontrol/service/CacheControlConverter.java
+ com.zerrmat.stockexchange.cachecontrol.service.CacheControlConverter
+com/zerrmat/stockexchange/marketstack/fragments/MarketStackPagination.java
+ com.zerrmat.stockexchange.marketstack.fragments.MarketStackPagination
+ com.zerrmat.stockexchange.marketstack.fragments.MarketStackPagination$MarketStackPaginationBuilder
+com/zerrmat/stockexchange/historical/service/HistoricalService.java
+ com.zerrmat.stockexchange.historical.service.HistoricalService
+com/zerrmat/stockexchange/exchange/dao/ExchangeRepositoryFilter.java
+ com.zerrmat.stockexchange.exchange.dao.ExchangeRepositoryFilter
+com/zerrmat/stockexchange/exchange/marketstack/dto/ExchangeMarketStackResponseWrapper.java
+ com.zerrmat.stockexchange.exchange.marketstack.dto.ExchangeMarketStackResponseWrapper
+ com.zerrmat.stockexchange.exchange.marketstack.dto.ExchangeMarketStackResponseWrapper$ExchangeMarketStackResponseWrapperBuilder
+com/zerrmat/stockexchange/util/GenericConverter.java
+ com.zerrmat.stockexchange.util.GenericConverter
+com/zerrmat/stockexchange/exchangetostock/model/ExchangeToStockModel.java
+ com.zerrmat.stockexchange.exchangetostock.model.ExchangeToStockModel
+ com.zerrmat.stockexchange.exchangetostock.model.ExchangeToStockModel$ExchangeToStockModelBuilder
+com/zerrmat/stockexchange/rest/service/ExternalRequestsService.java
+ com.zerrmat.stockexchange.rest.service.ExternalRequestsService
+ com.zerrmat.stockexchange.rest.service.ExternalRequestsService$1
+ com.zerrmat.stockexchange.rest.service.ExternalRequestsService$2
+ com.zerrmat.stockexchange.rest.service.ExternalRequestsService$3
+ com.zerrmat.stockexchange.rest.service.ExternalRequestsService$4
+com/zerrmat/stockexchange/ticker/marketstack/dto/TickerHistoricalMarketStackResponseWrapper.java
+ com.zerrmat.stockexchange.ticker.marketstack.dto.TickerHistoricalMarketStackResponseWrapper
+ com.zerrmat.stockexchange.ticker.marketstack.dto.TickerHistoricalMarketStackResponseWrapper$TickerHistoricalMarketStackResponseWrapperBuilder
+com/zerrmat/stockexchange/cachecontrol/model/CacheControlModel.java
+ com.zerrmat.stockexchange.cachecontrol.model.CacheControlModel
+ com.zerrmat.stockexchange.cachecontrol.model.CacheControlModel$CacheControlModelBuilder
+com/zerrmat/stockexchange/rest/ExternalHistoricalController.java
+ com.zerrmat.stockexchange.rest.ExternalHistoricalController
+com/zerrmat/stockexchange/util/ZonedDateTimeDeserializer.java
+ com.zerrmat.stockexchange.util.ZonedDateTimeDeserializer
+com/zerrmat/stockexchange/stock/dao/StockRepository.java
+ com.zerrmat.stockexchange.stock.dao.StockRepository
+com/zerrmat/stockexchange/stock/model/StockModel.java
+ com.zerrmat.stockexchange.stock.model.StockModel
+ com.zerrmat.stockexchange.stock.model.StockModel$StockModelBuilder
+com/zerrmat/stockexchange/util/ExternalController.java
+ com.zerrmat.stockexchange.util.ExternalController
+com/zerrmat/stockexchange/cachecontrol/dto/CacheControlDto.java
+ com.zerrmat.stockexchange.cachecontrol.dto.CacheControlDto
+ com.zerrmat.stockexchange.cachecontrol.dto.CacheControlDto$CacheControlDtoBuilder
+com/zerrmat/stockexchange/stock/service/StockConverter.java
+ com.zerrmat.stockexchange.stock.service.StockConverter
+com/zerrmat/stockexchange/rest/ExternalExchangesController.java
+ com.zerrmat.stockexchange.rest.ExternalExchangesController
+com/zerrmat/stockexchange/marketstack/fragments/stock/MarketStackStockTicker.java
+ com.zerrmat.stockexchange.marketstack.fragments.stock.MarketStackStockTicker
+ com.zerrmat.stockexchange.marketstack.fragments.stock.MarketStackStockTicker$MarketStackStockTickerBuilder
+com/zerrmat/stockexchange/exchangetostock/dao/ExchangeToStockRepository.java
+ com.zerrmat.stockexchange.exchangetostock.dao.ExchangeToStockRepository
+com/zerrmat/stockexchange/exchangetostock/service/ExchangeToStockConverter.java
+ com.zerrmat.stockexchange.exchangetostock.service.ExchangeToStockConverter
+com/zerrmat/stockexchange/cachecontrol/dao/CacheControlRepository.java
+ com.zerrmat.stockexchange.cachecontrol.dao.CacheControlRepository
+com/zerrmat/stockexchange/cachecontrol/service/CacheControlService.java
+ com.zerrmat.stockexchange.cachecontrol.service.CacheControlService
+com/zerrmat/stockexchange/marketstack/fragments/stock/MarketStackStockData.java
+ com.zerrmat.stockexchange.marketstack.fragments.stock.MarketStackStockData
+ com.zerrmat.stockexchange.marketstack.fragments.stock.MarketStackStockData$MarketStackStockDataBuilder
+com/zerrmat/stockexchange/exchange/service/ExchangeConverter.java
+ com.zerrmat.stockexchange.exchange.service.ExchangeConverter
+com/zerrmat/stockexchange/rest/ExternalStocksController.java
+ com.zerrmat.stockexchange.rest.ExternalStocksController
+com/zerrmat/stockexchange/historical/service/HistoricalConverter.java
+ com.zerrmat.stockexchange.historical.service.HistoricalConverter
+com/zerrmat/stockexchange/exchange/model/ExchangeModel.java
+ com.zerrmat.stockexchange.exchange.model.ExchangeModel
+ com.zerrmat.stockexchange.exchange.model.ExchangeModel$ExchangeModelBuilder

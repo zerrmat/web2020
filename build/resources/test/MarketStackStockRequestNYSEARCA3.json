@@ -1,0 +1,871 @@
+{
+  "pagination": {
+    "limit": 1000,
+    "offset": 2000,
+    "count": 142,
+    "total": 2142
+  },
+  "data": {
+    "name": "NYSE ARCA",
+    "acronym": "NYSEARCA",
+    "mic": "ARCX",
+    "country": "USA",
+    "country_code": "US",
+    "city": "New York",
+    "website": "www.nyse.com",
+    "tickers": [
+      {
+        "name": null,
+        "symbol": "VIS",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FIRST TRUST CBOE S&P 500 VIX TAIL HEDGE FUND",
+        "symbol": "VIXH",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": null,
+        "symbol": "VIXM",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ProShares VIX ShortTerm Futures ETF",
+        "symbol": "VIXY",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "DIREXION VALUE LINER CONSERVATIVE EQUITY ETF",
+        "symbol": "VLLV",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "DIREXION VALUE LINER MID AND LARGECAP HIGH DIVIDEN",
+        "symbol": "VLML",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "DIREXION VALUE LINER SMALL AND MIDCAP HIGH DIVIDEN",
+        "symbol": "VLSM",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": null,
+        "symbol": "VLU",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "JANUS HENDERSON SHORT DURATION INCOME ETF",
+        "symbol": "VNLA",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "VANECK VECTORS VIETNAM ETF",
+        "symbol": "VNM",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "VANGUARD REAL ESTATE INDEX FUND ETF SHARES",
+        "symbol": "VNQ",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "VANGUARD MIDCAP INDEX FUND ETF SHARES",
+        "symbol": "VO",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "VANGUARD MIDCAP VALUE INDEX FUND ETF SHARES",
+        "symbol": "VOE",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "VANGUARD 500 INDEX FUND ETF SHARES",
+        "symbol": "VOO",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "VANGUARD S&P 500 GROWTH INDEX FUND ETF SHARES",
+        "symbol": "VOOG",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "VANGUARD S&P 500 VALUE INDEX FUND ETF SHARES",
+        "symbol": "VOOV",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": null,
+        "symbol": "VOT",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "VANGUARD COMMUNICATION SERVICES INDEX FUND ETF SHA",
+        "symbol": "VOX",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": null,
+        "symbol": "VPL",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "VANGUARD UTILITIES INDEX FUND ETF SHARES",
+        "symbol": "VPU",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Barclays ETN DYN VEQTORTM",
+        "symbol": "VQT",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "UBS ETRACS S&P 500 VEQTOR Switch ETN",
+        "symbol": "VQTS",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "VIRTUS REAL ASSET INCOME ETF",
+        "symbol": "VRAI",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SPDRR NUVEEN S&PR VRDO MUNICIPAL BOND ETF",
+        "symbol": "VRD",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "INVESCO VARIABLE RATE PREFERRED ETF",
+        "symbol": "VRP",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "VOLSHARES LARGE CAP ETF",
+        "symbol": "VSL",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "DIREXION S&P 500 R VOLATILITY RESPONSE SHARES",
+        "symbol": "VSPY",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "VANGUARD FTSE ALLWORLD EXUS SMALLCAP INDEX FUND ET",
+        "symbol": "VSS",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "VANGUARD TOTAL WORLD STOCK INDEX FUND ETF SHARES",
+        "symbol": "VT",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "VANGUARD TAXEXEMPT BOND INDEX FUND ETF SHARES",
+        "symbol": "VTEB",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "VANGUARD TOTAL STOCK MARKET INDEX FUND ETF SHARES",
+        "symbol": "VTI",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "VANGUARD VALUE INDEX FUND ETF SHARES",
+        "symbol": "VTV",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "VANGUARD GROWTH INDEX FUND ETF SHARES",
+        "symbol": "VUG",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "VIDENT CORE U.S. EQUITY FUND",
+        "symbol": "VUSE",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": null,
+        "symbol": "VV",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "VANGUARD EMERGING MARKETS STOCK INDEX FUND ETF SHA",
+        "symbol": "VWO",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "VANGUARD EXTENDED MARKET INDEX FUND ETF SHARES",
+        "symbol": "VXF",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "VANGUARD HIGH DIVIDEND YIELD INDEX FUND ETF SHARES",
+        "symbol": "VYM",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "DIREXION DAILY CONSUMER DISCRETIONARY BULL 3X SHAR",
+        "symbol": "WANT",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "WISDOMTREE BALANCED INCOME FUND NA",
+        "symbol": "WBAL",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "WBI BULLBEAR RISING INCOME 2000 ETF",
+        "symbol": "WBIA",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "WBI BULLBEAR VALUE 2000 ETF",
+        "symbol": "WBIB",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "WBI BULLBEAR YIELD 2000 ETF",
+        "symbol": "WBIC",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "WBI BULLBEAR QUALITY 2000 ETF",
+        "symbol": "WBID",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "WBI BULLBEAR RISING INCOME 3000 ETF",
+        "symbol": "WBIE",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "WBI BULLBEAR VALUE 3000 ETF",
+        "symbol": "WBIF",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "WBI BULLBEAR YIELD 3000 ETF",
+        "symbol": "WBIG",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "WBI BULLBEAR GLOBAL HIGH INCOME ETF",
+        "symbol": "WBIH",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "WBI BULLBEAR GLOBAL INCOME ETF",
+        "symbol": "WBII",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "WBI BULLBEAR QUALITY 3000 ETF",
+        "symbol": "WBIL",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "WBI BULLBEAR TREND SWITCH US TOTAL RETURN ETF",
+        "symbol": "WBIN",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "WBI BULLBEAR GLOBAL ROTATION ETF",
+        "symbol": "WBIR",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "WBI BULLBEAR TREND SWITCH US 3000 TOTAL RETURN ETF",
+        "symbol": "WBIT",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": null,
+        "symbol": "WBIY",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "WISDOMTREE ICBCCS S&P CHINA 500 FUND NA",
+        "symbol": "WCHN",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "SPDR S&P GLOBAL DIVIDEND ETF",
+        "symbol": "WDIV",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "DIREXION DAILY REGIONAL BANKS BEAR 3X SHARES",
+        "symbol": "WDRW",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "WISDOMTREE MANAGED FUTURES STRATEGY FUND NA",
+        "symbol": "WDTI",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "Teucrium Wheat Fund ETF",
+        "symbol": "WEAT",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "iPath Pure Beta Grains ETN",
+        "symbol": "WEET",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "WISDOMTREE U.S. EXPORT AND MULTINATIONAL FUND NA",
+        "symbol": "WEXP",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "Barclays Women in Leadership ETN",
+        "symbol": "WIL",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SPDRR FTSE INTERNATIONAL GOVERNMENT INFLATIONPROTE",
+        "symbol": "WIP",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ETFS Physical White Metals Basket Share ETF",
+        "symbol": "WITE",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "CROWDINVEST WISDOM ETF",
+        "symbol": "WIZE",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "INVESCO WILSHIRE MICROCAP ETF",
+        "symbol": "WMCR",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "WOMEN COM NETWORKS INC",
+        "symbol": "WOMN",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES INTERNATIONAL DEVELOPED PROPERTY ETF",
+        "symbol": "WPS",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "INVESCO WILSHIRE US REIT ETF",
+        "symbol": "WREI",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "SPIRITED FUNDSETFMG WHISKEY & SPIRITS ETF",
+        "symbol": "WSKY",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "UBS ETRACS ProShares Daily 3x Inverse Crude ETN",
+        "symbol": "WTID",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "UBS ETRACS ProShares Daily 3x Long Crude ETN",
+        "symbol": "WTIU",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "WISDOMTREE MANAGED FUTURES STRATEGY FUND NA",
+        "symbol": "WTMF",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SUMMIT WATER INFRASTRUCTURE MULTIFACTOR ETF",
+        "symbol": "WTRX",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "WISDOMTREE U.S. DOMESTIC ECONOMY FUND NA",
+        "symbol": "WUSA",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "SPDRR S&PR AEROSPACE & DEFENSE ETF",
+        "symbol": "XAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SPDRR S&PR BIOTECH ETF",
+        "symbol": "XBI",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "AMPLIFY INTERNATIONAL ONLINE RETAIL ETF",
+        "symbol": "XBUY",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "COLUMBIA EM CORE EXCHINA ETF",
+        "symbol": "XCEM",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Metaurus Equity Component Trust US Equity ExDivide",
+        "symbol": "XDIV",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": null,
+        "symbol": "XES",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SPDRR S&PR HOMEBUILDERS ETF",
+        "symbol": "XHB",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SPDRR S&PR HEALTH CARE EQUIPMENT ETF",
+        "symbol": "XHE",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SPDRR S&PR HEALTH CARE SERVICES ETF",
+        "symbol": "XHS",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SPDR MSCI CHINA A SHARES IMI ETF",
+        "symbol": "XINA",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "SPDR FACTSET INNOVATIVE TECHNOLOGY ETF",
+        "symbol": "XITK",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "UBS AG VelocityShares VIX Short Volatility Hedged ",
+        "symbol": "XIVH",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "THE MATERIALS SELECT SECTOR SPDR FUND",
+        "symbol": "XLB",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "THE COMMUNICATION SERVICES SELECT SECTOR SPDR FUND",
+        "symbol": "XLC",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "THE ENERGY SELECT SECTOR SPDR FUND",
+        "symbol": "XLE",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Cushing ETF Trust Cushing Energy MLP ETF",
+        "symbol": "XLEY",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "THE FINANCIAL SELECT SECTOR SPDR FUND",
+        "symbol": "XLF",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": null,
+        "symbol": "XLFS",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "INVESCO S&P 500 TOP 50 ETF",
+        "symbol": "XLG",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "THE INDUSTRIAL SELECT SECTOR SPDR FUND",
+        "symbol": "XLI",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "THE TECHNOLOGY SELECT SECTOR SPDR FUND",
+        "symbol": "XLK",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "THE CONSUMER STAPLES SELECT SECTOR SPDR FUND",
+        "symbol": "XLP",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "THE REAL ESTATE SELECT SECTOR SPDR FUND",
+        "symbol": "XLRE",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": null,
+        "symbol": "XLSR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Cushing ETF Trust Cushing Energy Supply Chain MLP ",
+        "symbol": "XLSY",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "Cushing ETF Trust Cushing Transportation MLP ETF",
+        "symbol": "XLTY",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": null,
+        "symbol": "XLU",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Cushing ETF Trust Cushing Utility MLP ETF",
+        "symbol": "XLUY",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "THE HEALTH CARE SELECT SECTOR SPDR FUND",
+        "symbol": "XLV",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "THE CONSUMER DISCRETIONARY SELECT SECTOR SPDR FUND",
+        "symbol": "XLY",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SPDRR S&PR METALS & MINING ETF",
+        "symbol": "XME",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": null,
+        "symbol": "XMHQ",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "INVESCO S&P MIDCAP LOW VOLATILITY ETF",
+        "symbol": "XMLV",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "INVESCO S&P MIDCAP MOMENTUM ETF",
+        "symbol": "XMMO",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "VANECK VECTORS CEF MUNICIPAL INCOME ETF",
+        "symbol": "XMPT",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "INVESCO S&P MIDCAP VALUE WITH MOMENTUM ETF",
+        "symbol": "XMVM",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "WISDOMTREE GLOBAL EXMEXICO EQUITY FUND NA",
+        "symbol": "XMX",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "SPDRR NYSE TECHNOLOGY ETF",
+        "symbol": "XNTK",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SPDRR S&PR OIL & GAS EXPLORATION & PRODUCTION ETF",
+        "symbol": "XOP",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SPDRR S&PR PHARMACEUTICALS ETF",
+        "symbol": "XPH",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PROSHARES ULTRA FTSE CHINA 50",
+        "symbol": "XPP",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "INVESCO S&P 500 EXRATE SENSITIVE LOW VOLATILITY ET",
+        "symbol": "XRLV",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SPDRR S&PR RETAIL ETF",
+        "symbol": "XRT",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SPDRR S&PR SEMICONDUCTOR ETF",
+        "symbol": "XSD",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "INVESCO S&P SMALLCAP LOW VOLATILITY ETF",
+        "symbol": "XSLV",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "INVESCO S&P SMALLCAP MOMENTUM ETF",
+        "symbol": "XSMO",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "WISDOMTREE EMERGING MARKETS EXSTATEOWNED ENTERPRIS",
+        "symbol": "XSOE",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "INVESCO S&P SMALLCAP VALUE WITH MOMENTUM ETF",
+        "symbol": "XSVM",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SPDRR S&PR SOFTWARE & SERVICES ETF",
+        "symbol": "XSW",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SPDR S&P TECHNOLOGY HARDWARE ETF",
+        "symbol": "XTH",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "SPDRR S&PR TELECOM ETF",
+        "symbol": "XTL",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SPDRR S&PR TRANSPORTATION ETF",
+        "symbol": "XTN",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "UBS ETRACS Daily LongShort VIX ETN",
+        "symbol": "XVIX",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "iPath SP 500 DYNAMIC VIX ET",
+        "symbol": "XVZ",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SPDR S&P INTERNET ETF",
+        "symbol": "XWEB",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "iPath Inverse S&P 500 VIX ShortTerm Futures ETN",
+        "symbol": "XXV",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "DIREXION DAILY FTSE CHINA BEAR 3X SHARES",
+        "symbol": "YANG",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "INVESCO CHINA ALLCAP ETF",
+        "symbol": "YAO",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "ProShares Ultra Yen ETF",
+        "symbol": "YCL",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ProShares UltraShort Communication Services Select",
+        "symbol": "YCOM",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ProShares UltraShort Yen ETF",
+        "symbol": "YCS",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "MicroSectors US Big Oil Index Inverse ETN",
+        "symbol": "YGRN",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "RBC Yorkville MLP Dis GrLdrs Liqd PR ETN",
+        "symbol": "YGRO",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "DIREXION DAILY FTSE CHINA BULL 3X SHARES",
+        "symbol": "YINN",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PRINCIPAL ACTIVE INCOME ETF FORMERLY PRINCIPAL EDG",
+        "symbol": "YLD",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "VANECK VECTORS HIGH INCOME INFRASTRUCTURE MLP ETF",
+        "symbol": "YMLI",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "ADVISORSHARES PURE CANNABIS ETF",
+        "symbol": "YOLO",
+        "has_intraday": false,
+        "has_eod": true
+      }
+    ]
+  }
+}

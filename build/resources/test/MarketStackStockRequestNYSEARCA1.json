@@ -1,0 +1,6019 @@
+{
+  "pagination": {
+    "limit": 1000,
+    "offset": 0,
+    "count": 1000,
+    "total": 2142
+  },
+  "data": {
+    "name": "NYSE ARCA",
+    "acronym": "NYSEARCA",
+    "mic": "ARCX",
+    "country": "USA",
+    "country_code": "US",
+    "city": "New York",
+    "website": "www.nyse.com",
+    "tickers": [
+      {
+        "name": "Perth Mint Physical Gold",
+        "symbol": "AAAU",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ADVISORSHARES DORSEY WRIGHT ADR ETF",
+        "symbol": "AADR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Unified Series Trust Absolute Core Strategy ETF",
+        "symbol": "ABEQ",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Safety First Trust Series 2009-2",
+        "symbol": "ABI",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "AdvisorShares Accuvest Global Opportunities ETF",
+        "symbol": "ACCU",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "XTRACKERS MSCI ACWI EX USA ESG LEADERS EQUITY ETF",
+        "symbol": "ACSG",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES EDGE MSCI MULTIFACTOR GLOBAL ETF",
+        "symbol": "ACWF",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PowerShares DB Agriculture Short ETN",
+        "symbol": "ADZ",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "VANECK VECTORS AFRICA INDEX ETF",
+        "symbol": "AFK",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PACER CSOP FTSE CHINA A50 ETF",
+        "symbol": "AFTY",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PowerShares DB Agriculture Double Short ETN",
+        "symbol": "AGA",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "ISHARES CORE U.S. AGGREGATE BOND ETF",
+        "symbol": "AGG",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "IQ ENHANCED CORE BOND U.S. ETF",
+        "symbol": "AGGE",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "IQ ENHANCED CORE PLUS BOND U.S. ETF",
+        "symbol": "AGGP",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "WISDOMTREE YIELD ENHANCED U.S. AGGREGATE BOND FUND",
+        "symbol": "AGGY",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "AdvisorShares Accuvest Mars Hill Global Relative V",
+        "symbol": "AGLS",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "ETFS Physical Asian Gold Shares ETF",
+        "symbol": "AGOL",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "ProShares Ultra Silver ETF",
+        "symbol": "AGQ",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES AGENCY BOND ETF",
+        "symbol": "AGZ",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "AI POWERED EQUITY ETF",
+        "symbol": "AIEQ",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "AI POWERED INTERNATIONAL EQUITY ETF",
+        "symbol": "AIIQ",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "WISDOMTREE ASIA LOCAL DEBT FUND NA",
+        "symbol": "ALD",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "ALPHACLONE INTERNATIONAL ETF",
+        "symbol": "ALFI",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "RBS US Large Cap Alternator Exchange Traded Note",
+        "symbol": "ALTL",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "JP Morgan Alerian MLP Index ETN",
+        "symbol": "AMJ",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Credit Suisse AG Nassau Branch XLinks Monthly Pay ",
+        "symbol": "AMJL",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "ALERIAN MLP ETF",
+        "symbol": "AMLP",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "QRAFT AIENHANCED US LARGE CAP MOMENTUM ETF",
+        "symbol": "AMOM",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES UTILITIES SECTOR BOND FUND",
+        "symbol": "AMPS",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "UBS ETRACS Alerian MLP Index ETN",
+        "symbol": "AMU",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "AMUB",
+        "symbol": "AMUB",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "INFRACAP MLP ETF",
+        "symbol": "AMZA",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "GLOBAL X FTSE ANDEAN 40 ETF",
+        "symbol": "AND",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "ISHARES CORE AGGRESSIVE ALLOCATION ETF",
+        "symbol": "AOA",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES CORE CONSERVATIVE ALLOCATION ETF",
+        "symbol": "AOK",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES CORE MODERATE ALLOCATION ETF",
+        "symbol": "AOM",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES CORE GROWTH ALLOCATION ETF",
+        "symbol": "AOR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "GLOBAL X MSCI ARGENTINA ETF",
+        "symbol": "ARGT",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ARK FINTECH INNOVATION ETF",
+        "symbol": "ARKF",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ARK GENOMIC REVOLUTION ETF",
+        "symbol": "ARKG",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ARK INNOVATION ETF",
+        "symbol": "ARKK",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ARK AUTONOMOUS TECHNOLOGY & ROBOTICS ETF",
+        "symbol": "ARKQ",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ARK NEXT GENERATION INTERNET ETF",
+        "symbol": "ARKW",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ARMOR US EQUITY INDEX ETF",
+        "symbol": "ARMR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "GLOBAL X FTSE SOUTHEAST ASIA ETF",
+        "symbol": "ASEA",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "XTRACKERS HARVEST CSI 300 CHINA ASHARES ETF",
+        "symbol": "ASHR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "XTRACKERS HARVEST CSI 500 CHINA ASHARES SMALL CAP ",
+        "symbol": "ASHS",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "XTRACKERS MSCI CHINA A INCLUSION EQUITY ETF",
+        "symbol": "ASHX",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Barclays ETN Select MLP ETN",
+        "symbol": "ATMP",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": null,
+        "symbol": "AUD",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "WISDOMTREE AUSTRALIA & NEW ZEALAND DEBT FUND NA",
+        "symbol": "AUNZ",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "WISDOMTREE AUSTRALIA DIVIDEND FUND NA",
+        "symbol": "AUSE",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "GLOBAL X ADAPTIVE U.S. FACTOR ETF",
+        "symbol": "AUSF",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "AVANTIS INTERNATIONAL EQUITY ETF",
+        "symbol": "AVDE",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "AVANTIS INTERNATIONAL SMALL CAP VALUE ETF",
+        "symbol": "AVDV",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "AVANTIS EMERGING MARKETS EQUITY ETF",
+        "symbol": "AVEM",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "AVANTIS U.S. EQUITY ETF",
+        "symbol": "AVUS",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "AVANTIS U.S. SMALL CAP VALUE ETF",
+        "symbol": "AVUV",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "AWARE ULTRASHORT DURATION ENHANCED INCOME ETF",
+        "symbol": "AWTM",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "WISDOMTREE ASIA PACIFIC EXJAPAN FUND NA",
+        "symbol": "AXJL",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "ISHARES EDGE MSCI MIN VOL ASIA EX JAPAN ETF",
+        "symbol": "AXJV",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "Barclays GEMS ASIA8 ETN",
+        "symbol": "AYT",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "GLOBAL X CENTRAL ASIA & MONGOLIA INDEX ETF",
+        "symbol": "AZIA",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "INVESCO TAXABLE MUNICIPAL BOND ETF",
+        "symbol": "BAB",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SPDRR NUVEEN BARCLAYS CAPITAL BUILD AMERICA BOND E",
+        "symbol": "BABS",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": null,
+        "symbol": "BABZ",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "iPathA Series B Bloomberg Cotton Subindex Total Re",
+        "symbol": "BAL",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "GraniteShares Gold Trust Shares of Beneficial Inte",
+        "symbol": "BAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Direxion Daily Gold Bull 3X ETF",
+        "symbol": "BAR1",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "Morgan Stanley S&P 500 Oil Hedged ETN",
+        "symbol": "BARL",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "Direxion Daily Gold Bear 3X Shares ETF",
+        "symbol": "BARS",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "AMPLIFY ADVANCED BATTERY METALS AND MATERIALS ETF",
+        "symbol": "BATT",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "VIRTUS LIFESCI BIOTECH CLINICAL TRIALS ETF",
+        "symbol": "BBC",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "VIRTUS LIFESCI BIOTECH PRODUCTS ETF",
+        "symbol": "BBP",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "COLUMBIA BEYOND BRICS ETF",
+        "symbol": "BBRC",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "ABERDEEN STANDARD BLOOMBERG ALL COMMODITY LONGER D",
+        "symbol": "BCD",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "EGSHARES BLUE CHIP ETF",
+        "symbol": "BCHP",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "ABERDEEN STANDARD BLOOMBERG ALL COMMODITY STRATEGY",
+        "symbol": "BCI",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "iPath Pure Beta Broad Commodity ETN",
+        "symbol": "BCM",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": null,
+        "symbol": "BDAT",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "UBS ETRACS 2xLeveraged Long Wells Fargo Business D",
+        "symbol": "BDCL",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "UBS ETRACS Wells Fargo Business Development Compan",
+        "symbol": "BDCS",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "BDCZ",
+        "symbol": "BDCZ",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PowerShares DB Base Metals Long ETN",
+        "symbol": "BDG",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "Breakwave Dry Bulk Shipping",
+        "symbol": "BDRY",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "BARRONS 400 ETF",
+        "symbol": "BFOR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "INSPIRE 100 ETF",
+        "symbol": "BIBL",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PUREFUNDS ISE BIG DATA ETF",
+        "symbol": "BIGD",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "SPDRR S&PR BRIC 40 ETF",
+        "symbol": "BIK",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "ROGERS AI GLOBAL MACRO ETF",
+        "symbol": "BIKR",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "SPDRR BLOOMBERG BARCLAYS 13 MONTH TBILL ETF",
+        "symbol": "BIL",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "VANGUARD INTERMEDIATETERM BOND INDEX FUND ETF SHAR",
+        "symbol": "BIV",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "VANECK VECTORS BDC INCOME ETF",
+        "symbol": "BIZD",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "REX BKCM ETF",
+        "symbol": "BKC",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "ISHARES MSCI BRIC ETF",
+        "symbol": "BKF",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "INVESCO SENIOR LOAN ETF",
+        "symbol": "BKLN",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "INSPIRE GLOBAL HOPE ETF",
+        "symbol": "BLES",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "VIRTUS NEWFLEET DYNAMIC CREDIT ETF",
+        "symbol": "BLHY",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "iPath Pure Beta Precious Metals ETN",
+        "symbol": "BLNG",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "AMPLIFY TRANSFORMATIONAL DATA SHARING ETF",
+        "symbol": "BLOK",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "VANGUARD LONGTERM BOND INDEX FUND ETF SHARES",
+        "symbol": "BLV",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FLEXSHARES CORE SELECT BOND FUND",
+        "symbol": "BNDC",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SPDRR BLOOMBERG BARCLAYS AGGREGATE BOND ETF",
+        "symbol": "BNDS",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "MicroSectors US Big Banks Index 3X Inverse Leverag",
+        "symbol": "BNKD",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "MicroSectors US Big Banks Index 2X Leveraged ETNs",
+        "symbol": "BNKO",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "MicroSectors US Big Banks Index 3X Leveraged ETNs",
+        "symbol": "BNKU",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "MicroSectors US Big Banks Index 2X Inverse Leverag",
+        "symbol": "BNKZ",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "USCommodity Brent Oil Fund LP ETF",
+        "symbol": "BNO",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ProShares Ultra DJUBS Natural Gas ETF",
+        "symbol": "BOIL",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PIMCO ACTIVE BOND EXCHANGETRADED FUND",
+        "symbol": "BOND",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "NYSE PICKENS OIL RESPONSE ETF",
+        "symbol": "BOON",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "Innovator IBD Breakout Opportunities",
+        "symbol": "BOUT",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "GLOBAL X BRAZIL FINANCIALS ETF",
+        "symbol": "BRAF",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "GLOBAL X BRAZIL CONSUMER ETF",
+        "symbol": "BRAQ",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "GLOBAL X BRAZIL MID CAP ETF",
+        "symbol": "BRAZ",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "VANECK VECTORS BRAZIL SMALLCAP ETF",
+        "symbol": "BRF",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": null,
+        "symbol": "BRXX",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "DIREXION DAILY BRAZIL BEAR 3X SHARES",
+        "symbol": "BRZS",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "DIREXION DAILY MSCI BRAZIL BULL 3X SHARES",
+        "symbol": "BRZU",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "GUGGENHEIM BULLETSHARES 2015 CORPORATE BOND ETF",
+        "symbol": "BSCF",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "GUGGENHEIM BULLETSHARES 2016 CORPORATE BOND ETF",
+        "symbol": "BSCG",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "GUGGENHEIM BULLETSHARES 2017 CORPORATE BOND ETF",
+        "symbol": "BSCH",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "INVESCO BULLETSHARES 2018 CORPORATE BOND ETF",
+        "symbol": "BSCI",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "INVESCO BULLETSHARES 2019 CORPORATE BOND ETF",
+        "symbol": "BSCJ",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "GUGGENHEIM BULLETSHARES 2014 HIGH YIELD CORPORATE ",
+        "symbol": "BSJE",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "GUGGENHEIM BULLETSHARES 2015 HIGH YIELD CORPORATE ",
+        "symbol": "BSJF",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "GUGGENHEIM BULLETSHARES 2016 HIGH YIELD CORPORATE ",
+        "symbol": "BSJG",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "GUGGENHEIM BULLETSHARES 2017 HIGH YIELD CORPORATE ",
+        "symbol": "BSJH",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "INVESCO BULLETSHARES 2018 HIGH YIELD CORPORATE BON",
+        "symbol": "BSJI",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "INVESCO BULLETSHARES 2019 HIGH YIELD CORPORATE BON",
+        "symbol": "BSJJ",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "VANGUARD SHORTTERM BOND INDEX FUND ETF SHARES",
+        "symbol": "BSV",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "UBS AG VelocityShares VIX Tail Risk ETN linked to ",
+        "symbol": "BSWN",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "AGFIQ U.S. MARKET NEUTRAL ANTIBETA FUND",
+        "symbol": "BTAL",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PACER US CASH COWS GROWTH ETF",
+        "symbol": "BUL",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": null,
+        "symbol": "BUND",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "PowerShares DB German Bund Futures ETNs",
+        "symbol": "BUNL",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "PowerShares DB 3x German Bund Futures ETNs",
+        "symbol": "BUNT",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "USCF SUMMERHAVEN SHPEI INDEX FUND",
+        "symbol": "BUY",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "USCF SUMMERHAVEN SHPEN INDEX FUND",
+        "symbol": "BUYN",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "BUZZ US SENTIMENT LEADERS ETF",
+        "symbol": "BUZ",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "BRAND VALUE ETF",
+        "symbol": "BVAL",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "iPath CBOE S&P 500 BuyWrite IndexSM ETN",
+        "symbol": "BWV",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "SPDRR BLOOMBERG BARCLAYS INTERNATIONAL TREASURY BO",
+        "symbol": "BWX",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SPDRR BLOOMBERG BARCLAYS SHORT TERM INTERNATIONAL ",
+        "symbol": "BWZ",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Barclays ETN+LONG B S&P 500",
+        "symbol": "BXUB",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "Barclays ETN+LONG C S&P 500",
+        "symbol": "BXUC",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "ISHARES YIELD OPTIMIZED BOND ETF",
+        "symbol": "BYLD",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "WISDOMTREE BRAZILIAN REAL STRATEGY FUND NA",
+        "symbol": "BZF",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "PROSHARES ULTRASHORT MSCI BRAZIL CAPPED",
+        "symbol": "BZQ",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": null,
+        "symbol": "CAD",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "iPath Pure Beta Coffee ETN",
+        "symbol": "CAFE",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "Teucrium CANE Fund ETF",
+        "symbol": "CANE",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Barclays ETN Shiller CAPE ETN",
+        "symbol": "CAPE",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "VANECK VECTORS CHINAAMC CHINA BOND ETF",
+        "symbol": "CBON",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "CAMBRIA CORE EQUITY ETF",
+        "symbol": "CCOR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "WISDOMTREE COMMODITY COUNTRY EQUITY FUND NA",
+        "symbol": "CCXE",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Central Fund of Canada Ltd",
+        "symbol": "CEF",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "UBS ETRACS Mthly Pay 2x ClosedEnd ETN",
+        "symbol": "CEFL",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "UBS AG London Branch ETRACS Monthly Pay 2X Leverag",
+        "symbol": "CEFZ",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "WISDOMTREE EMERGING CURRENCY STRATEGY FUND NA",
+        "symbol": "CEW",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "INVESCO S&P GLOBAL WATER INDEX ETF",
+        "symbol": "CGW",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "DIREXION DAILY CSI 300 CHINA A SHARE BEAR 1X SHARE",
+        "symbol": "CHAD",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "DIREXION DAILY CSI 300 CHINA A SHARE BULL 2X SHARE",
+        "symbol": "CHAU",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "AGFIQ U.S. MARKET NEUTRAL VALUE FUND",
+        "symbol": "CHEP",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "CHANGE FINANCE U.S. LARGE CAP FOSSIL FUEL FREE ETF",
+        "symbol": "CHGX",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "GLOBAL X MSCI CHINA ENERGY ETF",
+        "symbol": "CHIE",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "GLOBAL X MSCI CHINA HEALTH CARE ETF",
+        "symbol": "CHIH",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "GLOBAL X MSCI CHINA INDUSTRIALS ETF",
+        "symbol": "CHII",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "GLOBAL X MSCI CHINA INFORMATION TECHNOLOGY ETF",
+        "symbol": "CHIK",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "GLOBAL X MSCI CHINA LARGECAP 50 ETF",
+        "symbol": "CHIL",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "GLOBAL X MSCI CHINA MATERIALS ETF",
+        "symbol": "CHIM",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "GLOBAL X MSCI CHINA CONSUMER DISCRETIONARY ETF",
+        "symbol": "CHIQ",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "GLOBAL X MSCI CHINA REAL ESTATE ETF",
+        "symbol": "CHIR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "GLOBAL X MSCI CHINA CONSUMER STAPLES ETF",
+        "symbol": "CHIS",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "GLOBAL X MSCI CHINA UTILITIES ETF",
+        "symbol": "CHIU",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "GLOBAL X MSCI CHINA FINANCIALS ETF",
+        "symbol": "CHIX",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "MARKET VECTORS RENMINBI BOND ETF",
+        "symbol": "CHLC",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "GLOBAL X GF CHINA BOND ETF",
+        "symbol": "CHNB",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "iPath Pure Beta Cocoa ETN",
+        "symbol": "CHOC",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "EGSHARES CHINA INFRASTRUCTURE ETF",
+        "symbol": "CHXX",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES INTERMEDIATE CREDIT BOND ETF",
+        "symbol": "CIU",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "DIREXION DAILY HOMEBUILDERS & SUPPLIES BEAR 3X SHA",
+        "symbol": "CLAW",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PROSHARES LONG ONLINESHORT STORES RETAIL ETF",
+        "symbol": "CLIX",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "INVESCO TREASURY COLLATERAL ETF",
+        "symbol": "CLTL",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES 10 YEAR CREDIT BOND ETF",
+        "symbol": "CLY",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES INTEREST RATE HEDGED 10 YEAR CREDIT BOND E",
+        "symbol": "CLYH",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES CMBS ETF",
+        "symbol": "CMBS",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES DOW JONES UBS ROLL SCI TR SHS BEN INT",
+        "symbol": "CMDT",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES BLOOMBERG ROLL SELECT COMMODITY STRATEGY E",
+        "symbol": "CMDY",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES CALIFORNIA MUNI BOND ETF",
+        "symbol": "CMF",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "XTRACKERS MSCI ALL CHINA EQUITY ETF",
+        "symbol": "CN",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "AMPLIFY SEYMOUR CANNABIS ETF",
+        "symbol": "CNBS",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "IQ CANADA SMALL CAP ETF",
+        "symbol": "CNDA",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "CSOP MSCI CHINA A INTERNATIONAL HEDGED ETF",
+        "symbol": "CNHX",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "GLOBAL X CANADA PREFERRED ETF",
+        "symbol": "CNPF",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SPDR S&P KENSHO CLEAN POWER ETF",
+        "symbol": "CNRG",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "POWERSHARES CONTRARIAN OPPORTUNITIES PORTFOLIO",
+        "symbol": "CNTR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "VANECK VECTORS CHINAAMC SMECHINEXT ETF",
+        "symbol": "CNXT",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Market Vectors Chinese RenminbiUSD ETN",
+        "symbol": "CNY",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PROSHARES USD COVERED BOND",
+        "symbol": "COBO",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "MARKET VECTORS COLOMBIA ETF",
+        "symbol": "COLX",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "DIREXION AUSPICE BROAD COMMODITY STRATEGY ETF",
+        "symbol": "COM",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "GRANITESHARES BLOOMBERG COMMODITY BROAD STRATEGY N",
+        "symbol": "COMB",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "GRANITESHARES S&P GSCI COMMODITY BROAD STRATEGY NO",
+        "symbol": "COMG",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "GLOBAL X COPPER MINERS ETF",
+        "symbol": "COPX",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Teucrium Corn Fund ETF",
+        "symbol": "CORN",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PIMCO INVESTMENT GRADE CORPORATE BOND INDEX EXCHAN",
+        "symbol": "CORP",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "iPathA Series B Bloomberg Livestock Subindex Total",
+        "symbol": "COW",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "USCommodity Copper ETF",
+        "symbol": "CPER",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "IQ REAL RETURN ETF",
+        "symbol": "CPI",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "INVESCO CHINA TECHNOLOGY ETF",
+        "symbol": "CQQQ",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": null,
+        "symbol": "CRAK",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES MSCI ACWI LOW CARBON TARGET ETF",
+        "symbol": "CRBN",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "GLOBAL COMMODITY EQUITY ETF",
+        "symbol": "CRBQ",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES U.S. CREDIT BOND ETF",
+        "symbol": "CRED",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ProShares UltraShort Australian Dollar",
+        "symbol": "CROC",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "IQ GLOBAL AGRIBUSINESS SMALL CAP ETF",
+        "symbol": "CROP",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Teucrium Crude Oil Fund ETF",
+        "symbol": "CRUD",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "Credit Suisse Commodity Benchmark ETN",
+        "symbol": "CSCB",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "Credit Suisse Commodity Rotation ETN",
+        "symbol": "CSCR",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "INVESCO S&P SPINOFF ETF",
+        "symbol": "CSD",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES 13 YEAR CREDIT BOND ETF",
+        "symbol": "CSJ",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "Credit Suisse Long Short Equity ETN",
+        "symbol": "CSLS",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "Credit Suisse Merger Arbitrage ETN",
+        "symbol": "CSMA",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "Credit Suisse 2x Levered Merger Arbitrage ETN",
+        "symbol": "CSMB",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "Credit Suisse Market Neut Global Eq ETN",
+        "symbol": "CSMN",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "iPath Pure Beta Cotton ETN",
+        "symbol": "CTNN",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "VIRTUS CUMBERLAND MUNICIPAL BOND ETF",
+        "symbol": "CUMB",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "iPath Pure Beta Copper ETN",
+        "symbol": "CUPM",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "DIREXION DAILY HEALTHCARE BULL 3X SHARES",
+        "symbol": "CURE",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "INVESCO MSCI GLOBAL TIMBER ETF",
+        "symbol": "CUT",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "CTracks Linked to the CVOLT Index ETN",
+        "symbol": "CVOL",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "INVESCO ZACKS MULTIASSET INCOME ETF",
+        "symbol": "CVY",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SPDRR BLOOMBERG BARCLAYS CONVERTIBLE SECURITIES ET",
+        "symbol": "CWB",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "DIREXION DAILY CSI CHINA INTERNET INDEX BULL 2X SH",
+        "symbol": "CWEB",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SPDRR MSCI ACWI EXUS ETF",
+        "symbol": "CWI",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ADVISORSHARES FOCUSED EQUITY ETF",
+        "symbol": "CWS",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SPDRR NUVEEN BARCLAYS CAPITAL CALIFORNIA MUNICIPAL",
+        "symbol": "CXA",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "WISDOMTREE CHINESE YUAN STRATEGY FUND NA",
+        "symbol": "CYB",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "INVESCO ZACKS MIDCAP ETF",
+        "symbol": "CZA",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ETNs linked to the VelocityShares Daily 4X Long US",
+        "symbol": "DAUD",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PowerShares DB Agriculture Fund ETF",
+        "symbol": "DBA",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "DEUTSCHE XTRACKERS MSCI AUSTRALIA HEDGED EQUITY ET",
+        "symbol": "DBAU",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "XTRACKERS MSCI ALL WORLD EX US HEDGED EQUITY ETF",
+        "symbol": "DBAW",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PowerShares DB Base Metals Fund ETF",
+        "symbol": "DBB",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "XTRACKERS MSCI BRAZIL HEDGED EQUITY ETF",
+        "symbol": "DBBR",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "PowerShares DB Commodity Index Fund ETF",
+        "symbol": "DBC",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": null,
+        "symbol": "DBE",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "XTRACKERS MSCI EAFE HEDGED EQUITY ETF",
+        "symbol": "DBEF",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "XTRACKERS MSCI EMERGING MARKETS HEDGED EQUITY ETF",
+        "symbol": "DBEM",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "XTRACKERS MSCI EAFE SMALL CAP HEDGED EQUITY ETF",
+        "symbol": "DBES",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "XTRACKERS MSCI EUROPE HEDGED EQUITY ETF",
+        "symbol": "DBEU",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "XTRACKERS MSCI EUROZONE HEDGED EQUITY ETF",
+        "symbol": "DBEZ",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "XTRACKERS MSCI GERMANY HEDGED EQUITY ETF",
+        "symbol": "DBGR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "DEUTSCHE XTRACKERS S&P HEDGED GLOBAL INFRASTRUCTUR",
+        "symbol": "DBIF",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "DEUTSCHE XTRACKERS MSCI ITALY HEDGED EQUITY ETF",
+        "symbol": "DBIT",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "AdvisorShares Pring Turner Business Cycle ETF",
+        "symbol": "DBIZ",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "XTRACKERS MSCI JAPAN HEDGED EQUITY ETF",
+        "symbol": "DBJP",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "XTRACKERS MSCI SOUTH KOREA HEDGED EQUITY ETF",
+        "symbol": "DBKO",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "ADVISORSHARES DOUBLELINE VALUE EQUITY ETF",
+        "symbol": "DBLV",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "IM DBI MANAGED FUTURES STRATEGY ETF",
+        "symbol": "DBMF",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "XTRACKERS MSCI MEXICO HEDGED EQUITY ETF",
+        "symbol": "DBMX",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": null,
+        "symbol": "DBO",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": null,
+        "symbol": "DBP",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "DEUTSCHE XTRACKERS DOW JONES HEDGED INTERNATIONAL ",
+        "symbol": "DBRE",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "Credit Suisse AxelaTrader 3x Inverse Brent Crude O",
+        "symbol": "DBRT",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "PowerShares DB Silver Fund ETF",
+        "symbol": "DBS",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "DEUTSCHE XTRACKERS MSCI SOUTHERN EUROPE HEDGED EQU",
+        "symbol": "DBSE",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "DEUTSCHE XTRACKERS MSCI SPAIN HEDGED EQUITY ETF",
+        "symbol": "DBSP",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "WISDOMTREE GLOBAL EXU.S. UTILITIES FUND NA",
+        "symbol": "DBU",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "XTRACKERS MSCI UNITED KINGDOM HEDGED EQUITY ETF",
+        "symbol": "DBUK",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "PowerShares DB G10 Currency Harvest Fund ETF",
+        "symbol": "DBV",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ETNs linked to the VelocityShares Daily 4X Long US",
+        "symbol": "DCHF",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "iPath Seasonal Natural Gas ETN",
+        "symbol": "DCNG",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "PROSHARES SHORT OIL & GAS",
+        "symbol": "DDG",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PROSHARES ULTRA DOW30",
+        "symbol": "DDM",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PowerShares DB Commodity Double Short ETN",
+        "symbol": "DEE",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": null,
+        "symbol": "DEEF",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "INVESCO DEFENSIVE EQUITY ETF",
+        "symbol": "DEF",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PowerShares DB US Deflation ETN",
+        "symbol": "DEFL",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "WISDOMTREE EMERGING MARKETS HIGH DIVIDEND FUND NA",
+        "symbol": "DEM",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "XTRACKERS FTSE EMERGING COMPREHENSIVE FACTOR ETF",
+        "symbol": "DEMG",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "WISDOMTREE U.S. SMALLCAP DIVIDEND FUND NA",
+        "symbol": "DES",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "XTRACKERS RUSSELL 2000 COMPREHENSIVE FACTOR ETF",
+        "symbol": "DESC",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "ETNs linked to the VelocityShares Daily 4X Long US",
+        "symbol": "DEUR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "XTRACKERS RUSSELL 1000 COMPREHENSIVE FACTOR ETF",
+        "symbol": "DEUS",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "WISDOMTREE GLOBAL HIGH DIVIDEND FUND NA",
+        "symbol": "DEW",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "WISDOMTREE EUROPE SMALLCAP DIVIDEND FUND NA",
+        "symbol": "DFE",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "DIREXION DAILY AEROSPACE & DEFENSE BULL 3X SHARES",
+        "symbol": "DFEN",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "WISDOMTREE JAPAN SMALLCAP DIVIDEND FUND NA",
+        "symbol": "DFJ",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "iPath US TREASURY 5YR BULL",
+        "symbol": "DFVL",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "VelocityShares 3x Inv Natural Gas ETN",
+        "symbol": "DGAZ",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ETNs linked to the VelocityShares Daily 4X Long US",
+        "symbol": "DGBP",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PowerShares DB Gold Fund ETF",
+        "symbol": "DGL",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PowerShares DB Gold Double Long ETN",
+        "symbol": "DGP",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES CORE DIVIDEND GROWTH ETF",
+        "symbol": "DGRO",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "WISDOMTREE EMERGING MARKETS SMALLCAP DIVIDEND FUND",
+        "symbol": "DGS",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SPDRR GLOBAL DOW ETF",
+        "symbol": "DGT",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PowerShares DB Gold Short ETN",
+        "symbol": "DGZ",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "WISDOMTREE U.S. HIGH DIVIDEND FUND NA",
+        "symbol": "DHS",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "DIAMOND HILL VALUATIONWEIGHTED 500 ETF",
+        "symbol": "DHVW",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "PIMCO DIVERSIFIED INCOME EXCHANGETRADED FUND",
+        "symbol": "DI",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "SPDR Dow Jones Industrial Average ETF",
+        "symbol": "DIA",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PROSHARES ULTRA OIL & GAS",
+        "symbol": "DIG",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "WISDOMTREE INTERNATIONAL MIDCAP DIVIDEND FUND NA",
+        "symbol": "DIM",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "iPath Pure Beta Agriculture ETN",
+        "symbol": "DIRT",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "GLOBAL X SUPERDIVIDEND U.S. ETF",
+        "symbol": "DIV",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "AGFIQ HEDGED DIVIDEND INCOME FUND",
+        "symbol": "DIVA",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "CTracks ETN MillerHoward Strt Div Rinv",
+        "symbol": "DIVC",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ADVISORSHARES ATHENA HIGH DIVIDEND ETF",
+        "symbol": "DIVI",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "AMPLIFY CWP ENHANCED DIVIDEND INCOME ETF",
+        "symbol": "DIVO",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "REALITY SHARES DIVS ETF",
+        "symbol": "DIVY",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "UBS AG London Branch ETRACS Bloomberg Commodity In",
+        "symbol": "DJCB",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "UBS ETRACS DJUBS Commodity Index TR ETN",
+        "symbol": "DJCI",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "INVESCO DOW JONES INDUSTRIAL AVERAGE DIVIDEND ETF",
+        "symbol": "DJD",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "iPath Dow JonesUBS Commodity Index Total ReturnSM ",
+        "symbol": "DJP",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ETNs linked to the VelocityShares Daily 4X Long US",
+        "symbol": "DJPY",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "iPath US Treasury Long Bond Bull ETN",
+        "symbol": "DLBL",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "Citigroup Global Markets Holdings Inc VelocityShar",
+        "symbol": "DLBR",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "WISDOMTREE U.S. LARGECAP DIVIDEND FUND NA",
+        "symbol": "DLN",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "WISDOMTREE INTERNATIONAL SMALLCAP DIVIDEND FUND NA",
+        "symbol": "DLS",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "AAM S&P DEVELOPED MARKETS HIGH DIVIDEND VALUE ETF",
+        "symbol": "DMDV",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "DELTASHARES S&P EM 100 & MANAGED RISK ETF",
+        "symbol": "DMRE",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "DELTASHARES S&P INTERNATIONAL MANAGED RISK ETF",
+        "symbol": "DMRI",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "DELTASHARES S&P 500 MANAGED RISK ETF",
+        "symbol": "DMRL",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "DELTASHARES S&P 400 MANAGED RISK ETF",
+        "symbol": "DMRM",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "DELTASHARES S&P 600 MANAGED RISK ETF",
+        "symbol": "DMRS",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "WISDOMTREE GLOBAL EXU.S. QUALITY DIVIDEND GROWTH F",
+        "symbol": "DNL",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ELEMENTS Dogs of the Dow Linked to Jones High Yiel",
+        "symbol": "DOD",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "PROSHARES SHORT DOW30",
+        "symbol": "DOG",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Arrow Dogs of the World",
+        "symbol": "DOGS",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "WISDOMTREE INTERNATIONAL LARGECAP DIVIDEND FUND NA",
+        "symbol": "DOL",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "WISDOMTREE U.S. MIDCAP DIVIDEND FUND NA",
+        "symbol": "DON",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "WISDOMTREE INTERNATIONAL DIVIDEND EXFINANCIALS FUN",
+        "symbol": "DOO",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "DIREXION DAILY MSCI DEVELOPED MARKETS BEAR 3X SHAR",
+        "symbol": "DPK",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "DIREXION DAILY REGIONAL BANKS BULL 3X SHARES",
+        "symbol": "DPST",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PowerShares DB Commodity Long ETN",
+        "symbol": "DPU",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "REALITY SHARES FUNDSTRAT DQM LONG ETF",
+        "symbol": "DQML",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "RBS Global Big Pharma ETN",
+        "symbol": "DRGS",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": null,
+        "symbol": "DRIP",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "DIREXION DAILY MSCI REAL ESTATE BULL 3X SHARES",
+        "symbol": "DRN",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Market Vectors Double Short Euro ETN",
+        "symbol": "DRR",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "DIREXION DAILY MSCI REAL ESTATE BEAR 3X SHARES",
+        "symbol": "DRV",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Highland HFR EventDriven ETF",
+        "symbol": "DRVN",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "WISDOMTREE GLOBAL EXU.S. REAL ESTATE FUND NA",
+        "symbol": "DRW",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES MSCI KLD 400 SOCIAL ETF",
+        "symbol": "DSI",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "DISTILLATE U.S. FUNDAMENTAL STABILITY & VALUE ETF",
+        "symbol": "DSTL",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "POWERSHARES CHINESE YUAN DIM SUM BOND PORTFOLIO",
+        "symbol": "DSUM",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "WISDOMTREE U.S. TOTAL DIVIDEND FUND NA",
+        "symbol": "DTD",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "WISDOMTREE INTERNATIONAL HIGH DIVIDEND FUND NA",
+        "symbol": "DTH",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "WISDOMTREE U.S. DIVIDEND EXFINANCIALS FUND NA",
+        "symbol": "DTN",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PowerShares DB Crude Oil Double Short ETN",
+        "symbol": "DTO",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "iPath US Treasury 2year Bull ETN",
+        "symbol": "DTUL",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "iPath US Treasury 10year Bull ETN",
+        "symbol": "DTYL",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Exchange Traded Concepts Trust FLAGForensic Accoun",
+        "symbol": "DUAL",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "PROSHARES ULTRASHORT OIL & GAS",
+        "symbol": "DUG",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "DIREXION DAILY SILVER MINERS INDEX BEAR 2X SHARES",
+        "symbol": "DULL",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "VANECK VECTORS MORNINGSTAR DURABLE DIVIDEND ETF",
+        "symbol": "DURA",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "DIREXION DAILY INDUSTRIALS BULL 3X SHARES",
+        "symbol": "DUSL",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "DIREXION DAILY GOLD MINERS INDEX BEAR 3X SHARES",
+        "symbol": "DUST",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "UBS ETRACS Diversified High Income ETN",
+        "symbol": "DVHI",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "UBS ETRACS Mthly Pay 2x Divs Hi Inc ETN",
+        "symbol": "DVHL",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "DEEP VALUE ETF",
+        "symbol": "DVP",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES ASIAPACIFIC DIVIDEND ETF",
+        "symbol": "DVYA",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES EMERGING MARKETS DIVIDEND ETF",
+        "symbol": "DVYE",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "UBS ETRACS Mo Pay 2x DJ Select Div ETN",
+        "symbol": "DVYL",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "WISDOMTREE INTERNATIONAL EQUITY FUND NA",
+        "symbol": "DWM",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "WISDOMTREE INTERNATIONAL MULTIFACTOR FUND NA",
+        "symbol": "DWMF",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "VelocityShares 3x Inverse Crude Oil ETNs linked to",
+        "symbol": "DWT",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": null,
+        "symbol": "DWTI",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "SPDR R S&P R INTERNATIONAL DIVIDEND ETF",
+        "symbol": "DWX",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PROSHARES ULTRASHORT DOW30",
+        "symbol": "DXD",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "WISDOMTREE JAPAN HEDGED EQUITY FUND NA",
+        "symbol": "DXJ",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "WISDOMTREE JAPAN HEDGED CAPITAL GOODS FUND NA",
+        "symbol": "DXJC",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "WISDOMTREE JAPAN HEDGED FINANCIALS FUND NA",
+        "symbol": "DXJF",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "WISDOMTREE JAPAN HEDGED HEALTH CARE FUND NA",
+        "symbol": "DXJH",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "WISDOMTREE JAPAN HEDGED REAL ESTATE FUND NA",
+        "symbol": "DXJR",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "WISDOMTREE JAPAN HEDGED TECH MEDIA AND TELECOM FUN",
+        "symbol": "DXJT",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "WISDOMTREE GLOBAL EXU.S. HEDGED DIVIDEND FUND NA",
+        "symbol": "DXUS",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "BLACKROCK U.S. EQUITY FACTOR ROTATION ETF",
+        "symbol": "DYNF",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "DIREXION DAILY MSCI DEVELOPED MARKETS BULL 3X SHAR",
+        "symbol": "DZK",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": null,
+        "symbol": "DZZ",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": null,
+        "symbol": "EAGG",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "XTRACKERS MSCI EAFE ESG LEADERS EQUITY ETF",
+        "symbol": "EASG",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": null,
+        "symbol": "EASI",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SPDRR BLOOMBERG BARCLAYS EMERGING MARKETS LOCAL BO",
+        "symbol": "EBND",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FIRST TRUST EIP CARBON IMPACT ETF",
+        "symbol": "ECLN",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES MSCI CHINA SMALLCAP ETF",
+        "symbol": "ECNS",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "COLUMBIA EMERGING MARKETS CONSUMER ETF",
+        "symbol": "ECON",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "TRUEMARK ESG ACTIVE OPPORTUNITIES ETF",
+        "symbol": "ECOZ",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "DIREXION DAILY MSCI EMERGING MARKETS BULL 3X SHARE",
+        "symbol": "EDC",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SPDRR S&PR EMERGING MARKETS DIVIDEND ETF",
+        "symbol": "EDIV",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ALPS EMERGING SECTOR DIVIDEND DOGS ETF",
+        "symbol": "EDOG",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FIRST TRUST DOW 30 EQUAL WEIGHT ETF",
+        "symbol": "EDOW",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "VANGUARD EXTENDED DURATION TREASURY INDEX FUND ETF",
+        "symbol": "EDV",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "DIREXION DAILY MSCI EMERGING MARKETS BEAR 3X SHARE",
+        "symbol": "EDZ",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "INVESCO BRIC ETF",
+        "symbol": "EEB",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "ELEMENTS Linked to the SPECTRUM Large Cap US Secto",
+        "symbol": "EEH",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": null,
+        "symbol": "EEHB",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "INVESCO S&P EMERGING MARKETS LOW VOLATILITY ETF",
+        "symbol": "EELV",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES MSCI EMERGING MARKETS ETF",
+        "symbol": "EEM",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "AAM S&P EMERGING MARKETS HIGH DIVIDEND VALUE ETF",
+        "symbol": "EEMD",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "INVESCO S&P EMERGING MARKETS MOMENTUM ETF",
+        "symbol": "EEMO",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES MSCI EMERGING MARKETS SMALLCAP ETF",
+        "symbol": "EEMS",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SPDR MSCI EMERGING MARKETS FOSSIL FUEL RESERVES FR",
+        "symbol": "EEMX",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "WISDOMTREE U.S. SMALLCAP FUND NA",
+        "symbol": "EES",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PROSHARES ULTRA MSCI EMERGING MARKETS",
+        "symbol": "EET",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PROSHARES ULTRASHORT MSCI EMERGING MARKETS",
+        "symbol": "EEV",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES MSCI EAFE ETF",
+        "symbol": "EFA",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SPDR MSCI EAFE FOSSIL FUEL RESERVES FREE ETF",
+        "symbol": "EFAX",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "GLOBAL X JPMORGAN EFFICIENTE INDEX ETF",
+        "symbol": "EFFE",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "PROSHARES ULTRA MSCI EAFE",
+        "symbol": "EFO",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PROSHARES ULTRASHORT MSCI EAFE",
+        "symbol": "EFU",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PROSHARES SHORT MSCI EAFE",
+        "symbol": "EFZ",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "VANECK VECTORS EGYPT INDEX ETF",
+        "symbol": "EGPT",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES MSCI INDONESIA ETF",
+        "symbol": "EIDO",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "VANECK VECTORS ENERGY INCOME ETF",
+        "symbol": "EINC",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES MSCI IRELAND ETF",
+        "symbol": "EIRL",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES MSCI ISRAEL ETF",
+        "symbol": "EIS",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Innovator ETFs Trust Innovator MSCI Emerging Marke",
+        "symbol": "EJAN",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Innovator ETFs Trust Innovator MSCI Emerging Marke",
+        "symbol": "EJUL",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "IDEANOMICS NEXTGEN VEHICLES & TECHNOLOGY ETF",
+        "symbol": "EKAR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "WISDOMTREE EMERGING MARKETS LOCAL DEBT FUND NA",
+        "symbol": "ELD",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "VANECK VECTORS EMERGING MARKETS AGGREGATE BOND ETF",
+        "symbol": "EMAG",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SPDR MSCI EM BEYOND BRIC ETF",
+        "symbol": "EMBB",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "ISHARES INTEREST RATE HEDGED EMERGING MARKETS BOND",
+        "symbol": "EMBH",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "DIREXION DAILY EMERGING MARKETS BOND BULL 3X SHARE",
+        "symbol": "EMBU",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "SPDR BOFA MERRILL LYNCH EMERGING MARKETS CORPORATE",
+        "symbol": "EMCD",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "EGSHARES EMERGING MARKETS CORE ETF",
+        "symbol": "EMCR",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "EGSHARES EM STRATEGIC OPPORTUNITIES ETF",
+        "symbol": "EMDD",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "EGShares Emerging Markets Div Gr ETF",
+        "symbol": "EMDG",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "Virtus Glovista Emerging Markets",
+        "symbol": "EMEM",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "GLOBAL X MSCI NEXT EMERGING & FRONTIER ETF",
+        "symbol": "EMFM",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SPDRR MSCI EM 50 ETF",
+        "symbol": "EMFT",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "EGShares EM Dividend High Income ETF",
+        "symbol": "EMHD",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "iPath Long Enhanced MSCI Emerging Markets Index ET",
+        "symbol": "EMLB",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "VANECK VECTORS J.P. MORGAN EM LOCAL CURRENCY BOND ",
+        "symbol": "EMLC",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FIRST TRUST NORTH AMERICAN ENERGY INFRASTRUCTURE F",
+        "symbol": "EMLP",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "WISDOMTREE EMERGING MARKETS MULTIFACTOR FUND NA",
+        "symbol": "EMMF",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "EMQQ THE EMERGING MARKETS INTERNET & ECOMMERCE ETF",
+        "symbol": "EMQQ",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "GUGGENHEIM EMERGING MARKETS REAL ESTATE ETF",
+        "symbol": "EMRE",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "iPath Short Enhanced MSCI Emerging Markets Index E",
+        "symbol": "EMSA",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "XTRACKERS MSCI EMERGING MARKETS ESG LEADERS EQUITY",
+        "symbol": "EMSG",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": null,
+        "symbol": "EMSO",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "PROSHARES DECLINE OF THE RETAIL STORE ETF",
+        "symbol": "EMTY",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ALERIAN ENERGY INFRASTRUCTURE ETF",
+        "symbol": "ENFR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES INDUSTRIALS SECTOR BOND FUND",
+        "symbol": "ENGN",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "ERSHARES ENTREPRENEUR 30 ETF",
+        "symbol": "ENTR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "INVESCO CANADIAN ENERGY INCOME ETF",
+        "symbol": "ENY",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "ISHARES MSCI PHILIPPINES ETF",
+        "symbol": "EPHE",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "WISDOMTREE INDIA EARNINGS FUND NA",
+        "symbol": "EPI",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES MSCI POLAND ETF",
+        "symbol": "EPOL",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES MSCI PACIFIC EX JAPAN ETF",
+        "symbol": "EPP",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ADVISORSHARES EQUITYPRO ETF",
+        "symbol": "EPRO",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "WISDOMTREE U.S. LARGECAP FUND NA",
+        "symbol": "EPS",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES MSCI PERU ETF",
+        "symbol": "EPU",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PROSHARES ULTRASHORT FTSE EUROPE",
+        "symbol": "EPV",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "INVESCO RUSSELL 1000 EQUAL WEIGHT ETF",
+        "symbol": "EQAL",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ALPS EQUAL SECTOR WEIGHT ETF",
+        "symbol": "EQL",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "WORKPLACE EQUALITY PORTFOLIO",
+        "symbol": "EQLT",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "INVESCO S&P 100 EQUAL WEIGHT ETF",
+        "symbol": "EQWL",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "INVESCO RUSSELL 2000 EQUAL WEIGHT ETF",
+        "symbol": "EQWS",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "EQUITYCOMPASS RISK MANAGER ETF",
+        "symbol": "ERM",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "iPath EURUSD Exchange Rate ETN",
+        "symbol": "ERO",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "ERSHARES NONUS SMALL CAP ETF",
+        "symbol": "ERSX",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES MSCI RUSSIA ETF",
+        "symbol": "ERUS",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "DIREXION DAILY ENERGY BULL 3X SHARES",
+        "symbol": "ERX",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "DIREXION DAILY ENERGY BEAR 3X SHARES",
+        "symbol": "ERY",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "DIREXION DAILY ENERGY BEAR 1X SHARES",
+        "symbol": "ERYY",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "INVESCO GLOBAL ESG REVENUE ETF",
+        "symbol": "ESGF",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "INVESCO ESG REVENUE ETF",
+        "symbol": "ESGL",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "COLUMBIA SUSTAINABLE INTERNATIONAL EQUITY INCOME E",
+        "symbol": "ESGN",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "COLUMBIA SUSTAINABLE U.S. EQUITY INCOME ETF",
+        "symbol": "ESGS",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "COLUMBIA SUSTAINABLE GLOBAL EQUITY INCOME ETF",
+        "symbol": "ESGW",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "DIREXION MSCI USA ESG LEADERS VS. LAGGARDS ETF",
+        "symbol": "ESNG",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES MSCI EMERGING MARKETS EASTERN EUROPE INDEX",
+        "symbol": "ESR",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "SOURCE EURO STOXX 50 ETF",
+        "symbol": "ESTX",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "ETHO CLIMATE LEADERSHIP U.S. ETF",
+        "symbol": "ETHO",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "WISDOMTREE EURO DEBT FUND N/A",
+        "symbol": "EU",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "WISDOMTREE EUROPE QUALITY DIVIDEND GROWTH FUND NA",
+        "symbol": "EUDG",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "DIREXION DAILY MSCI EUROPEAN FINANCIALS BULL 2X SH",
+        "symbol": "EUFL",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "DIREXION DAILY MSCI EUROPEAN FINANCIALS BEAR 1X SH",
+        "symbol": "EUFS",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "ProShares Short Euro",
+        "symbol": "EUFX",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PROSHARES SHORT MSCI EMERGING MARKETS",
+        "symbol": "EUM",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES EDGE MSCI MIN VOL EUROPE ETF",
+        "symbol": "EUMV",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ProShares UltraShort Euro ETF",
+        "symbol": "EUO",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "DIREXION DAILY FTSE EUROPE BULL 3X SHARES",
+        "symbol": "EURL",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES MSCI USA EQUAL WEIGHTED ETF",
+        "symbol": "EUSA",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": null,
+        "symbol": "EUSC",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "DIREXION DAILY EURO STOXX 50 R BULL 3X SHARES",
+        "symbol": "EUXL",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "VANECK VECTORS ENVIRONMENTAL SERVICES ETF",
+        "symbol": "EVX",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES MSCI AUSTRALIA ETF",
+        "symbol": "EWA",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES MSCI CANADA ETF",
+        "symbol": "EWC",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "INVESCO S&P 500 R EQUAL WEIGHT COMMUNICATION SERVI",
+        "symbol": "EWCO",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES MSCI SWEDEN ETF",
+        "symbol": "EWD",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "INVESCO MSCI EMERGING MARKETS EQUAL COUNTRY WEIGHT",
+        "symbol": "EWEM",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "ISHARES MSCI GERMANY ETF",
+        "symbol": "EWG",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES MSCI HONG KONG ETF",
+        "symbol": "EWH",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES MSCI HONG KONG SMALL CAP INDEX FUND",
+        "symbol": "EWHS",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "ISHARES MSCI ITALY ETF",
+        "symbol": "EWI",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES MSCI JAPAN ETF",
+        "symbol": "EWJ",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES MSCI BELGIUM ETF",
+        "symbol": "EWK",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES MSCI SWITZERLAND ETF",
+        "symbol": "EWL",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES MSCI MALAYSIA ETF",
+        "symbol": "EWM",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "INVESCO S&P MIDCAP 400 EQUAL WEIGHT ETF",
+        "symbol": "EWMC",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES MSCI NETHERLANDS ETF",
+        "symbol": "EWN",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES MSCI AUSTRIA ETF",
+        "symbol": "EWO",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES MSCI SPAIN ETF",
+        "symbol": "EWP",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES MSCI FRANCE ETF",
+        "symbol": "EWQ",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "INVESCO S&P 500 R EQUAL WEIGHT REAL ESTATE ETF",
+        "symbol": "EWRE",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "GUGGENHEIM RUSSELL 1000R EQUAL WEIGHT ETF",
+        "symbol": "EWRI",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": null,
+        "symbol": "EWRM",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": null,
+        "symbol": "EWRS",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "ISHARES MSCI SINGAPORE ETF",
+        "symbol": "EWS",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "INVESCO S&P SMALLCAP 600 EQUAL WEIGHT ETF",
+        "symbol": "EWSC",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES MSCI SINGAPORE SMALL CAP INDEX FUND",
+        "symbol": "EWSS",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "ISHARES MSCI TAIWAN ETF",
+        "symbol": "EWT",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES MSCI UNITED KINGDOM ETF",
+        "symbol": "EWU",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PROSHARES ULTRASHORT MSCI JAPAN",
+        "symbol": "EWV",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES MSCI MEXICO ETF",
+        "symbol": "EWW",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SPDRR S&PR EMERGING MARKETS SMALL CAP ETF",
+        "symbol": "EWX",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES MSCI SOUTH KOREA ETF",
+        "symbol": "EWY",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES MSCI BRAZIL ETF",
+        "symbol": "EWZ",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES GLOBAL INDUSTRIALS ETF",
+        "symbol": "EXI",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES MSCI SOUTH AFRICA ETF",
+        "symbol": "EZA",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PROSHARES ULTRA MSCI JAPAN",
+        "symbol": "EZJ",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "WISDOMTREE U.S. MIDCAP FUND NA",
+        "symbol": "EZM",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "WISDOMTREE U.S. LARGECAP VALUE FUND NA",
+        "symbol": "EZY",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "FIRST TRUST GLOBAL WIND ENERGY ETF",
+        "symbol": "FAN",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "DIREXION DAILY FINANCIAL BULL 3X SHARES",
+        "symbol": "FAS",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FIRST TRUST AUSTRALIA ALPHADEX FUND",
+        "symbol": "FAUS",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "DIREXION DAILY FINANCIAL BEAR 3X SHARES",
+        "symbol": "FAZ",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "DIREXION DAILY FINANCIAL BEAR 1X SHARES",
+        "symbol": "FAZZ",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "UBS Fisher Enhanced Big Cap Growth ETN",
+        "symbol": "FBG",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "UBS AG FI Enhanced Large Cap Growth ETN",
+        "symbol": "FBGX",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FIDELITY TOTAL BOND ETF",
+        "symbol": "FBND",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FIRST TRUST NYSE ARCA BIOTECHNOLOGY INDEX FUND",
+        "symbol": "FBT",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "TRIMTABS INTL FREECASHFLOW ETF",
+        "symbol": "FCFI",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "FIRST TRUST NATURAL GAS ETF",
+        "symbol": "FCG",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FIDELITY MSCI COMMUNICATION SERVICES INDEX ETF",
+        "symbol": "FCOM",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FIDELITY CORPORATE BOND ETF",
+        "symbol": "FCOR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FIRST TRUST STOXX EUROPEAN SELECT DIVIDEND INDEX F",
+        "symbol": "FDD",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FIDELITY HIGH YIELD FACTOR ETF",
+        "symbol": "FDHY",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FIDELITY MSCI CONSUMER DISCRETIONARY INDEX ETF",
+        "symbol": "FDIS",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FIRST TRUST MORNINGSTAR DIVIDEND LEADERS INDEX FUN",
+        "symbol": "FDL",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FIDELITY LOW VOLATILITY FACTOR ETF",
+        "symbol": "FDLO",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FIRST TRUST DOW JONES SELECT MICROCAP INDEX FUND",
+        "symbol": "FDM",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FIDELITY MOMENTUM FACTOR ETF",
+        "symbol": "FDMO",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FIRST TRUST DOW JONES INTERNET INDEX FUND",
+        "symbol": "FDN",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FIDELITY DIVIDEND ETF FOR RISING RATES",
+        "symbol": "FDRR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FIDELITY HIGH DIVIDEND ETF",
+        "symbol": "FDVV",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Barclays ETN FI Enhanced Europe 50 ETN",
+        "symbol": "FEEU",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "FIDELITY MSCI ENERGY INDEX ETF",
+        "symbol": "FENY",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Credit Suisse FI Enhanced Europe 50 ETNs",
+        "symbol": "FEUL",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SPDRR EURO STOXX 50R ETF",
+        "symbol": "FEZ",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Barclays ETN FI Enhanced Europe 50 Exchange Traded",
+        "symbol": "FFEU",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "UVA UNCONSTRAINED MEDIUMTERM FIXED INCOME ETF",
+        "symbol": "FFIU",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FIRST TRUST FTSE EPRANAREIT DEVELOPED MARKETS REAL",
+        "symbol": "FFR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "INNOVATOR IBDR 50 ETF",
+        "symbol": "FFTY",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FIRST TRUST DOW JONES GLOBAL SELECT DIVIDEND INDEX",
+        "symbol": "FGD",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Citi FI Enhanced Global High Yield ETNs due March ",
+        "symbol": "FGDY",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "FIDELITY MSCI HEALTH CARE INDEX ETF",
+        "symbol": "FHLC",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FALAH RUSSELLIDEALRATINGS U.S. LARGE CAP ETF",
+        "symbol": "FIA",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "Credit Suisse FI Enhanced Big Cap Gr ETN",
+        "symbol": "FIBG",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "FIDELITY INTERNATIONAL HIGH DIVIDEND ETF",
+        "symbol": "FIDI",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FIDELITY MSCI INDUSTRIALS INDEX ETF",
+        "symbol": "FIDU",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "UBS AG London Branch",
+        "symbol": "FIEE",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Citi FI Enhanced Europe 50 ETNs due March 22 2028",
+        "symbol": "FIEF",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "Credit Suisse FI Enhanced Europe 50 ETN",
+        "symbol": "FIEU",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "Barclays ETN FI Enhanced Glb Hi Yld ETN",
+        "symbol": "FIGY",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "UBS AG London Branch FI Enhanced Global High Yield",
+        "symbol": "FIHD",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES MSCI GLOBAL ENERGY PRODUCERS ETF",
+        "symbol": "FILL",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PROSHARES SHORT 30 YEAR TIPS/TSY SPREAD",
+        "symbol": "FINF",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "PROSHARES ULTRAPRO FINANCIAL SELECT SECTOR",
+        "symbol": "FINU",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "PROSHARES ULTRAPRO SHORT FINANCIAL SELECT SECTOR",
+        "symbol": "FINZ",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "Empire State Realty OP LP Series 250 Operating Par",
+        "symbol": "FISK",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SPDR SSGA FIXED INCOME SECTOR ROTATION ETF",
+        "symbol": "FISR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SPDR S&P KENSHO FUTURE SECURITY ETF",
+        "symbol": "FITE",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FIDELITY INTERNATIONAL VALUE FACTOR ETF",
+        "symbol": "FIVA",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "DEFIANCE NEXT GEN CONNECTIVITY ETF",
+        "symbol": "FIVG",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PIMCO 37 YEAR U.S. TREASURY INDEX FUND",
+        "symbol": "FIVZ",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "FIRST TRUST WATER ETF",
+        "symbol": "FIW",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Barclays ETN FI Enhanced Global High Yield Exchang",
+        "symbol": "FIYY",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Franklin Templeton ETF Trust Franklin FTSE Austral",
+        "symbol": "FLAU",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Franklin FTSE Asia ex Japan",
+        "symbol": "FLAX",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Franklin Templeton ETF Trust Franklin FTSE Brazil ",
+        "symbol": "FLBR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Franklin FTSE Canada",
+        "symbol": "FLCA",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FRANKLIN LIBERTY U.S. CORE BOND ETF",
+        "symbol": "FLCB",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Franklin Templeton ETF Trust Franklin FTSE China E",
+        "symbol": "FLCH",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Franklin Liberty Investment Grade Corporate",
+        "symbol": "FLCO",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Franklin Templeton ETF Trust Franklin FTSE Europe ",
+        "symbol": "FLEE",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Franklin Templeton ETF Trust Franklin FTSE Europe ",
+        "symbol": "FLEH",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Barclays ETN FI Enhanced Europe 50 ETN Series B",
+        "symbol": "FLEU",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Franklin Templeton ETF Trust Franklin FTSE France ",
+        "symbol": "FLFR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Franklin Templeton ETF Trust Franklin FTSE United ",
+        "symbol": "FLGB",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Credit Suisse FI Large Cap Gr Enh ETN",
+        "symbol": "FLGE",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Franklin Templeton ETF Trust Franklin FTSE Germany",
+        "symbol": "FLGR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Franklin Templeton ETF Trust Franklin FTSE Hong Ko",
+        "symbol": "FLHK",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Franklin FTSE India",
+        "symbol": "FLIN",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Franklin Liberty International Opportunities",
+        "symbol": "FLIO",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "Franklin Templeton ETF Trust Franklin FTSE Italy E",
+        "symbol": "FLIY",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Franklin Templeton ETF Trust Franklin FTSE Japan H",
+        "symbol": "FLJH",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Franklin Templeton ETF Trust Franklin FTSE Japan E",
+        "symbol": "FLJP",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Franklin Templeton ETF Trust Franklin FTSE South K",
+        "symbol": "FLKR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Franklin FTSE Latin America",
+        "symbol": "FLLA",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Franklin Liberty US Low Volatility",
+        "symbol": "FLLV",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FIRST TRUST GLOBAL ENGINEERING AND CONSTRUCTION ET",
+        "symbol": "FLM",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Franklin Templeton ETF Trust Liberty Municipal Bon",
+        "symbol": "FLMB",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Franklin Templeton ETF Trust Liberty Intermediate ",
+        "symbol": "FLMI",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Franklin Templeton ETF Trust Franklin FTSE Mexico ",
+        "symbol": "FLMX",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Franklin LibertyQ Global Dividend",
+        "symbol": "FLQD",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Franklin LibertyQ Emerging Markets",
+        "symbol": "FLQE",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Franklin LibertyQ Global Equity",
+        "symbol": "FLQG",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Franklin LibertyQ International Equity Hedged",
+        "symbol": "FLQH",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SPDR BLOOMBERG BARCLAYS INVESTMENT GRADE FLOATING ",
+        "symbol": "FLRN",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ADVISORSHARES PACIFIC ASSET ENHANCED FLOATING RATE",
+        "symbol": "FLRT",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Franklin FTSE Russia",
+        "symbol": "FLRU",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Franklin FTSE Saudi Arabia",
+        "symbol": "FLSA",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Franklin FTSE Switzerland",
+        "symbol": "FLSW",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FIDELITY LIMITED TERM BOND ETF",
+        "symbol": "FLTB",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "VANECK VECTORS INVESTMENT GRADE FLOATING RATE ETF",
+        "symbol": "FLTR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Franklin FTSE Taiwan",
+        "symbol": "FLTW",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "DIREXION FLIGHT TO SAFETY STRATEGY ETF",
+        "symbol": "FLYT",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Franklin FTSE South Africa",
+        "symbol": "FLZA",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES MSCI FRONTIER 100 ETF",
+        "symbol": "FM",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FIDELITY MSCI MATERIALS INDEX ETF",
+        "symbol": "FMAT",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Fieldstone Merlin Dynamic Large Cap Growth",
+        "symbol": "FMDG",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "FIRST TRUST MANAGED FUTURES STRATEGY FUND",
+        "symbol": "FMF",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "UBS ETRACS Wells Fargo MLP ExEnrgy ETN",
+        "symbol": "FMLP",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "FIDELITY MSCI FINANCIALS INDEX ETF",
+        "symbol": "FNCL",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SCHWAB FUNDAMENTAL U.S. SMALL COMPANY INDEX ETF",
+        "symbol": "FNDA",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SCHWAB FUNDAMENTAL U.S. BROAD MARKET INDEX ETF",
+        "symbol": "FNDB",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SCHWAB FUNDAMENTAL INTERNATIONAL SMALL COMPANY IND",
+        "symbol": "FNDC",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SCHWAB FUNDAMENTAL EMERGING MARKETS LARGE COMPANY ",
+        "symbol": "FNDE",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SCHWAB FUNDAMENTAL INTERNATIONAL LARGE COMPANY IND",
+        "symbol": "FNDF",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SCHWAB FUNDAMENTAL U.S. LARGE COMPANY INDEX ETF",
+        "symbol": "FNDX",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ADVISORSHARES NEW TECH AND MEDIA ETF",
+        "symbol": "FNG",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "BMO REX MicroSectors FANG Index 3X Inverse Leverag",
+        "symbol": "FNGD",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "MicroSectors FANG Index 2X Leveraged ETNs due Janu",
+        "symbol": "FNGO",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "BMO REX MicroSectors FANG Index 3X Leveraged Excha",
+        "symbol": "FNGU",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "MicroSectors FANG Index 2X Inverse Leveraged ETNs ",
+        "symbol": "FNGZ",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FIRST TRUST CHINDIA ETF",
+        "symbol": "FNI",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": null,
+        "symbol": "FNIO",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "iPath Pure Beta Aluminum ETN",
+        "symbol": "FOIL",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "PIMCO FOREIGN CURRENCY STRATEGY EXCHANGE-TRADED FU",
+        "symbol": "FORX",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "ISHARES FOCUSED VALUE FACTOR ETF",
+        "symbol": "FOVL",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FIRST TRUST PREFERRED SECURITIES AND INCOME ETF",
+        "symbol": "FPE",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FIRST TRUST INSTITUTIONAL PREFERRED SECURITIES AND",
+        "symbol": "FPEI",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FIRST TRUST US EQUITY OPPORTUNITIES ETF",
+        "symbol": "FPX",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FIDELITY QUALITY FACTOR ETF",
+        "symbol": "FQAL",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "VANECK VECTORS UNCONVENTIONAL OIL & GAS ETF",
+        "symbol": "FRAK",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FIDELITY MSCI REAL ESTATE INDEX ETF",
+        "symbol": "FREL",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FIRST TRUST S&P REIT INDEX FUND",
+        "symbol": "FRI",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Large Cap Growth IndexLinked Exchange Traded Notes",
+        "symbol": "FRLG",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "INVESCO FRONTIER MARKETS ETF",
+        "symbol": "FRN",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "FIRST TRUST SHORT DURATION MANAGED MUNICIPAL ETF",
+        "symbol": "FSMB",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FIDELITY SMALLMID FACTOR ETF",
+        "symbol": "FSMD",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FIDELITY MSCI CONSUMER STAPLES INDEX ETF",
+        "symbol": "FSTA",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FIDELITY MSCI INFORMATION TECHNOLOGY INDEX ETF",
+        "symbol": "FTEC",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FIRST TRUST LONGSHORT EQUITY ETF",
+        "symbol": "FTLS",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Franklin Short Duration US Govt ETF",
+        "symbol": "FTSD",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FIRST TRUST TAIWAN ALPHADEX FUND",
+        "symbol": "FTW",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": null,
+        "symbol": "FTY",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "UBS ETRACS CMCI Food TR ETN",
+        "symbol": "FUD",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ELEMENTS SM Linked to the MLCX Biofuels Index Exch",
+        "symbol": "FUE",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FIRST TRUST ULTRA SHORT DURATION MUNICIPAL ETF",
+        "symbol": "FUMB",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FIDELITY MSCI UTILITIES INDEX ETF",
+        "symbol": "FUTY",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FIDELITY VALUE FACTOR ETF",
+        "symbol": "FVAL",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FIRST TRUST VALUE LINE DIVIDEND INDEX FUND",
+        "symbol": "FVD",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FIRST TRUST VALUE LINE 100 EXCHANGETRADED FUND",
+        "symbol": "FVL",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ADVISORSHARES FOLIOBEYOND SMART CORE BOND ETF",
+        "symbol": "FWDB",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ADVISORSHARES MADRONA DOMESTIC ETF",
+        "symbol": "FWDD",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "ADVISORSHARES MADRONA INTERNATIONAL ETF",
+        "symbol": "FWDI",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "Guggenheim CurrencyShares Australian Dollar Trust ",
+        "symbol": "FXA",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Guggenheim CurrencyShares British Pound Sterling T",
+        "symbol": "FXB",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Guggenheim CurrencyShares Canadian Dollar Trust ET",
+        "symbol": "FXC",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "CurrencyShares Chinese Renminbi Trust",
+        "symbol": "FXCH",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "FIRST TRUST CONSUMER DISCRETIONARY ALPHADEX FUND",
+        "symbol": "FXD",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Guggenheim CurrencyShares Euro Trust ETF",
+        "symbol": "FXE",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "POWERSHARES DEVELOPED EUROPACIFIC CURRENCY HEDGED ",
+        "symbol": "FXEP",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "POWERSHARES EUROPE CURRENCY HEDGED LOW VOLATILITY ",
+        "symbol": "FXEU",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "Guggenheim CurrencyShares Swiss Franc Trust ETF",
+        "symbol": "FXF",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FIRST TRUST CONSUMER STAPLES ALPHADEX FUND",
+        "symbol": "FXG",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FIRST TRUST HEALTH CARE ALPHADEX FUND",
+        "symbol": "FXH",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES CHINA LARGECAP ETF",
+        "symbol": "FXI",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "POWERSHARES JAPAN CURRENCY HEDGED LOW VOLATILITY P",
+        "symbol": "FXJP",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "FIRST TRUST TECHNOLOGY ALPHADEX FUND",
+        "symbol": "FXL",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FIRST TRUST ENERGY ALPHADEX FUND",
+        "symbol": "FXN",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FIRST TRUST FINANCIALS ALPHADEX FUND",
+        "symbol": "FXO",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PROSHARES ULTRASHORT FTSE CHINA 50",
+        "symbol": "FXP",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FIRST TRUST INDUSTRIALSPRODUCER DURABLES ALPHADEX ",
+        "symbol": "FXR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Guggenheim CurrencyShares Swedish Krona Trust ETF",
+        "symbol": "FXS",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "CurrencyShares Singapore Dollar Trust",
+        "symbol": "FXSG",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "FIRST TRUST UTILITIES ALPHADEX FUND",
+        "symbol": "FXU",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Guggenheim CurrencyShares Japanese",
+        "symbol": "FXY",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FIRST TRUST MATERIALS ALPHADEX FUND",
+        "symbol": "FXZ",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SPDRR S&PR EMERGING MIDDLE EAST & AFRICA ETF",
+        "symbol": "GAF",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "SPDR SSGA GLOBAL ALLOCATION ETF",
+        "symbol": "GAL",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ETFMG VIDEO GAME TECH ETF",
+        "symbol": "GAMR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "DIREXION DAILY NATURAL GAS RELATED BULL 3X SHARES",
+        "symbol": "GASL",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "DIREXION DAILY NATURAL GAS RELATED BEAR 3X SHARES",
+        "symbol": "GASX",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "Barclays Bank PLC iPath Series B Bloomberg Natural",
+        "symbol": "GAZ",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "iPath GBPUSD Exchange Rate ETN",
+        "symbol": "GBB",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "Global Developments Inc",
+        "symbol": "GBDV",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES GOVERNMENTCREDIT BOND ETF",
+        "symbol": "GBF",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "GOLDMAN SACHS ACCESS TREASURY 01 YEAR ETF",
+        "symbol": "GBIL",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Barclays Bank PLC iPath Gold ETN",
+        "symbol": "GBUG",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "GOLDMAN SACHS MOTIF NEW AGE CONSUMER ETF",
+        "symbol": "GBUY",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "WisdomTree Continuous Commodity Index Fund",
+        "symbol": "GCC",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Claymore CEF GS Connect ETN",
+        "symbol": "GCE",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "GOLDMAN SACHS MOTIF DATADRIVEN WORLD ETF",
+        "symbol": "GDAT",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ProShares Ultra Australian Dollar",
+        "symbol": "GDAY",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "GadsdenA DynamicA GrowthA",
+        "symbol": "GDG",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "PROSHARES ULTRA JUNIOR MINERS",
+        "symbol": "GDJJ",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "PROSHARES ULTRASHORT JUNIOR MINERS",
+        "symbol": "GDJS",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "GADSDEN DYNAMIC MULTIASSET ETF",
+        "symbol": "GDMA",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "GOLDMAN SACHS MOTIF HUMAN EVOLUTION ETF",
+        "symbol": "GDNA",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "VANECK VECTORS GOLD MINERS ETF",
+        "symbol": "GDX",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "VANECK VECTORS JUNIOR GOLD MINERS ETF",
+        "symbol": "GDXJ",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PROSHARES ULTRASHORT GOLD MINERS",
+        "symbol": "GDXS",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "PROSHARES ULTRA GOLD MINERS",
+        "symbol": "GDXX",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "GOLDMAN SACHS ACTIVEBETAR EMERGING MARKETS EQUITY ",
+        "symbol": "GEM",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "MARKET VECTORS GERMANY SMALL-CAP ETF",
+        "symbol": "GERJ",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "ADVISORSHARES GARTMAN GOLDEURO ETF",
+        "symbol": "GEUR",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "GOLDMAN SACHS MOTIF FINANCE REIMAGINED ETF",
+        "symbol": "GFIN",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "AdvisorShares Gartman Gold/Britsh Pd ETF",
+        "symbol": "GGBP",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "GLOBAL X PURE GOLD MINERS ETF",
+        "symbol": "GGGG",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "PROSHARES GERMAN SOVEREIGNSUBSOVEREIGN ETF",
+        "symbol": "GGOV",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "Exchange Traded Concepts Trust REX Gold Hedged FTS",
+        "symbol": "GHE",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "INVESCO S&P HIGH INCOME INFRASTRUCTURE ETF",
+        "symbol": "GHII",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "REX GOLD HEDGED S&P 500 ETF",
+        "symbol": "GHS",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "GOLDMAN SACHS ACCESS HIGH YIELD CORPORATE BOND ETF",
+        "symbol": "GHYB",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "GOLDMAN SACHS ACCESS INVESTMENT GRADE CORPORATE BO",
+        "symbol": "GIGB",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SPDRR S&P GLOBAL INFRASTRUCTURE ETF",
+        "symbol": "GII",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ADVISORSHARES GLOBAL ECHO ETF",
+        "symbol": "GIVE",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "WISDOMTREE YIELD ENHANCED GLOBAL AGGREGATE BOND FU",
+        "symbol": "GLBY",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "streetTRACKS Gold Shares ETF",
+        "symbol": "GLD",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "AdvisorShares International Gold ETF",
+        "symbol": "GLDE",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "SPDR Gold MiniShares Trust",
+        "symbol": "GLDM",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SPDR Long Dollar Gold Trust",
+        "symbol": "GLDW",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": null,
+        "symbol": "GLDX",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "AGFiQ Global Infrastructure",
+        "symbol": "GLIF",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ProShares UltraShort Gold ETF",
+        "symbol": "GLL",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ETFS Physical Precious Metals Basket Shares ETF",
+        "symbol": "GLTR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SPDRR S&PR EMERGING ASIA PACIFIC ETF",
+        "symbol": "GMF",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SPDR S&P SMALL CAP EMERGING ASIA PACIFIC ETF",
+        "symbol": "GMFS",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "SPDRR S&PR EMERGING LATIN AMERICA ETF",
+        "symbol": "GML",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "SPDR(R) S&P(R) EMERGING MARKETS ETF",
+        "symbol": "GMM",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "COLUMBIA INTERMEDIATE MUNICIPAL BOND ETF",
+        "symbol": "GMMB",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "CAMBRIA GLOBAL MOMENTUM ETF",
+        "symbol": "GMOM",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "COLUMBIA CORE BOND ETF",
+        "symbol": "GMTB",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "MicroSectors FANG Index Inverse ETNs due January 8",
+        "symbol": "GNAF",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "WISDOMTREE GLOBAL NATURAL RESOURCES FUND NA",
+        "symbol": "GNAT",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "SPDRR S&PR GLOBAL NATURAL RESOURCES ETF",
+        "symbol": "GNR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "VANECK VECTORS MORNINGSTAR GLOBAL WIDE MOAT ETF",
+        "symbol": "GOAT",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "U.S. GLOBAL GO GOLD AND PRECIOUS METAL MINERS ETF",
+        "symbol": "GOAU",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "GLOBAL X GOLD EXPLORERS ETF",
+        "symbol": "GOEX",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FLEXSHARES GLOBAL QUALITY REAL ESTATE INDEX FUND",
+        "symbol": "GQRE",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "GLOBAL X MSCI GREECE ETF",
+        "symbol": "GREK",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "IQ GLOBAL RESOURCES ETF",
+        "symbol": "GRES",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "iPath Global Carbon ETN",
+        "symbol": "GRN",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "VANECK VECTORS GREEN BOND ETF",
+        "symbol": "GRNB",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ELEMENTS Linked to the MLCX Grains Index ETN",
+        "symbol": "GRU",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "iPath Pure Beta Softs ETN",
+        "symbol": "GRWN",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "GS CONNECT SP GSCI ENH COMM",
+        "symbol": "GSC",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "GOLDMAN SACHS ACTIVEBETAR EUROPE EQUITY ETF",
+        "symbol": "GSEU",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "iShares SP GSCI CommodityIndexed Trust",
+        "symbol": "GSG",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "GOLDMAN SACHS ACTIVEBETAR INTERNATIONAL EQUITY ETF",
+        "symbol": "GSIE",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "GOLDMAN SACHS ACTIVEBETAR JAPAN EQUITY ETF",
+        "symbol": "GSJY",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "GOLDMAN SACHS ACTIVEBETAR U.S. LARGE CAP EQUITY ET",
+        "symbol": "GSLC",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "iPath SP GSCI Total Return Index ETN",
+        "symbol": "GSP",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "GOLDMAN SACHS ACTIVEBETAR U.S. SMALL CAP EQUITY ET",
+        "symbol": "GSSC",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "INVESCO ULTRA SHORT DURATION ETF",
+        "symbol": "GSY",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ADVISORSHARES MORGAN CREEK GLOBAL TACTICAL ETF",
+        "symbol": "GTAA",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "INVESCO TOTAL RETURN BOND ETF",
+        "symbol": "GTO",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FLEXSHARES MORNINGSTAR GLOBAL UPSTREAM NATURAL RES",
+        "symbol": "GUNR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SPDRR S&PR EMERGING EUROPE ETF",
+        "symbol": "GUR",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "GLOBAL X GURU INTERNATIONAL INDEX ETF",
+        "symbol": "GURI",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "GLOBAL X GURU INDEX ETF",
+        "symbol": "GURU",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "GLOBAL X GURU SMALL CAP INDEX ETF",
+        "symbol": "GURX",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "DIREXION DAILY S&AMPP OIL &AMP GAS EXP. &AMP PROD.",
+        "symbol": "GUSH",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "CAMBRIA GLOBAL VALUE ETF",
+        "symbol": "GVAL",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "GOLDMAN SACHS HEDGE INDUSTRY VIP ETF",
+        "symbol": "GVIP",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Columbia American Beacon Large Cap Value ETF",
+        "symbol": "GVT",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "SPDRR S&PR WORLD EXUS ETF",
+        "symbol": "GWL",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "SPDRR S&PR INTERNATIONAL SMALL CAP ETF",
+        "symbol": "GWX",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SPDRR S&PR CHINA ETF",
+        "symbol": "GXC",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "GLOBAL X FTSE NORDIC REGION ETF",
+        "symbol": "GXF",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "GLOBAL X MSCI COLOMBIA ETF",
+        "symbol": "GXG",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ADVISORSHARES GARTMAN GOLDYEN ETF",
+        "symbol": "GYEN",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "ARROW DOW JONES GLOBAL YIELD ETF",
+        "symbol": "GYLD",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ETFMG PRIME CYBER SECURITY ETF",
+        "symbol": "HACK",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES CURRENCY HEDGED MSCI ACWI ETF",
+        "symbol": "HACW",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "CSOP CHINA CSI 300 AH DYNAMIC ETF",
+        "symbol": "HAHA",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "SPDR S&P KENSHO SMART MOBILITY ETF",
+        "symbol": "HAIL",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "DIREXION DAILY CYBER SECURITY & IT BEAR 2X SHARES",
+        "symbol": "HAKD",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "DIREXION DAILY CYBER SECURITY & IT BULL 2X SHARES",
+        "symbol": "HAKK",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "INVESCO CHINA SMALL CAP ETF",
+        "symbol": "HAO",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "VANECK VECTORS NATURAL RESOURCES ETF",
+        "symbol": "HAP",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES CURRENCY HEDGED MSCI AUSTRALIA ETF",
+        "symbol": "HAUD",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "XTRACKERS INTERNATIONAL REAL ESTATE ETF",
+        "symbol": "HAUZ",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES CURRENCY HEDGED MSCI ACWI EX U.S. ETF",
+        "symbol": "HAWX",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ProShares Ultra Homebuilders & Supplies",
+        "symbol": "HBU",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "ProShares UltraShort Homebuilders & Supl",
+        "symbol": "HBZ",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "HARTFORD CORPORATE BOND ETF",
+        "symbol": "HCOR",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "XTRACKERS MSCI ALL WORLD EX US HIGH DIVIDEND YIELD",
+        "symbol": "HDAW",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "XTRACKERS MSCI EMERGING MARKETS HIGH DIVIDEND YIEL",
+        "symbol": "HDEE",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "XTRACKERS MSCI EAFE HIGH DIVIDEND YIELD EQUITY ETF",
+        "symbol": "HDEF",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "XTRACKERS MSCI EUROZONE HIGH DIVIDEND YIELD HEDGED",
+        "symbol": "HDEZ",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "PROSHARES HEDGE REPLICATION ETF",
+        "symbol": "HDG",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ADVISORSHARES RANGER EQUITY BEAR ETF",
+        "symbol": "HDGE",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "AdvisorShares Athena Intl Bear ETF",
+        "symbol": "HDGI",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "QRAFT AIENHANCED U.S. HIGH DIVIDEND ETF",
+        "symbol": "HDIV",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "UBS AG London Branch ETRACS Monthly Pay 2X Leverag",
+        "symbol": "HDLB",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "WISDOMTREE INTERNATIONAL HEDGED SMALLCAP DIVIDEND ",
+        "symbol": "HDLS",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "UBS ETRACS M Py 2xLvg US HiDivLowVol ETN",
+        "symbol": "HDLV",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "FIRST TRUST HORIZON MANAGED VOLATILITY DEVELOPED I",
+        "symbol": "HDMV",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES CORE HIGH DIVIDEND ETF",
+        "symbol": "HDV",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "WISDOMTREE INTERNATIONAL HEDGED EQUITY FUND NA",
+        "symbol": "HDWM",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "SPDR S&P INTERNATIONAL DIVIDEND CURRENCY HEDGED ET",
+        "symbol": "HDWX",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "STRATEGY SHARES ECOLOGICAL STRATEGY ETF 1",
+        "symbol": "HECO",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "WISDOMTREE EUROPE HEDGED EQUITY FUND NA",
+        "symbol": "HEDJ",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "DIREXION DAILY MSCI EUROPE CURRENCY HEDGED BULL 2X",
+        "symbol": "HEGE",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "DIREXION DAILY MSCI JAPAN CURRENCY HEDGED BULL 2X ",
+        "symbol": "HEGJ",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "iPath Pure Beta Industrial Metals ETN",
+        "symbol": "HEVY",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "ISHARES CURRENCY HEDGED MSCI CANADA ETF",
+        "symbol": "HEWC",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES CURRENCY HEDGED MSCI ITALY ETF",
+        "symbol": "HEWI",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES CURRENCY HEDGED MSCI JAPAN ETF",
+        "symbol": "HEWJ",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES CURRENCY HEDGED MSCI SWITZERLAND ETF",
+        "symbol": "HEWL",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES CURRENCY HEDGED MSCI SPAIN ETF",
+        "symbol": "HEWP",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES CURRENCY HEDGED MSCI UNITED KINGDOM ETF",
+        "symbol": "HEWU",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES CURRENCY HEDGED MSCI MEXICO ETF",
+        "symbol": "HEWW",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES CURRENCY HEDGED MSCI SOUTH KOREA ETF",
+        "symbol": "HEWY",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES CURRENCY HEDGED MSCI EUROZONE ETF",
+        "symbol": "HEZU",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SPDR EURO STOXX 50 CURRENCY HEDGED ETF",
+        "symbol": "HFEZ",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "HORIZONS S&P FINANCIAL SELECT SECTOR COVERED CALL ",
+        "symbol": "HFIN",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "IQ 50 PERCENT HEDGED FTSE EUROPE ETF",
+        "symbol": "HFXE",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "IQ 50 PERCENT HEDGED FTSE INTERNATIONAL ETF",
+        "symbol": "HFXI",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "IQ 50 PERCENT HEDGED FTSE JAPAN ETF",
+        "symbol": "HFXJ",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ProShares Hedged FTSE Europe",
+        "symbol": "HGEU",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "INVESCO ZACKS INTERNATIONAL MULTIASSET INCOME ETF",
+        "symbol": "HGI",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "ProShares Hedged FTSE Japan",
+        "symbol": "HGJP",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "Heavenly Hot Dogs Inc",
+        "symbol": "HHDG",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "Highland HFR Global ETF",
+        "symbol": "HHFR",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "ISHARES CURRENCY HEDGED INTERNATIONAL HIGH YIELD B",
+        "symbol": "HHYX",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": null,
+        "symbol": "HIDDN",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "COLUMBIA EM QUALITY DIVIDEND ETF",
+        "symbol": "HILO",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "MASTER INCOME ETF",
+        "symbol": "HIPS",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES CURRENCY HEDGED JPXNIKKEI 400 ETF",
+        "symbol": "HJPX",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Horizons Korea KOSPI 200 ETF",
+        "symbol": "HKOR",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "HARTFORD MUNICIPAL OPPORTUNITIES ETF",
+        "symbol": "HMOP",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ADVISORSHARES SAGE CORE RESERVES ETF",
+        "symbol": "HOLD",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "UBS ETRACS M Rst 2xLvg ISE Excly Hbs ETN",
+        "symbol": "HOML",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "UBS ETRACS ISE Exclusively Hmbldrs ETN",
+        "symbol": "HOMX",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "HOYA CAPITAL HOUSING ETF",
+        "symbol": "HOMZ",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "INSIGHTSHARES PATRIOTIC EMPLOYERS ETF",
+        "symbol": "HONR",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "HARTFORD QUALITY BOND ETF",
+        "symbol": "HQBD",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "SPDR MSCI INTERNATIONAL REAL ESTATE CURRENCY HEDGE",
+        "symbol": "HREX",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES CURRENCY HEDGED MSCI EAFE SMALLCAP ETF",
+        "symbol": "HSCZ",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "GLOBAL X S&P 500 COVERED CALL ETF",
+        "symbol": "HSPX",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "HARTFORD SCHRODERS TAXAWARE BOND ETF",
+        "symbol": "HTAB",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Robo Global Healthcare Technology and Innovation",
+        "symbol": "HTEC",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "HARTFORD TOTAL RETURN BOND ETF",
+        "symbol": "HTRB",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "HULL TACTICAL US ETF",
+        "symbol": "HTUS",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "STRATEGY SHARES US MARKET ROTATION STRATEGY ETF 1",
+        "symbol": "HUSE",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FIRST TRUST HORIZON MANAGED VOLATILITY DOMESTIC ET",
+        "symbol": "HUSV",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "U.S. EQUITY HIGH VOLATILITY PUT WRITE INDEX FUND",
+        "symbol": "HVPW",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "VANECK VECTORS HIGHYIELD MUNICIPAL INDEX ETF",
+        "symbol": "HYD",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "DIREXION DAILY HIGH YIELD BEAR 2X SHARES",
+        "symbol": "HYDD",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "XTRACKERS LOW BETA HIGH YIELD BOND ETF",
+        "symbol": "HYDW",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "VANECK VECTORS EMERGING MARKETS HIGH YIELD BOND ET",
+        "symbol": "HYEM",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES IBOXX HIGH YIELD CORPORATE BOND ETF",
+        "symbol": "HYG",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES INTEREST RATE HEDGED HIGH YIELD BOND ETF",
+        "symbol": "HYGH",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "FLEXSHARES HIGH YIELD VALUESCORED BOND INDEX FUND",
+        "symbol": "HYGV",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "XTRACKERS USD HIGH YIELD CORPORATE BOND ETF",
+        "symbol": "HYLB",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "HIGH YIELD ETF",
+        "symbol": "HYLD",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "IQ S&P HIGH YIELD LOW VOLATILITY BOND ETF",
+        "symbol": "HYLV",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SPDRR NUVEEN BLOOMBERG BARCLAYS HIGH YIELD MUNICIP",
+        "symbol": "HYMB",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PIMCO 05 YEAR HIGH YIELD CORPORATE BOND INDEX EXCH",
+        "symbol": "HYS",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Northern Lights Fund Trust III CP High Yield Trend",
+        "symbol": "HYTR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "XTRACKERS HIGH BETA HIGH YIELD BOND ETF",
+        "symbol": "HYUP",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES U.S. BROKERDEALERS &AMP SECURITIES EXCHANG",
+        "symbol": "IAI",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES U.S. INSURANCE ETF",
+        "symbol": "IAK",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES U.S. REGIONAL BANKS ETF",
+        "symbol": "IAT",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "iShares Gold Trust",
+        "symbol": "IAU",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES IBONDS MAR 2016 CORPORATE EXFINANCIALS ETF",
+        "symbol": "IBCB",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES IBONDS MAR 2018 TERM CORPORATE EXFINANCIAL",
+        "symbol": "IBCC",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES IBONDS MAR 2020 TERM CORPORATE EXFINANCIAL",
+        "symbol": "IBCD",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES IBONDS MAR 2023 TERM CORPORATE EXFINANCIAL",
+        "symbol": "IBCE",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "INSPIRE CORPORATE BOND IMPACT ETF",
+        "symbol": "IBD",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES IBONDS MAR 2016 CORPORATE ETF",
+        "symbol": "IBDA",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES IBONDS MAR 2018 TERM CORPORATE ETF",
+        "symbol": "IBDB",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES IBONDS MAR 2020 TERM CORPORATE ETF",
+        "symbol": "IBDC",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES IBONDS MAR 2023 TERM CORPORATE ETF",
+        "symbol": "IBDD",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES IBONDS DEC 2016 TERM CORPORATE ETF",
+        "symbol": "IBDF",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES IBONDS DEC 2018 TERM CORPORATE ETF",
+        "symbol": "IBDH",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES IBONDS DEC 2017 TERM CORPORATE ETF",
+        "symbol": "IBDJ",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES IBONDS DEC 2019 TERM CORPORATE ETF",
+        "symbol": "IBDK",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES IBONDS DEC 2020 TERM CORPORATE ETF",
+        "symbol": "IBDL",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES IBONDS DEC 2021 TERM CORPORATE ETF",
+        "symbol": "IBDM",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES IBONDS DEC 2022 TERM CORPORATE ETF",
+        "symbol": "IBDN",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES IBONDS DEC 2023 TERM CORPORATE ETF",
+        "symbol": "IBDO",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES IBONDS DEC 2024 TERM CORPORATE ETF",
+        "symbol": "IBDP",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES IBONDS DEC 2025 TERM CORPORATE ETF",
+        "symbol": "IBDQ",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES IBONDS DEC 2026 TERM CORPORATE ETF",
+        "symbol": "IBDR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES IBONDS DEC 2027 TERM CORPORATE ETF",
+        "symbol": "IBDS",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES IBONDS DEC 2028 TERM CORPORATE ETF",
+        "symbol": "IBDT",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES IBONDS DEC 2029 TERM CORPORATE ETF",
+        "symbol": "IBDU",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "DIREXION IBILLIONAIRE INDEX ETF",
+        "symbol": "IBLN",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES IBONDS SEP 2015 AMTFREE MUNI BOND ETF",
+        "symbol": "IBMD",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES IBONDS SEP 2016 TERM MUNI BOND ETF",
+        "symbol": "IBME",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES IBONDS SEP 2017 TERM MUNI BOND ETF",
+        "symbol": "IBMF",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES IBONDS SEP 2018 TERM MUNI BOND ETF",
+        "symbol": "IBMG",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES IBONDS SEP 2019 TERM MUNI BOND ETF",
+        "symbol": "IBMH",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES IBONDS SEP 2020 TERM MUNI BOND ETF",
+        "symbol": "IBMI",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES IBONDS DEC 2021 TERM MUNI BOND ETF",
+        "symbol": "IBMJ",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES IBONDS DEC 2022 TERM MUNI BOND ETF",
+        "symbol": "IBMK",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SPDRR BLOOMBERG BARCLAYS INTERNATIONAL CORPORATE B",
+        "symbol": "IBND",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SERENITYSHARES IMPACT ETF",
+        "symbol": "ICAN",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "iPath Optimized Currency Carry ETN",
+        "symbol": "ICI",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "WISDOMTREE INDIAN RUPEE STRATEGY FUND NA",
+        "symbol": "ICN",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES MSCI COLOMBIA ETF",
+        "symbol": "ICOL",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES CORE MSCI INTERNATIONAL DEVELOPED MARKETS ",
+        "symbol": "IDEV",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": null,
+        "symbol": "IDHB",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "INVESCO S&P INTERNATIONAL DEVELOPED QUALITY ETF",
+        "symbol": "IDHQ",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Metaurus Equity Component Trust US Equity Cumulati",
+        "symbol": "IDIV",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "INVESCO S&P INTERNATIONAL DEVELOPED LOW VOLATILITY",
+        "symbol": "IDLV",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "INVESCO S&P INTERNATIONAL DEVELOPED MOMENTUM ETF",
+        "symbol": "IDMO",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES GENOMICS IMMUNOLOGY AND HEALTHCARE ETF",
+        "symbol": "IDNA",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ALPS INTERNATIONAL SECTOR DIVIDEND DOGS ETF",
+        "symbol": "IDOG",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES SELFDRIVING EV AND TECH ETF",
+        "symbol": "IDRV",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES U.S. UTILITIES ETF",
+        "symbol": "IDU",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "VANECK VECTORS INDONESIA INDEX ETF",
+        "symbol": "IDX",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "VANECK VECTORS INDONESIA SMALLCAP ETF",
+        "symbol": "IDXJ",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES ENHANCED INTERNATIONAL LARGECAP ETF",
+        "symbol": "IEIL",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES ENHANCED INTERNATIONAL SMALLCAP ETF",
+        "symbol": "IEIS",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES ENHANCED U.S. LARGECAP ETF",
+        "symbol": "IELG",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "INVESCO EMERGING MARKETS DEBT DEFENSIVE ETF",
+        "symbol": "IEMD",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "EGSHARES TCW EM INTERMEDIATE TERM INVESTMENT GRADE",
+        "symbol": "IEMF",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES CORE MSCI EMERGING MARKETS ETF",
+        "symbol": "IEMG",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "INVESCO EMERGING MARKETS DEBT VALUE ETF",
+        "symbol": "IEMV",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES ENHANCED U.S. SMALLCAP ETF",
+        "symbol": "IESM",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES CORE MSCI EUROPE ETF",
+        "symbol": "IEUR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES EUROPE ETF",
+        "symbol": "IEV",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES U.S. OIL EQUIPMENT & SERVICES ETF",
+        "symbol": "IEZ",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": null,
+        "symbol": "IFLY",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES INTEREST RATE HEDGED LONGTERM CORPORATE BO",
+        "symbol": "IGBH",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "EGA Emerging Global Shares Trust",
+        "symbol": "IGEM",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES LONGTERM CORPORATE BOND ETF",
+        "symbol": "IGLB",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES EXPANDED TECH SECTOR ETF",
+        "symbol": "IGM",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES NORTH AMERICAN TECHMULTIMEDIA NETWORKING E",
+        "symbol": "IGN",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PROSHARES SHORT INVESTMENT GRADE CORPORATE",
+        "symbol": "IGS",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PROSHARES ULTRA INVESTMENT GRADE CORPORATE",
+        "symbol": "IGU",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "NYSE ARCA LISTED TEST STOCK FOR CTS CQS",
+        "symbol": "IGZ",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES CYBERSECURITY AND TECH ETF",
+        "symbol": "IHAK",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "WISDOMTREE INTERNATIONAL HEDGED QUALITY DIVIDEND G",
+        "symbol": "IHDG",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES U.S. PHARMACEUTICALS ETF",
+        "symbol": "IHE",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES U.S. HEALTHCARE PROVIDERS ETF",
+        "symbol": "IHF",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES U.S. MEDICAL DEVICES ETF",
+        "symbol": "IHI",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "VANECK VECTORS INTERNATIONAL HIGH YIELD BOND ETF",
+        "symbol": "IHY",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "INVESCO CORPORATE INCOME DEFENSIVE ETF",
+        "symbol": "IHYD",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "INVESCO CORPORATE INCOME VALUE ETF",
+        "symbol": "IHYV",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "INVESCO INVESTMENT GRADE DEFENSIVE ETF",
+        "symbol": "IIGD",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "INVESCO INVESTMENT GRADE VALUE ETF",
+        "symbol": "IIGV",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Innovator ETFs Trust Innovator MSCI EAFE Power Buf",
+        "symbol": "IJAN",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES CORE S&P MIDCAP ETF",
+        "symbol": "IJH",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES S&P MIDCAP 400 VALUE ETF",
+        "symbol": "IJJ",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES S&P MIDCAP 400 GROWTH ETF",
+        "symbol": "IJK",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SPDRR BARCLAYS INTERNATIONAL HIGH YIELD BOND ETF",
+        "symbol": "IJNK",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES CORE S&P SMALLCAP ETF",
+        "symbol": "IJR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES S&P SMALLCAP 600 VALUE ETF",
+        "symbol": "IJS",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Innovator ETFs Trust Innovator MSCI EAFE Power Buf",
+        "symbol": "IJUL",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PIMCO GLOBAL ADVANTAGE INFLATIONLINKED BOND STRATE",
+        "symbol": "ILB",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES LATIN AMERICA 40 ETF",
+        "symbol": "ILF",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES CORE 10 YEAR USD BOND ETF",
+        "symbol": "ILTB",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "INVESCO MULTIFACTOR CORE FIXED INCOME ETF",
+        "symbol": "IMFC",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "INVESCO MULTIFACTOR CORE PLUS FIXED INCOME ETF",
+        "symbol": "IMFP",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "iPath SP MLP ETN",
+        "symbol": "IMLP",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES CORE 510 YEAR USD BOND ETF",
+        "symbol": "IMTB",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES EDGE MSCI INTL MOMENTUM FACTOR ETF",
+        "symbol": "IMTM",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "INNOVATION ALPHA GLOBAL ETF",
+        "symbol": "INAG",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "INNOVATION ALPHA UNITED STATES ETF",
+        "symbol": "INAU",
+        "has_intraday": false,
+        "has_eod": false
+      },
+      {
+        "name": "COLUMBIA INDIA CONSUMER ETF",
+        "symbol": "INCO",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "DIREXION DAILY MSCI INDIA BULL 3X SHARES",
+        "symbol": "INDL",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Pacer Benchmark Industrial Real Estate SCTR",
+        "symbol": "INDS",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "PowerShares DB US Inflation ETN",
+        "symbol": "INFL",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SPDR SSGA INCOME ALLOCATION ETF",
+        "symbol": "INKM",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "iPath MSCI India IndexSM ETN",
+        "symbol": "INP",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "Market Vectors Indian RupeeUSD ETN",
+        "symbol": "INR",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES EDGE MSCI MULTIFACTOR INTL ETF",
+        "symbol": "INTF",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "COLUMBIA INDIA INFRASTRUCTURE ETF",
+        "symbol": "INXX",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SPDRR NUVEEN BARCLAYS CAPITAL NEW YORK MUNICIPAL B",
+        "symbol": "INY",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "IQ GLOBAL OIL SMALL CAP ETF",
+        "symbol": "IOIL",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES GLOBAL 100 ETF",
+        "symbol": "IOO",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ISHARES CORE MSCI PACIFIC ETF",
+        "symbol": "IPAC",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "ETFMG PRIME MOBILE PAYMENTS ETF",
+        "symbol": "IPAY",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SPDRR S&PR INTERNATIONAL CONSUMER DISCRETIONARY SE",
+        "symbol": "IPD",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SPDRR S&PR INTERNATIONAL FINANCIAL SECTOR ETF",
+        "symbol": "IPF",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SPDRR S&PR INTERNATIONAL TECHNOLOGY SECTOR ETF",
+        "symbol": "IPK",
+        "has_intraday": false,
+        "has_eod": true
+      },
+      {
+        "name": "SPDRR S&PR INTERNATIONAL INDUSTRIAL SECTOR ETF",
+        "symbol": "IPN",
+        "has_intraday": false,
+        "has_eod": true
+      }
+    ]
+  }
+}

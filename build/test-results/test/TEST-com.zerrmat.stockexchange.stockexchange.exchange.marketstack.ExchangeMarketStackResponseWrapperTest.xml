@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.zerrmat.stockexchange.stockexchange.exchange.marketstack.ExchangeMarketStackResponseWrapperTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-09-10T14:59:30" hostname="JA-KOMPUTER" time="0.003">
+  <properties/>
+  <testcase name="shouldExtractData()" classname="com.zerrmat.stockexchange.stockexchange.exchange.marketstack.ExchangeMarketStackResponseWrapperTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

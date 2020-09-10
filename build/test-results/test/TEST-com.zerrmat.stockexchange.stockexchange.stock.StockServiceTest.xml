@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.zerrmat.stockexchange.stockexchange.stock.StockServiceTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2020-09-10T14:59:31" hostname="JA-KOMPUTER" time="0.04">
+  <properties/>
+  <testcase name="shouldUpdateValue()" classname="com.zerrmat.stockexchange.stockexchange.stock.StockServiceTest" time="0.033"/>
+  <testcase name="shouldGetStockWithGivenSymbol()" classname="com.zerrmat.stockexchange.stockexchange.stock.StockServiceTest" time="0.001"/>
+  <testcase name="shouldUpdateStocks()" classname="com.zerrmat.stockexchange.stockexchange.stock.StockServiceTest" time="0.002"/>
+  <testcase name="shouldGetAllStocks()" classname="com.zerrmat.stockexchange.stockexchange.stock.StockServiceTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

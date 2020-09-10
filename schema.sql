@@ -55,22 +55,22 @@ CREATE TABLE historical (
 );
 
 
-INSERT INTO stock(name, symbol, value, currency) VALUES ('CDPROJEKT', 'CDR.XWAR', 320.48, 'EUR');
-INSERT INTO stock(name, symbol, value, currency) VALUES ('11BIT', '11B.XWAR', 507.00, 'EUR');
-INSERT INTO stock(name, symbol, value, currency) VALUES ('Apple', 'AAPL', 461.90, 'USD');
+--INSERT INTO stock(name, symbol, value, currency) VALUES ('CDPROJEKT', 'CDR.XWAR', 320.48, 'EUR');
+--INSERT INTO stock(name, symbol, value, currency) VALUES ('11BIT', '11B.XWAR', 507.00, 'EUR');
+--INSERT INTO stock(name, symbol, value, currency) VALUES ('Apple', 'AAPL', 461.90, 'USD');
 
 --INSERT INTO exchangetostock(exchange_id, stock_id) VALUES (1322, 2);
 --INSERT INTO exchangetostock(exchange_id, stock_id) VALUES (1322, 3);
 --INSERT INTO exchangetostock(exchange_id, stock_id) VALUES (1351, 4);
 
-INSERT INTO exchange(symbol, currency, name) VALUES ('XWAR', 'EUR', 'Warsaw Stock Exchange');
-INSERT INTO exchange(symbol, currency, name) VALUES ('XNAS', 'USD', 'NASDAQ Stock Exchange');
+--INSERT INTO exchange(symbol, currency, name) VALUES ('XWAR', 'EUR', 'Warsaw Stock Exchange');
+--INSERT INTO exchange(symbol, currency, name) VALUES ('XNAS', 'USD', 'NASDAQ Stock Exchange');
 
-INSERT INTO cachecontrol(endpoint_name, last_access) VALUES ('exchanges', '2020-07-31 16:15:14');
-INSERT INTO cachecontrol(endpoint_name, last_access) VALUES ('stocks.ARCX', '2020-07-31 17:15:14');
+--INSERT INTO cachecontrol(endpoint_name, last_access) VALUES ('exchanges', '2020-07-31 16:15:14');
+--INSERT INTO cachecontrol(endpoint_name, last_access) VALUES ('stocks.ARCX', '2020-07-31 17:15:14');
 
-INSERT INTO historical(ets_id, value, volume, date) VALUES (1322, 320.48, 5930, '2020-09-04 09:35:53');
-INSERT INTO historical(ets_id, value, volume, date) VALUES (1351, 461.90, 238312, '2020-09-04 09:36:12');
+--INSERT INTO historical(ets_id, value, volume, date) VALUES (1322, 320.48, 5930, '2020-09-04 09:35:53');
+--INSERT INTO historical(ets_id, value, volume, date) VALUES (1351, 461.90, 238312, '2020-09-04 09:36:12');
 
 --update cachecontrol set last_access = '2020-07-29 16:48:00' where endpoint_name = 'exchanges';
 SET CLIENT_ENCODING TO 'UTF-8';

@@ -1,0 +1,45 @@
+com/zerrmat/stockexchange/stockexchange/cachecontrol/CacheControlServiceTest.java
+ com.zerrmat.stockexchange.stockexchange.cachecontrol.CacheControlServiceTest
+com/zerrmat/stockexchange/stockexchange/exchange/ExchangeServiceTest.java
+ com.zerrmat.stockexchange.stockexchange.exchange.ExchangeServiceTest
+ com.zerrmat.stockexchange.stockexchange.exchange.ExchangeServiceTest$1
+com/zerrmat/stockexchange/stockexchange/exchange/ExchangeRepositoryFilterTest.java
+ com.zerrmat.stockexchange.stockexchange.exchange.ExchangeRepositoryFilterTest
+com/zerrmat/stockexchange/stockexchange/util/RestTestUtils.java
+ com.zerrmat.stockexchange.stockexchange.util.RestTestUtils
+com/zerrmat/stockexchange/stockexchange/rest/ExternalHistoricalControllerTest.java
+ com.zerrmat.stockexchange.stockexchange.rest.ExternalHistoricalControllerTest
+ com.zerrmat.stockexchange.stockexchange.rest.ExternalHistoricalControllerTest$1
+ com.zerrmat.stockexchange.stockexchange.rest.ExternalHistoricalControllerTest$2
+ com.zerrmat.stockexchange.stockexchange.rest.ExternalHistoricalControllerTest$3
+ com.zerrmat.stockexchange.stockexchange.rest.ExternalHistoricalControllerTest$4
+com/zerrmat/stockexchange/stockexchange/exchange/marketstack/ExchangeMarketStackResponseWrapperTest.java
+ com.zerrmat.stockexchange.stockexchange.exchange.marketstack.ExchangeMarketStackResponseWrapperTest
+com/zerrmat/stockexchange/stockexchange/stock/StockServiceTest.java
+ com.zerrmat.stockexchange.stockexchange.stock.StockServiceTest
+com/zerrmat/stockexchange/stockexchange/rest/ExternalExchangesControllerTest.java
+ com.zerrmat.stockexchange.stockexchange.rest.ExternalExchangesControllerTest
+ com.zerrmat.stockexchange.stockexchange.rest.ExternalExchangesControllerTest$1
+com/zerrmat/stockexchange/stockexchange/exchangetostock/ExchangeToStockConverterTest.java
+ com.zerrmat.stockexchange.stockexchange.exchangetostock.ExchangeToStockConverterTest
+com/zerrmat/stockexchange/stockexchange/exchangetostock/ExchangeToStockServiceTest.java
+ com.zerrmat.stockexchange.stockexchange.exchangetostock.ExchangeToStockServiceTest
+com/zerrmat/stockexchange/stockexchange/cachecontrol/CacheControlConverterTest.java
+ com.zerrmat.stockexchange.stockexchange.cachecontrol.CacheControlConverterTest
+com/zerrmat/stockexchange/stockexchange/exchange/ExchangeConverterTest.java
+ com.zerrmat.stockexchange.stockexchange.exchange.ExchangeConverterTest
+com/zerrmat/stockexchange/stockexchange/stock/StockFilterTest.java
+ com.zerrmat.stockexchange.stockexchange.stock.StockFilterTest
+com/zerrmat/stockexchange/stockexchange/rest/ExternalStocksControllerTest.java
+ com.zerrmat.stockexchange.stockexchange.rest.ExternalStocksControllerTest
+ com.zerrmat.stockexchange.stockexchange.rest.ExternalStocksControllerTest$1
+ com.zerrmat.stockexchange.stockexchange.rest.ExternalStocksControllerTest$2
+com/zerrmat/stockexchange/stockexchange/stock/StockConverterTest.java
+ com.zerrmat.stockexchange.stockexchange.stock.StockConverterTest
+com/zerrmat/stockexchange/stockexchange/StockExchangeApplicationTests.java
+ com.zerrmat.stockexchange.stockexchange.StockExchangeApplicationTests
+com/zerrmat/stockexchange/stockexchange/rest/ExternalTickersControllerTest.java
+ com.zerrmat.stockexchange.stockexchange.rest.ExternalTickersControllerTest
+ com.zerrmat.stockexchange.stockexchange.rest.ExternalTickersControllerTest$1
+com/zerrmat/stockexchange/stockexchange/stock/marketstack/StockMarketStackReponseWrapperTest.java
+ com.zerrmat.stockexchange.stockexchange.stock.marketstack.StockMarketStackReponseWrapperTest
