@@ -3,7 +3,6 @@ import React from "react";
 class StockHistory extends React.Component {
     Ready(props) {
         const history = props.data.stockHistory;
-        console.log(history);
         if (history.length !== 0) {
             return (
                 <div>

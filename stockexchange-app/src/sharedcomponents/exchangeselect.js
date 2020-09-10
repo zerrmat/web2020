@@ -22,12 +22,10 @@ class ExchangeSelect extends React.Component {
     }
 
     setExchange(event) {
-        //console.log("wybor: " + event.target.value);
         this.props.onExchangeChange(event.target.value);
     }
 
     setStock(event) {
-        //console.log("wybor: " + event.target.value);
         this.props.onStockChange(event.target.value);
     }
 }

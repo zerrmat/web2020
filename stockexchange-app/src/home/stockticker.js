@@ -9,7 +9,6 @@ class StockTicker extends React.Component {
                 s = s + "0";
             }
         }
-        console.log(s);
         return s;
     }
 
