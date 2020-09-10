@@ -15,7 +15,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.text.DateFormat;
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -139,6 +141,8 @@ public class StockExchangeRestController {
                     || h.getDate().isEqual(finalFrom.atStartOfDay(zoneZero))
                     || h.getDate().isEqual(finalTo.atStartOfDay(zoneZero))
                 )).collect(Collectors.toList());
+        result.forEach(r -> r.setDate(ZonedDateTime.of(r.getDate().toLocalDate(),
+                LocalTime.of(0, 0), ZoneId.of("Etc/UTC"))));
         return result;
     }
 }

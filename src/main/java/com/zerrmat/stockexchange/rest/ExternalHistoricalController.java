@@ -91,6 +91,7 @@ public class ExternalHistoricalController extends ExternalController {
                 this.exchangeCurrency, this.fullStockSymbol, this.from, this.to);
         ExchangeToStockDto one = exchangeToStockService.getOne(this.exchangeSymbol, this.fullStockSymbol);
         historicalDtos.forEach(h -> {
+            h.setDate(ZonedDateTime.of(h.getDate().toLocalDate(), LocalTime.of(0, 0), ZoneId.of("Etc/UTC")));
             h.setEtsId(one.getId());
             h.setExchangeId(one.getExchangeId());
             h.setExchangeName(one.getExchangeName());

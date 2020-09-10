@@ -1,0 +1,145 @@
+// Override default variables before the import
+$body-bg: #c8e6c9;
+
+#main-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#logo {
+  text-align: center;
+  vertical-align: middle;
+  background-color: #2e7d32;
+  line-height: 200px;
+  height: 200px;
+  -moz-border-radius: 100px / 80px;
+  -webkit-border-radius: 100px / 80px;
+  border-radius: 100px / 80px;
+}
+
+#logo-text {
+  font-size: 64px;
+  font-family: Roboto, serif;
+  color: white;
+  margin: 0 auto;
+}
+
+#home-header-container {
+  -moz-border-radius: 100px / 80px;
+  -webkit-border-radius: 100px / 80px;
+  border-radius: 100px / 80px;
+}
+
+#history-header-container {
+  margin-left: 2%;
+  -moz-border-radius: 100px / 80px;
+  -webkit-border-radius: 100px / 80px;
+  border-radius: 100px / 80px;
+}
+
+.link, .link:visited, .link:hover {
+  color: white;
+  text-decoration: none;
+}
+
+#home-header {
+  display: inline-block;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#history-header {
+  display: inline-block;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.headerPos {
+  background-color: #2e7d32;
+  text-decoration: none;
+  display: inline-block;
+  width: 49%;
+  list-style: none;
+  color: white;
+}
+
+#exchangeSelect {
+  display: inline-block;
+  width: 49%;
+}
+
+#stockSelect {
+  display: inline-block;
+  margin-left: 2%;
+  width: 49%;
+}
+
+#exchangeDiv {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#ticker-name {
+  display: inline-block;
+  color: #bdbdbd;
+}
+
+#ticker-symbol {
+  color: white;
+  display: inline-block;
+  margin-left: 20px;
+}
+
+#ticker-value {
+  display: inline-block;
+  color: #bdbdbd;
+  margin-left: 50px;
+}
+
+#ticker-container {
+  text-align: center;
+  vertical-align: middle;
+  background-color: #2e7d32;
+  height: 100px;
+  -moz-border-radius: 100px / 80px;
+  -webkit-border-radius: 100px / 80px;
+  border-radius: 100px / 80px;
+}
+
+#from-container {
+  display: inline-block;
+  width: 49%;
+  margin-top: 8px;
+}
+
+#to-container {
+  display: inline-block;
+  margin-left: 2%;
+  width: 49%;
+}
+
+#from {
+  margin-left: 1%;
+  width: 94%;
+}
+
+#to {
+  margin-left: 1%;
+  width: 94%;
+}
+
+// Import Bootstrap and its default variables
+@import '~bootstrap/scss/bootstrap.scss';
+
+.container {
+  padding: 0;
+}
+
+#header-ul {
+  display: block;
+  padding: 0;
+  margin-left: 16px;
+  margin-top: 8px;
+}
