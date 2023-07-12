@@ -10,12 +10,12 @@
     "bootstrap": "^4.5.2",
     "canvasjs-react-charts": "^1.0.5",
     "install": "^0.13.0",
-    "node-sass": "^4.14.1",
+    "node-sass": "^9.0.0",
     "react": "^16.13.1",
     "react-canvas-js": "^1.0.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1"
+    "react-scripts": "5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
